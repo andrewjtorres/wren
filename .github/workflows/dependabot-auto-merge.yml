@@ -2,7 +2,7 @@ name: Dependabot Auto-merge
 on:
   pull_request:
     branches:
-      - dev
+      - main
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true

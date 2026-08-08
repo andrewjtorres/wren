@@ -133,6 +133,6 @@ jobs:
         with:
           name: test-reports
           path: |
-            test-reports
-            test-results
+            packages/*/test-reports
+            packages/*/test-results
           retention-days: 30
