@@ -1,0 +1,20 @@
+# Miscellaneous
+!**/.*
+
+# Artifacts and Compiled Output
+.turbo
+
+# Dependencies
+.yarn
+node_modules
+
+# Editors and IDEs
+.cursor
+.idea
+.vscode
+
+# Version Control
+.git
+
+# Workspaces
+packages

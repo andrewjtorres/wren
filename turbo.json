@@ -1,0 +1,110 @@
+{
+  "noUpdateNotifier": true,
+  "futureFlags": {
+    "filterUsingTasks": true
+  },
+  "tasks": {
+    "build": {
+      "outputs": ["dist/**"]
+    },
+    "//#clean:artifact": {
+      "cache": false,
+      "outputs": []
+    },
+    "clean:artifact": {
+      "cache": false,
+      "outputs": []
+    },
+    "//#clean:cache": {
+      "cache": false,
+      "outputs": []
+    },
+    "clean:cache": {
+      "cache": false,
+      "outputs": []
+    },
+    "//#format": {
+      "inputs": [
+        "**/*.json",
+        "**/*.md",
+        "**/*.yml",
+        ".prettierignore",
+        "prettier.config.ts",
+        "!.cursor",
+        "!.git",
+        "!.idea",
+        "!.turbo",
+        "!.vscode",
+        "!.yarn",
+        "!node_modules",
+        "!packages"
+      ],
+      "outputs": ["node_modules/.cache/prettier/**"]
+    },
+    "format": {
+      "outputs": ["node_modules/.cache/prettier/**"]
+    },
+    "lint:css": {
+      "outputs": ["node_modules/.cache/stylelint/**"]
+    },
+    "lint:i18n": {
+      "outputs": ["src/i18n/**"]
+    },
+    "//#lint:javascript": {
+      "inputs": [
+        "config/typescript/**/*.json",
+        "**/*.js",
+        "**/*.ts",
+        "tsconfig.json",
+        "!.cursor",
+        "!.git",
+        "!.idea",
+        "!.turbo",
+        "!.vscode",
+        "!.yarn",
+        "!node_modules",
+        "!packages"
+      ],
+      "outputs": ["node_modules/.cache/eslint/**"]
+    },
+    "lint:javascript": {
+      "outputs": ["node_modules/.cache/eslint/**"]
+    },
+    "//#lint:typescript": {
+      "inputs": [
+        "config/typescript/**/*.json",
+        "**/*.js",
+        "**/*.ts",
+        "tsconfig.json",
+        "!.cursor",
+        "!.git",
+        "!.idea",
+        "!.turbo",
+        "!.vscode",
+        "!.yarn",
+        "!node_modules",
+        "!packages"
+      ],
+      "outputs": ["node_modules/.cache/typescript/**"]
+    },
+    "lint:typescript": {
+      "outputs": ["node_modules/.cache/typescript/**"]
+    },
+    "test:component": {
+      "outputs": ["src/**/snapshots/**", "test-reports/component/**", "test-results/**"]
+    },
+    "test:end-to-end": {
+      "outputs": ["src/**/snapshots/**", "test-reports/end-to-end/**", "test-results/**"]
+    },
+    "test:unit": {
+      "outputs": [
+        "src/**/*.unit.test.ts.snap",
+        "src/**/*.unit.test.tsx.snap",
+        "src/**/unit.test.ts.snap",
+        "src/**/unit.test.tsx.snap",
+        "test-reports/coverage/**",
+        "test-reports/unit/**"
+      ]
+    }
+  }
+}

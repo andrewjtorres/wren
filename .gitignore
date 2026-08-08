@@ -1,0 +1,23 @@
+# Artifacts and Compiled Output
+.turbo
+
+# Dependencies
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+node_modules
+
+# Editors and IDEs
+.cursor
+.idea
+.vscode
+
+# Logs
+*.log
+yarn-*.log*
+
+# Operating Systems
+.DS_Store

@@ -1,0 +1,76 @@
+{
+  "name": "@wren/graph-manager",
+  "version": "0.1.0",
+  "description": "Schema management and utilities",
+  "license": "MIT",
+  "author": "Andrew J. Torres <andrew.jonathan.torres@gmail.com> (https://andrewjtorr.es)",
+  "imports": {
+    "#src/*": "./src/*"
+  },
+  "exports": {
+    "./database/cache": {
+      "types": "./dist/database/cache/index.d.ts",
+      "default": "./dist/database/cache/index.js"
+    },
+    "./database/state": {
+      "types": "./dist/database/state/index.d.ts",
+      "default": "./dist/database/state/index.js"
+    },
+    "./condition": {
+      "types": "./dist/condition.d.ts",
+      "default": "./dist/condition.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewjtorres/wren.git",
+    "directory": "packages/graph-manager"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "rolldown --config=rolldown.config.ts",
+    "clean": "concurrently --group --raw \"yarn:clean:*\"",
+    "clean:artifact": "del .turbo dist \"*.log*\"",
+    "clean:cache": "del node_modules/.cache",
+    "format": "prettier --cache=node_modules/.cache/prettier/ --check --ignore-path=.prettierignore --log-level=warn \"**/*.@(json|md|yml)\"",
+    "lint": "concurrently --group --raw \"yarn:lint:*\"",
+    "lint:javascript": "eslint --cache --cache-location=node_modules/.cache/eslint/ \"**/*.[jt]s\"",
+    "lint:typescript": "tsc --build",
+    "refine": "concurrently --group --raw \"yarn:format\" \"yarn:lint\""
+  },
+  "devDependencies": {
+    "@ariga/atlas": "^1.2.3",
+    "@eslint/js": "^10.0.1",
+    "@total-typescript/ts-reset": "^0.6.1",
+    "@tursodatabase/database": "^0.7.2",
+    "@types/node": "^26.1.2",
+    "concurrently": "^10.0.4",
+    "del-cli": "^7.0.0",
+    "drizzle-kit": "1.0.0-rc.4",
+    "drizzle-orm": "1.0.0-rc.4",
+    "eslint": "^10.8.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-typescript": "^4.4.5",
+    "eslint-plugin-import-x": "^4.17.1",
+    "eslint-plugin-prettier": "^5.5.6",
+    "eslint-plugin-promise": "^7.3.0",
+    "eslint-plugin-unicorn": "^72.0.0",
+    "lint-staged": "^17.3.0",
+    "prettier": "^3.9.6",
+    "rolldown": "^1.2.1",
+    "rolldown-plugin-dts": "^0.28.0",
+    "turbo": "^2.10.8",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.65.0",
+    "valibot": "^1.4.2",
+    "zod": "^4.4.3"
+  },
+  "peerDependencies": {
+    "drizzle-orm": "^1.0.0-rc.4"
+  },
+  "engines": {
+    "node": ">=24.18",
+    "yarn": ">=4.18"
+  },
+  "private": true
+}

@@ -1,0 +1,10 @@
+{
+  "extends": "../../../../config/typescript/tsconfig.base",
+  "include": ["../../../../types/stylelint/*.d.ts", "../../../../stylelint.config.ts", "../../stylelint.config.ts"],
+  "compilerOptions": {
+    "rootDir": "../../../..",
+    "types": [],
+    "composite": true,
+    "tsBuildInfoFile": "../../node_modules/.cache/typescript/tsconfig.stylelint.tsbuildinfo"
+  }
+}

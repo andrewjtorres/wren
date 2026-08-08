@@ -1,0 +1,18 @@
+{
+  "TDc0yu4YI3": {
+    "defaultMessage": "Error",
+    "description": "Default error handler title"
+  },
+  "ZoA5ElZ83H": {
+    "defaultMessage": "¡Algo salió mal! Por favor, inténtelo de nuevo más tarde.",
+    "description": "Default error handler description"
+  },
+  "Zu62i1gQ2Z": {
+    "defaultMessage": "404",
+    "description": "Not found error handler title"
+  },
+  "y34LJxUGK9": {
+    "defaultMessage": "¡Hola, Mundo!",
+    "description": "Route title"
+  }
+}

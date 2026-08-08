@@ -1,0 +1,22 @@
+{
+  "extends": "../../../../config/typescript/tsconfig.base",
+  "include": [
+    "../../.react-router/types/**/*.ts",
+    "../../.storybook/**/*.ts",
+    "../../src/**/*",
+    "../../types/lib/*.d.ts",
+    "../../types/node/*.d.ts",
+    "../../types/react-intl/*.d.ts",
+    "../../types/react-router/*.d.ts",
+    "../../vite.config.ts"
+  ],
+  "exclude": ["../../src/**/*.test.*", "../../src/utils/render.tsx", "../../src/index.ts"],
+  "compilerOptions": {
+    "rootDirs": ["../..", "../../.react-router/types"],
+    "types": ["@react-router/node", "@total-typescript/ts-reset", "vite/client"],
+    "jsx": "react-jsx",
+    "composite": true,
+    "tsBuildInfoFile": "../../node_modules/.cache/typescript/tsconfig.storybook.tsbuildinfo",
+    "skipLibCheck": true
+  }
+}

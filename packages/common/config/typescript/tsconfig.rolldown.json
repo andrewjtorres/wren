@@ -1,0 +1,13 @@
+{
+  "extends": "../../../../config/typescript/tsconfig.base",
+  "include": ["../../src/**/*.ts", "../../package.json", "../../rolldown.config.ts"],
+  "exclude": ["../../src/**/*.test.ts"],
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "rootDir": "../..",
+    "types": ["node", "@total-typescript/ts-reset"],
+    "composite": true,
+    "tsBuildInfoFile": "../../node_modules/.cache/typescript/tsconfig.rolldown.tsbuildinfo",
+    "skipLibCheck": true
+  }
+}

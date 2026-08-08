@@ -1,0 +1,66 @@
+{
+  "name": "@wren/mail-agent",
+  "version": "0.1.0",
+  "description": "Mail intelligence and orchestration",
+  "license": "MIT",
+  "author": "Andrew J. Torres <andrew.jonathan.torres@gmail.com> (https://andrewjtorr.es)",
+  "imports": {
+    "#src/*": "./src/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewjtorres/wren.git",
+    "directory": "packages/mail-agent"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "rolldown --config=rolldown.config.ts",
+    "clean": "concurrently --group --raw \"yarn:clean:*\"",
+    "clean:artifact": "del .turbo dist test-reports \"*.log*\"",
+    "clean:cache": "del node_modules/.cache",
+    "dev": "cross-env NODE_ENV=\"${NODE_ENV:-development}\" tsx watch --inspect --tsconfig=config/typescript/tsconfig.rolldown.json src/index.ts",
+    "format": "prettier --cache=node_modules/.cache/prettier/ --check --ignore-path=.prettierignore --log-level=warn \"**/*.@(json|md|yml)\"",
+    "lint": "concurrently --group --raw \"yarn:lint:*\"",
+    "lint:javascript": "eslint --cache --cache-location=node_modules/.cache/eslint/ \"**/*.[jt]s\"",
+    "lint:typescript": "tsc --build",
+    "refine": "concurrently --group --raw \"yarn:format\" \"yarn:lint\"",
+    "test": "concurrently --group --raw \"yarn:test:*\"",
+    "test:unit": "vitest --config=config/vitest/vitest.config.unit.ts"
+  },
+  "dependencies": {
+    "@wren/common": "workspace:^",
+    "pino": "^10.3.1",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@total-typescript/ts-reset": "^0.6.1",
+    "@types/node": "^26.1.2",
+    "@vitest/coverage-v8": "^4.1.10",
+    "@vitest/eslint-plugin": "^1.6.24",
+    "@vitest/ui": "^4.1.10",
+    "concurrently": "^10.0.4",
+    "cross-env": "^10.1.0",
+    "del-cli": "^7.0.0",
+    "eslint": "^10.8.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-typescript": "^4.4.5",
+    "eslint-plugin-import-x": "^4.17.1",
+    "eslint-plugin-prettier": "^5.5.6",
+    "eslint-plugin-promise": "^7.3.0",
+    "eslint-plugin-unicorn": "^72.0.0",
+    "lint-staged": "^17.3.0",
+    "prettier": "^3.9.6",
+    "rolldown": "^1.2.1",
+    "tsx": "^4.23.1",
+    "turbo": "^2.10.8",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.65.0",
+    "vitest": "^4.1.10"
+  },
+  "engines": {
+    "node": ">=24.18",
+    "yarn": ">=4.18"
+  },
+  "private": true
+}

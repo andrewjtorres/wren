@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.base",
+  "include": ["../../lint-staged.config.ts"],
+  "compilerOptions": {
+    "rootDir": "../..",
+    "types": [],
+    "composite": true,
+    "tsBuildInfoFile": "../../node_modules/.cache/typescript/tsconfig.lint-staged.tsbuildinfo"
+  }
+}

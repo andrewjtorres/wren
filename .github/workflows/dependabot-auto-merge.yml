@@ -1,0 +1,55 @@
+name: Dependabot Auto-merge
+on:
+  pull_request:
+    branches:
+      - dev
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  auto-merge:
+    name: Auto-merge
+    permissions:
+      pull-requests: read
+    if: ${{ github.event.pull_request.user.login == 'dependabot[bot]' && github.event.pull_request.head.repo.full_name == github.repository }}
+    runs-on: ubuntu-26.04
+    timeout-minutes: 5
+    steps:
+      - name: Set Dependabot metadata
+        id: dependabot-metadata
+        uses: dependabot/fetch-metadata@25dd0e34f4fe68f24cc83900b1fe3fe149efef98 # v3.1.0
+      - name: Configure 1Password credentials
+        if: ${{ contains(fromJSON('["version-update:semver-minor", "version-update:semver-patch"]'), steps.dependabot-metadata.outputs.update-type) }}
+        uses: 1password/load-secrets-action/configure@3a12b0ab99d9cd590a3e9b5a90ea017210ed9556 # v4.0.1
+        with:
+          service-account-token: ${{ secrets.ONEPASSWORD_GITHUB_ACTIONS_SERVICE_ACCOUNT_ACCESS_TOKEN }}
+      - name: Load secrets
+        id: secrets
+        if: ${{ contains(fromJSON('["version-update:semver-minor", "version-update:semver-patch"]'), steps.dependabot-metadata.outputs.update-type) }}
+        uses: 1password/load-secrets-action@3a12b0ab99d9cd590a3e9b5a90ea017210ed9556 # v4.0.1
+        env:
+          WREN_AUTO_MERGE_PRIVATE_KEY: op://6s6jmi6tnbi44abtzzetlmbvo4/zwvowe4zs5akq7y3yqeo2v73gu/rfmgshb4sxmm6uoesboacosgmq
+      - name: Configure GitHub App credentials
+        id: github-app-credentials
+        if: ${{ contains(fromJSON('["version-update:semver-minor", "version-update:semver-patch"]'), steps.dependabot-metadata.outputs.update-type) }}
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        with:
+          client-id: Iv23litKumpfzjeEoxZT # Wren Auto-merge
+          private-key: ${{ steps.secrets.outputs.WREN_AUTO_MERGE_PRIVATE_KEY }}
+          permission-contents: write
+          permission-pull-requests: write
+      - name: Approve and merge pull request
+        if: ${{ contains(fromJSON('["version-update:semver-minor", "version-update:semver-patch"]'), steps.dependabot-metadata.outputs.update-type) }}
+        timeout-minutes: 5
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [[ "$(gh pr view --jq='.reviewDecision' --json='reviewDecision' "$PULL_REQUEST_URL")" != 'APPROVED' ]]; then
+              gh pr review --approve "$PULL_REQUEST_URL"
+          fi
+
+          gh pr merge --auto --squash "$PULL_REQUEST_URL"
+        env:
+          GITHUB_TOKEN: ${{ steps.github-app-credentials.outputs.token }}
+          PULL_REQUEST_URL: ${{ github.event.pull_request.html_url }}

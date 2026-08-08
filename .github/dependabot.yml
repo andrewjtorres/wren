@@ -1,0 +1,71 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directories:
+      - /.github/actions/bootstrap
+      - /
+    schedule:
+      interval: cron
+      cronjob: '15 5 * * *' # Every day at 5:15 AM
+      timezone: Etc/UTC
+    cooldown:
+      default-days: 7
+      include:
+        - '*'
+    allow:
+      - dependency-type: all
+    commit-message:
+      prefix: build
+      include: scope
+    groups:
+      minor:
+        patterns:
+          - '*'
+        update-types:
+          - minor
+      patch:
+        patterns:
+          - '*'
+        update-types:
+          - patch
+    labels:
+      - ':horse: chore'
+    open-pull-requests-limit: 10
+  - package-ecosystem: npm
+    directories:
+      - /
+    schedule:
+      interval: cron
+      cronjob: '15 5 * * *' # Every day at 5:15 AM
+      timezone: Etc/UTC
+    cooldown:
+      default-days: 7
+      include:
+        - '*'
+    allow:
+      - dependency-type: all
+    commit-message:
+      prefix: build
+      include: scope
+    groups:
+      minor:
+        patterns:
+          - '*'
+        update-types:
+          - minor
+      patch:
+        patterns:
+          - '*'
+        update-types:
+          - patch
+    ignore:
+      - dependency-name: drizzle-kit
+        versions: '>=1.0.0-rc.5'
+      - dependency-name: drizzle-orm
+        versions: '>=1.0.0-rc.5'
+      - dependency-name: typescript
+        versions: '>=7.0.0'
+    labels:
+      - ':horse: chore'
+    open-pull-requests-limit: 10
+    versioning-strategy: increase

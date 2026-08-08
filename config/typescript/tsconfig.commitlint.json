@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.base",
+  "include": ["../../commitlint.config.ts"],
+  "compilerOptions": {
+    "rootDir": "../..",
+    "types": ["node"],
+    "composite": true,
+    "tsBuildInfoFile": "../../node_modules/.cache/typescript/tsconfig.commitlint.tsbuildinfo"
+  }
+}

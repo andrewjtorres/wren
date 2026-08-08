@@ -1,0 +1,138 @@
+name: Continuous Integration
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+permissions:
+  contents: read
+env:
+  DO_NOT_TRACK: 1
+  TURBO_TELEMETRY_DISABLED: 1
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+jobs:
+  refine:
+    name: Refine
+    runs-on: ubuntu-26.04
+    timeout-minutes: 10
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          persist-credentials: false
+      - name: Bootstrap the repository
+        timeout-minutes: 5
+        uses: ./.github/actions/bootstrap
+      - name: Set Turbo metadata
+        id: turbo-metadata
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          echo "cache-dir-path=$(yarn run turbo config | jq --raw-output '.cacheDir')" >>"$GITHUB_OUTPUT"
+          echo "version=$(version="$(yarn run turbo --version)"; printf '%s' "v${version%%.*}")" >>"$GITHUB_OUTPUT"
+      - name: Set up Turbo cache
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ${{ steps.turbo-metadata.outputs.cache-dir-path }}
+          key: turbo-${{ steps.turbo-metadata.outputs.version }}-${{ github.job }}-${{ hashFiles('**/turbo.json', '!**/node_modules') }}-${{ github.sha }}
+          restore-keys: |
+            turbo-${{ steps.turbo-metadata.outputs.version }}-${{ github.job }}-${{ hashFiles('**/turbo.json', '!**/node_modules') }}-
+            turbo-${{ steps.turbo-metadata.outputs.version }}-${{ github.job }}-
+      - name: Perform stylization and static analysis
+        timeout-minutes: 5
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          yarn run turbo run format lint:css lint:javascript lint:typescript --concurrency=1 --output-logs=errors-only
+      - name: Prune the Turbo cache
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          find "$CACHE_DIR_PATH" -mindepth 1 -maxdepth 1 -mtime +14 -exec rm --force --recursive -- {} +
+        env:
+          CACHE_DIR_PATH: ${{ steps.turbo-metadata.outputs.cache-dir-path }}
+  test:
+    name: Test
+    runs-on: ubuntu-26.04
+    timeout-minutes: 25
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          persist-credentials: false
+      - name: Bootstrap the repository
+        timeout-minutes: 5
+        uses: ./.github/actions/bootstrap
+      - name: Set Turbo metadata
+        id: turbo-metadata
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          echo "cache-dir-path=$(yarn run turbo config | jq --raw-output '.cacheDir')" >>"$GITHUB_OUTPUT"
+          echo "version=$(version="$(yarn run turbo --version)"; printf '%s' "v${version%%.*}")" >>"$GITHUB_OUTPUT"
+      - name: Set up Turbo cache
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ${{ steps.turbo-metadata.outputs.cache-dir-path }}
+          key: turbo-${{ steps.turbo-metadata.outputs.version }}-${{ github.job }}-${{ hashFiles('**/turbo.json', '!**/node_modules') }}-${{ github.sha }}
+          restore-keys: |
+            turbo-${{ steps.turbo-metadata.outputs.version }}-${{ github.job }}-${{ hashFiles('**/turbo.json', '!**/node_modules') }}-
+            turbo-${{ steps.turbo-metadata.outputs.version }}-${{ github.job }}-
+      - name: Set metadata
+        id: metadata
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          install_browsers=$(yarn run turbo run test:component test:end-to-end --dry=json | jq --raw-output 'any(.tasks[]; (.cache.status // "MISS") != "HIT")')
+          echo "install-browsers=$install_browsers" >>"$GITHUB_OUTPUT"
+      - name: Install browsers
+        if: ${{ steps.metadata.outputs.install-browsers == 'true' }}
+        timeout-minutes: 15
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          yarn run playwright install --with-deps chrome
+          yarn run playwright install-deps firefox webkit
+
+          for attempt in 1 2 3; do
+              if timeout --kill-after=30 180 yarn run playwright install firefox webkit; then
+                  exit 0
+              fi
+          done
+
+          exit 1
+      - name: Perform unit, component, and end-to-end tests
+        timeout-minutes: 5
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          yarn run turbo run test:unit --concurrency=1 --output-logs=errors-only -- --coverage
+          yarn run turbo run test:component test:end-to-end --concurrency=1 --output-logs=errors-only
+      - name: Prune the Turbo cache
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          find "$CACHE_DIR_PATH" -mindepth 1 -maxdepth 1 -mtime +14 -exec rm --force --recursive -- {} +
+        env:
+          CACHE_DIR_PATH: ${{ steps.turbo-metadata.outputs.cache-dir-path }}
+      - name: Upload the test artifacts
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: test-reports
+          path: |
+            test-reports
+            test-results
+          retention-days: 30

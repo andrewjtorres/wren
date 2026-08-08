@@ -1,0 +1,24 @@
+# Artifacts and Compiled Output
+.react-router
+.turbo
+dist
+tmp
+
+# Dependencies
+node_modules
+
+# Editors and IDEs
+.cursor
+.vscode
+
+# Logs
+*.log
+yarn-*.log*
+
+# Miscellaneous
+.env*
+!.env.example
+
+# Test and Code Coverage
+test-reports
+test-results

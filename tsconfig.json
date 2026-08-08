@@ -1,0 +1,23 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "config/typescript/tsconfig.commitlint.json"
+    },
+    {
+      "path": "config/typescript/tsconfig.eslint.json"
+    },
+    {
+      "path": "config/typescript/tsconfig.lint-staged.json"
+    },
+    {
+      "path": "config/typescript/tsconfig.prettier.json"
+    },
+    {
+      "path": "config/typescript/tsconfig.stylelint.json"
+    },
+    {
+      "path": "config/typescript/tsconfig.vitest.json"
+    }
+  ]
+}

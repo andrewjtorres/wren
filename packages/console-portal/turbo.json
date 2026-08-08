@@ -1,0 +1,184 @@
+{
+  "extends": ["//"],
+  "tasks": {
+    "build:portal": {
+      "dependsOn": ["^build"],
+      "env": ["NODE_ENV"],
+      "inputs": [
+        "public/**",
+        "src/**",
+        "react-router.config.ts",
+        "vite.config.ts",
+        "!src/**/snapshots",
+        "!src/**/*.stories.ts",
+        "!src/**/*.stories.tsx",
+        "!src/**/*.test.ts",
+        "!src/**/*.test.tsx",
+        "!src/**/stories.ts",
+        "!src/**/stories.tsx",
+        "!src/utils/decorator.tsx",
+        "!src/utils/render.tsx"
+      ],
+      "outputs": ["dist/client/**", "dist/server/**"]
+    },
+    "build:studio": {
+      "dependsOn": ["@wren/common#build"],
+      "env": ["NODE_ENV", "I18N_DEFAULT_LANGUAGE_TAG", "DEBUG"],
+      "inputs": [
+        ".storybook/**",
+        "src/**",
+        "vite.config.ts",
+        "!src/**/snapshots",
+        "!src/**/*.test.ts",
+        "!src/**/*.test.tsx",
+        "!src/utils/render.tsx",
+        "!src/index.ts"
+      ],
+      "outputs": ["dist/studio/**"]
+    },
+    "format": {
+      "inputs": [
+        "**/*.json",
+        "**/*.md",
+        "**/*.webmanifest",
+        "**/*.yml",
+        ".prettierignore",
+        "prettier.config.ts",
+        "!.cursor",
+        "!.react-router",
+        "!.turbo",
+        "!.vscode",
+        "!dist",
+        "!i18n",
+        "!node_modules",
+        "!test-reports",
+        "!test-results",
+        "!tmp"
+      ]
+    },
+    "lint:css": {
+      "inputs": [
+        "**/*.css",
+        ".stylelintignore",
+        "prettier.config.ts",
+        "stylelint.config.ts",
+        "!.cursor",
+        "!.react-router",
+        "!.turbo",
+        "!.vscode",
+        "!dist",
+        "!node_modules",
+        "!public",
+        "!test-reports",
+        "!test-results",
+        "!tmp"
+      ]
+    },
+    "lint:i18n": {
+      "inputs": ["i18n/**/*.json"]
+    },
+    "lint:javascript": {
+      "dependsOn": ["^build"],
+      "inputs": [
+        "config/typescript/**/*.json",
+        "**/*.js",
+        "**/*.jsx",
+        "**/*.ts",
+        "**/*.tsx",
+        "tsconfig.json",
+        "!.cursor",
+        "!.react-router",
+        "!.turbo",
+        "!.vscode",
+        "!dist",
+        "!node_modules",
+        "!public",
+        "!test-reports",
+        "!test-results",
+        "!tmp"
+      ]
+    },
+    "lint:typescript": {
+      "dependsOn": ["^build"],
+      "inputs": [
+        "config/typescript/**/*.json",
+        "**/*.js",
+        "**/*.jsx",
+        "**/*.ts",
+        "**/*.tsx",
+        "tsconfig.json",
+        "!.cursor",
+        "!.react-router",
+        "!.turbo",
+        "!.vscode",
+        "!dist",
+        "!node_modules",
+        "!public",
+        "!test-reports",
+        "!test-results",
+        "!tmp"
+      ]
+    },
+    "test:component": {
+      "env": ["CI"],
+      "inputs": [
+        ".storybook/**",
+        "config/playwright/playwright.config.base.ts",
+        "config/playwright/playwright.config.component.ts",
+        "src/**",
+        "vite.config.ts",
+        "!src/**/snapshots",
+        "!src/**/*.end-to-end.test.ts",
+        "!src/**/*.unit.test.ts",
+        "!src/**/*.unit.test.tsx",
+        "!src/**/end-to-end.test.ts",
+        "!src/**/unit.test.ts",
+        "!src/**/unit.test.tsx",
+        "!src/utils/render.tsx",
+        "!src/index.ts"
+      ]
+    },
+    "test:end-to-end": {
+      "env": ["CI"],
+      "inputs": [
+        "config/playwright/playwright.config.base.ts",
+        "config/playwright/playwright.config.end-to-end.ts",
+        "public/**",
+        "src/**",
+        "react-router.config.ts",
+        "vite.config.ts",
+        "!src/**/snapshots",
+        "!src/**/*.component.test.ts",
+        "!src/**/*.stories.ts",
+        "!src/**/*.stories.tsx",
+        "!src/**/*.unit.test.ts",
+        "!src/**/*.unit.test.tsx",
+        "!src/**/component.test.ts",
+        "!src/**/stories.ts",
+        "!src/**/stories.tsx",
+        "!src/**/unit.test.ts",
+        "!src/**/unit.test.tsx",
+        "!src/utils/decorator.tsx",
+        "!src/utils/render.tsx"
+      ]
+    },
+    "test:unit": {
+      "dependsOn": ["^build"],
+      "env": ["CI"],
+      "inputs": [
+        "config/vitest/**",
+        "src/**",
+        "!src/**/snapshots",
+        "!src/**/*.component.test.ts",
+        "!src/**/*.end-to-end.test.ts",
+        "!src/**/*.stories.ts",
+        "!src/**/*.stories.tsx",
+        "!src/**/component.test.ts",
+        "!src/**/end-to-end.test.ts",
+        "!src/**/stories.ts",
+        "!src/**/stories.tsx",
+        "!src/utils/decorator.tsx"
+      ]
+    }
+  }
+}

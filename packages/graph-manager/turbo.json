@@ -1,0 +1,49 @@
+{
+  "extends": ["//"],
+  "tasks": {
+    "build": {
+      "env": ["NODE_ENV"],
+      "inputs": ["src/**", "rolldown.config.ts"]
+    },
+    "format": {
+      "inputs": [
+        "**/*.json",
+        "**/*.md",
+        "**/*.yml",
+        ".prettierignore",
+        "prettier.config.ts",
+        "!.cursor",
+        "!.turbo",
+        "!.vscode",
+        "!dist",
+        "!node_modules"
+      ]
+    },
+    "lint:javascript": {
+      "inputs": [
+        "config/typescript/**/*.json",
+        "**/*.js",
+        "**/*.ts",
+        "tsconfig.json",
+        "!.cursor",
+        "!.turbo",
+        "!.vscode",
+        "!dist",
+        "!node_modules"
+      ]
+    },
+    "lint:typescript": {
+      "inputs": [
+        "config/typescript/**/*.json",
+        "**/*.js",
+        "**/*.ts",
+        "tsconfig.json",
+        "!.cursor",
+        "!.turbo",
+        "!.vscode",
+        "!dist",
+        "!node_modules"
+      ]
+    }
+  }
+}

@@ -1,0 +1,13 @@
+# Miscellaneous
+!**/.*
+
+# Artifacts and Compiled Output
+.turbo
+dist
+
+# Dependencies
+node_modules
+
+# Editors and IDEs
+.cursor
+.vscode

@@ -1,0 +1,29 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "config/typescript/tsconfig.eslint.json"
+    },
+    {
+      "path": "config/typescript/tsconfig.lint-staged.json"
+    },
+    {
+      "path": "config/typescript/tsconfig.playwright.json"
+    },
+    {
+      "path": "config/typescript/tsconfig.prettier.json"
+    },
+    {
+      "path": "config/typescript/tsconfig.storybook.json"
+    },
+    {
+      "path": "config/typescript/tsconfig.stylelint.json"
+    },
+    {
+      "path": "config/typescript/tsconfig.vite.json"
+    },
+    {
+      "path": "config/typescript/tsconfig.vitest.json"
+    }
+  ]
+}

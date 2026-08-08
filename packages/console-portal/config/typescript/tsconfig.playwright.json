@@ -1,0 +1,18 @@
+{
+  "extends": "../../../../config/typescript/tsconfig.base",
+  "include": [
+    "../../src/**/*.component.test.ts",
+    "../../src/**/*.end-to-end.test.ts",
+    "../../src/**/component.test.ts",
+    "../../src/**/end-to-end.test.ts",
+    "../../types/node/*.d.ts",
+    "../../types/playwright/*.d.ts",
+    "../playwright/**/*.ts"
+  ],
+  "compilerOptions": {
+    "rootDir": "../..",
+    "types": ["node", "@total-typescript/ts-reset"],
+    "composite": true,
+    "tsBuildInfoFile": "../../node_modules/.cache/typescript/tsconfig.playwright.tsbuildinfo"
+  }
+}

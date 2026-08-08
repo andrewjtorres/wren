@@ -1,0 +1,69 @@
+name: Bootstrap
+description: Install the toolchain and dependencies
+runs:
+  using: composite
+  steps:
+    - name: Set tool versions
+      id: tool-versions
+      shell: bash
+      run: |
+        set -euo pipefail
+
+        while IFS=' ' read -r tool version || [[ -n "$tool" ]]; do
+            if [[ -z "$tool" || "$tool" == \#* ]]; then
+                continue
+            fi
+
+            echo "$tool=$version" >>"$GITHUB_OUTPUT"
+        done <.tool-versions
+    - name: Set up Socket Firewall
+      uses: socketdev/action@ba6de6cc0565af1f42295590380973573297e31f # v1.3.2
+      with:
+        mode: firewall
+        firewall-version: 1.13.1
+    - name: Set up Node
+      uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+      with:
+        node-version: ${{ steps.tool-versions.outputs.nodejs }}
+        package-manager-cache: false
+    - name: Set up Yarn
+      shell: bash
+      run: |
+        set -euo pipefail
+
+        mkdir --parents "$HOME/.local/bin"
+
+        curl --fail --location --output "$HOME/.local/bin/yarn" --show-error --silent 'https://repo.yarnpkg.com/releases/4.18.0/x86_64-unknown-linux-musl'
+
+        echo "fb8b1d20be72a0b544a35bcec4c7ed0ff55a9b173c01f191b02ba164b2051db5  $HOME/.local/bin/yarn" | sha256sum --check -
+
+        chmod +x "$HOME/.local/bin/yarn"
+
+        echo "$HOME/.local/bin" >>"$GITHUB_PATH"
+    - name: Set Yarn metadata
+      id: yarn-metadata
+      shell: bash
+      run: |
+        set -euo pipefail
+
+        echo "cache-dir-path=$(yarn config get cacheFolder)" >>"$GITHUB_OUTPUT"
+        echo "version=$(version="$(yarn --version)"; printf '%s' "v${version%%.*}")" >>"$GITHUB_OUTPUT"
+      env:
+        YARN_ENABLE_GLOBAL_CACHE: 0
+    - name: Set up Yarn cache
+      uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+      with:
+        path: ${{ steps.yarn-metadata.outputs.cache-dir-path }}
+        key: yarn-${{ steps.yarn-metadata.outputs.version }}-${{ hashFiles('.yarnrc.yml', 'yarn.lock') }}
+        restore-keys: |
+          yarn-${{ steps.yarn-metadata.outputs.version }}-
+    - name: Install JavaScript dependencies
+      shell: bash
+      run: |
+        set -euo pipefail
+
+        sfw yarn install --immutable
+      env:
+        HUSKY: 0
+        YARN_ENABLE_GLOBAL_CACHE: 0
+        YARN_ENABLE_MIRROR: 0

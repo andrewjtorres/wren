@@ -1,0 +1,1034 @@
+@font-face {
+  font-family: 'Noto Sans';
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-sans/v42.0.0/italic-100.woff2') format('woff2'),
+    url('/fonts/noto-sans/v42.0.0/italic-100.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=sans-serif --name='Noto Sans' --style=italic --weight=100 public/fonts/noto-sans/v42.0.0/italic-100.woff2 */
+@font-face {
+  font-family: 'Noto Sans Fallback';
+  font-weight: 100;
+  font-style: italic;
+  src: local('Arial Italic');
+  ascent-override: 111.94%;
+  descent-override: 30.68%;
+  line-gap-override: 0%;
+  size-adjust: 95.5%;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-sans/v42.0.0/italic-200.woff2') format('woff2'),
+    url('/fonts/noto-sans/v42.0.0/italic-200.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=sans-serif --name='Noto Sans' --style=italic --weight=200 public/fonts/noto-sans/v42.0.0/italic-200.woff2 */
+@font-face {
+  font-family: 'Noto Sans Fallback';
+  font-weight: 200;
+  font-style: italic;
+  src: local('Arial Italic');
+  ascent-override: 110.8%;
+  descent-override: 30.37%;
+  line-gap-override: 0%;
+  size-adjust: 96.48%;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-sans/v42.0.0/italic-300.woff2') format('woff2'),
+    url('/fonts/noto-sans/v42.0.0/italic-300.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=sans-serif --name='Noto Sans' --style=italic --weight=300 public/fonts/noto-sans/v42.0.0/italic-300.woff2 */
+@font-face {
+  font-family: 'Noto Sans Fallback';
+  font-weight: 300;
+  font-style: italic;
+  src: local('Arial Italic');
+  ascent-override: 109.14%;
+  descent-override: 29.91%;
+  line-gap-override: 0%;
+  size-adjust: 97.95%;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-sans/v42.0.0/italic-400.woff2') format('woff2'),
+    url('/fonts/noto-sans/v42.0.0/italic-400.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=sans-serif --name='Noto Sans' --style=italic --weight=400 public/fonts/noto-sans/v42.0.0/italic-400.woff2 */
+@font-face {
+  font-family: 'Noto Sans Fallback';
+  font-weight: 400;
+  font-style: italic;
+  src: local('Arial Italic');
+  ascent-override: 106.59%;
+  descent-override: 29.21%;
+  line-gap-override: 0%;
+  size-adjust: 100.3%;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-sans/v42.0.0/italic-500.woff2') format('woff2'),
+    url('/fonts/noto-sans/v42.0.0/italic-500.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=sans-serif --name='Noto Sans' --style=italic --weight=500 public/fonts/noto-sans/v42.0.0/italic-500.woff2 */
+@font-face {
+  font-family: 'Noto Sans Fallback';
+  font-weight: 500;
+  font-style: italic;
+  src: local('Arial Italic');
+  ascent-override: 104.4%;
+  descent-override: 28.61%;
+  line-gap-override: 0%;
+  size-adjust: 102.39%;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-sans/v42.0.0/italic-600.woff2') format('woff2'),
+    url('/fonts/noto-sans/v42.0.0/italic-600.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=sans-serif --name='Noto Sans' --style=italic --weight=600 public/fonts/noto-sans/v42.0.0/italic-600.woff2 */
+@font-face {
+  font-family: 'Noto Sans Fallback';
+  font-weight: 600;
+  font-style: italic;
+  src: local('Arial Bold Italic');
+  ascent-override: 110.39%;
+  descent-override: 30.26%;
+  line-gap-override: 0%;
+  size-adjust: 96.83%;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-sans/v42.0.0/italic-700.woff2') format('woff2'),
+    url('/fonts/noto-sans/v42.0.0/italic-700.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=sans-serif --name='Noto Sans' --style=italic --weight=700 public/fonts/noto-sans/v42.0.0/italic-700.woff2 */
+@font-face {
+  font-family: 'Noto Sans Fallback';
+  font-weight: 700;
+  font-style: italic;
+  src: local('Arial Bold Italic');
+  ascent-override: 107.61%;
+  descent-override: 29.5%;
+  line-gap-override: 0%;
+  size-adjust: 99.34%;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-sans/v42.0.0/italic-800.woff2') format('woff2'),
+    url('/fonts/noto-sans/v42.0.0/italic-800.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=sans-serif --name='Noto Sans' --style=italic --weight=800 public/fonts/noto-sans/v42.0.0/italic-800.woff2 */
+@font-face {
+  font-family: 'Noto Sans Fallback';
+  font-weight: 800;
+  font-style: italic;
+  src: local('Arial Bold Italic');
+  ascent-override: 105.63%;
+  descent-override: 28.95%;
+  line-gap-override: 0%;
+  size-adjust: 101.2%;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-sans/v42.0.0/italic-900.woff2') format('woff2'),
+    url('/fonts/noto-sans/v42.0.0/italic-900.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=sans-serif --name='Noto Sans' --style=italic --weight=900 public/fonts/noto-sans/v42.0.0/italic-900.woff2 */
+@font-face {
+  font-family: 'Noto Sans Fallback';
+  font-weight: 900;
+  font-style: italic;
+  src: local('Arial Bold Italic');
+  ascent-override: 103.42%;
+  descent-override: 28.35%;
+  line-gap-override: 0%;
+  size-adjust: 103.36%;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-sans/v42.0.0/normal-100.woff2') format('woff2'),
+    url('/fonts/noto-sans/v42.0.0/normal-100.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=sans-serif --name='Noto Sans' --style=normal --weight=100 public/fonts/noto-sans/v42.0.0/normal-100.woff2 */
+@font-face {
+  font-family: 'Noto Sans Fallback';
+  font-weight: 100;
+  font-style: normal;
+  src: local('Arial');
+  ascent-override: 108.84%;
+  descent-override: 29.83%;
+  line-gap-override: 0%;
+  size-adjust: 98.22%;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-sans/v42.0.0/normal-200.woff2') format('woff2'),
+    url('/fonts/noto-sans/v42.0.0/normal-200.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=sans-serif --name='Noto Sans' --style=normal --weight=200 public/fonts/noto-sans/v42.0.0/normal-200.woff2 */
+@font-face {
+  font-family: 'Noto Sans Fallback';
+  font-weight: 200;
+  font-style: normal;
+  src: local('Arial');
+  ascent-override: 107%;
+  descent-override: 29.33%;
+  line-gap-override: 0%;
+  size-adjust: 99.91%;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-sans/v42.0.0/normal-300.woff2') format('woff2'),
+    url('/fonts/noto-sans/v42.0.0/normal-300.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=sans-serif --name='Noto Sans' --style=normal --weight=300 public/fonts/noto-sans/v42.0.0/normal-300.woff2 */
+@font-face {
+  font-family: 'Noto Sans Fallback';
+  font-weight: 300;
+  font-style: normal;
+  src: local('Arial');
+  ascent-override: 104.42%;
+  descent-override: 28.62%;
+  line-gap-override: 0%;
+  size-adjust: 102.37%;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-sans/v42.0.0/normal-400.woff2') format('woff2'),
+    url('/fonts/noto-sans/v42.0.0/normal-400.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=sans-serif --name='Noto Sans' --style=normal --weight=400 public/fonts/noto-sans/v42.0.0/normal-400.woff2 */
+@font-face {
+  font-family: 'Noto Sans Fallback';
+  font-weight: 400;
+  font-style: normal;
+  src: local('Arial');
+  ascent-override: 100.41%;
+  descent-override: 27.52%;
+  line-gap-override: 0%;
+  size-adjust: 106.47%;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-sans/v42.0.0/normal-500.woff2') format('woff2'),
+    url('/fonts/noto-sans/v42.0.0/normal-500.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=sans-serif --name='Noto Sans' --style=normal --weight=500 public/fonts/noto-sans/v42.0.0/normal-500.woff2 */
+@font-face {
+  font-family: 'Noto Sans Fallback';
+  font-weight: 500;
+  font-style: normal;
+  src: local('Arial');
+  ascent-override: 98.46%;
+  descent-override: 26.99%;
+  line-gap-override: 0%;
+  size-adjust: 108.57%;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-sans/v42.0.0/normal-600.woff2') format('woff2'),
+    url('/fonts/noto-sans/v42.0.0/normal-600.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=sans-serif --name='Noto Sans' --style=normal --weight=600 public/fonts/noto-sans/v42.0.0/normal-600.woff2 */
+@font-face {
+  font-family: 'Noto Sans Fallback';
+  font-weight: 600;
+  font-style: normal;
+  src: local('Arial Bold');
+  ascent-override: 104.29%;
+  descent-override: 28.59%;
+  line-gap-override: 0%;
+  size-adjust: 102.5%;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-sans/v42.0.0/normal-700.woff2') format('woff2'),
+    url('/fonts/noto-sans/v42.0.0/normal-700.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=sans-serif --name='Noto Sans' --style=normal --weight=700 public/fonts/noto-sans/v42.0.0/normal-700.woff2 */
+@font-face {
+  font-family: 'Noto Sans Fallback';
+  font-weight: 700;
+  font-style: normal;
+  src: local('Arial Bold');
+  ascent-override: 101.84%;
+  descent-override: 27.91%;
+  line-gap-override: 0%;
+  size-adjust: 104.97%;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-sans/v42.0.0/normal-800.woff2') format('woff2'),
+    url('/fonts/noto-sans/v42.0.0/normal-800.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=sans-serif --name='Noto Sans' --style=normal --weight=800 public/fonts/noto-sans/v42.0.0/normal-800.woff2 */
+@font-face {
+  font-family: 'Noto Sans Fallback';
+  font-weight: 800;
+  font-style: normal;
+  src: local('Arial Bold');
+  ascent-override: 100.08%;
+  descent-override: 27.43%;
+  line-gap-override: 0%;
+  size-adjust: 106.81%;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-sans/v42.0.0/normal-900.woff2') format('woff2'),
+    url('/fonts/noto-sans/v42.0.0/normal-900.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=sans-serif --name='Noto Sans' --style=normal --weight=900 public/fonts/noto-sans/v42.0.0/normal-900.woff2 */
+@font-face {
+  font-family: 'Noto Sans Fallback';
+  font-weight: 900;
+  font-style: normal;
+  src: local('Arial Bold');
+  ascent-override: 98.08%;
+  descent-override: 26.88%;
+  line-gap-override: 0%;
+  size-adjust: 109%;
+}
+
+@font-face {
+  font-family: 'Noto Serif';
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-serif/v33.0.0/italic-100.woff2') format('woff2'),
+    url('/fonts/noto-serif/v33.0.0/italic-100.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=serif --name='Noto Serif' --style=italic --weight=100 public/fonts/noto-serif/v33.0.0/italic-100.woff2 */
+@font-face {
+  font-family: 'Noto Serif Fallback';
+  font-weight: 100;
+  font-style: italic;
+  src: local('Times New Roman Italic');
+  ascent-override: 106.08%;
+  descent-override: 29.08%;
+  line-gap-override: 0%;
+  size-adjust: 100.77%;
+}
+
+@font-face {
+  font-family: 'Noto Serif';
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-serif/v33.0.0/italic-200.woff2') format('woff2'),
+    url('/fonts/noto-serif/v33.0.0/italic-200.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=serif --name='Noto Serif' --style=italic --weight=200 public/fonts/noto-serif/v33.0.0/italic-200.woff2 */
+@font-face {
+  font-family: 'Noto Serif Fallback';
+  font-weight: 200;
+  font-style: italic;
+  src: local('Times New Roman Italic');
+  ascent-override: 102.72%;
+  descent-override: 28.16%;
+  line-gap-override: 0%;
+  size-adjust: 104.07%;
+}
+
+@font-face {
+  font-family: 'Noto Serif';
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-serif/v33.0.0/italic-300.woff2') format('woff2'),
+    url('/fonts/noto-serif/v33.0.0/italic-300.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=serif --name='Noto Serif' --style=italic --weight=300 public/fonts/noto-serif/v33.0.0/italic-300.woff2 */
+@font-face {
+  font-family: 'Noto Serif Fallback';
+  font-weight: 300;
+  font-style: italic;
+  src: local('Times New Roman Italic');
+  ascent-override: 97.88%;
+  descent-override: 26.83%;
+  line-gap-override: 0%;
+  size-adjust: 109.22%;
+}
+
+@font-face {
+  font-family: 'Noto Serif';
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-serif/v33.0.0/italic-400.woff2') format('woff2'),
+    url('/fonts/noto-serif/v33.0.0/italic-400.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=serif --name='Noto Serif' --style=italic --weight=400 public/fonts/noto-serif/v33.0.0/italic-400.woff2 */
+@font-face {
+  font-family: 'Noto Serif Fallback';
+  font-weight: 400;
+  font-style: italic;
+  src: local('Times New Roman Italic');
+  ascent-override: 91.96%;
+  descent-override: 25.21%;
+  line-gap-override: 0%;
+  size-adjust: 116.25%;
+}
+
+@font-face {
+  font-family: 'Noto Serif';
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-serif/v33.0.0/italic-500.woff2') format('woff2'),
+    url('/fonts/noto-serif/v33.0.0/italic-500.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=serif --name='Noto Serif' --style=italic --weight=500 public/fonts/noto-serif/v33.0.0/italic-500.woff2 */
+@font-face {
+  font-family: 'Noto Serif Fallback';
+  font-weight: 500;
+  font-style: italic;
+  src: local('Times New Roman Italic');
+  ascent-override: 89.39%;
+  descent-override: 24.5%;
+  line-gap-override: 0%;
+  size-adjust: 119.59%;
+}
+
+@font-face {
+  font-family: 'Noto Serif';
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-serif/v33.0.0/italic-600.woff2') format('woff2'),
+    url('/fonts/noto-serif/v33.0.0/italic-600.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=serif --name='Noto Serif' --style=italic --weight=600 public/fonts/noto-serif/v33.0.0/italic-600.woff2 */
+@font-face {
+  font-family: 'Noto Serif Fallback';
+  font-weight: 600;
+  font-style: italic;
+  src: local('Times New Roman Bold Italic');
+  ascent-override: 88.61%;
+  descent-override: 24.29%;
+  line-gap-override: 0%;
+  size-adjust: 120.64%;
+}
+
+@font-face {
+  font-family: 'Noto Serif';
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-serif/v33.0.0/italic-700.woff2') format('woff2'),
+    url('/fonts/noto-serif/v33.0.0/italic-700.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=serif --name='Noto Serif' --style=italic --weight=700 public/fonts/noto-serif/v33.0.0/italic-700.woff2 */
+@font-face {
+  font-family: 'Noto Serif Fallback';
+  font-weight: 700;
+  font-style: italic;
+  src: local('Times New Roman Bold Italic');
+  ascent-override: 85.45%;
+  descent-override: 23.42%;
+  line-gap-override: 0%;
+  size-adjust: 125.11%;
+}
+
+@font-face {
+  font-family: 'Noto Serif';
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-serif/v33.0.0/italic-800.woff2') format('woff2'),
+    url('/fonts/noto-serif/v33.0.0/italic-800.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=serif --name='Noto Serif' --style=italic --weight=800 public/fonts/noto-serif/v33.0.0/italic-800.woff2 */
+@font-face {
+  font-family: 'Noto Serif Fallback';
+  font-weight: 800;
+  font-style: italic;
+  src: local('Times New Roman Bold Italic');
+  ascent-override: 82.34%;
+  descent-override: 22.57%;
+  line-gap-override: 0%;
+  size-adjust: 129.82%;
+}
+
+@font-face {
+  font-family: 'Noto Serif';
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-serif/v33.0.0/italic-900.woff2') format('woff2'),
+    url('/fonts/noto-serif/v33.0.0/italic-900.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=serif --name='Noto Serif' --style=italic --weight=900 public/fonts/noto-serif/v33.0.0/italic-900.woff2 */
+@font-face {
+  font-family: 'Noto Serif Fallback';
+  font-weight: 900;
+  font-style: italic;
+  src: local('Times New Roman Bold Italic');
+  ascent-override: 79.93%;
+  descent-override: 21.91%;
+  line-gap-override: 0%;
+  size-adjust: 133.74%;
+}
+
+@font-face {
+  font-family: 'Noto Serif';
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-serif/v33.0.0/normal-100.woff2') format('woff2'),
+    url('/fonts/noto-serif/v33.0.0/normal-100.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=serif --name='Noto Serif' --style=normal --weight=100 public/fonts/noto-serif/v33.0.0/normal-100.woff2 */
+@font-face {
+  font-family: 'Noto Serif Fallback';
+  font-weight: 100;
+  font-style: normal;
+  src: local('Times New Roman');
+  ascent-override: 97.01%;
+  descent-override: 26.59%;
+  line-gap-override: 0%;
+  size-adjust: 110.19%;
+}
+
+@font-face {
+  font-family: 'Noto Serif';
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-serif/v33.0.0/normal-200.woff2') format('woff2'),
+    url('/fonts/noto-serif/v33.0.0/normal-200.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=serif --name='Noto Serif' --style=normal --weight=200 public/fonts/noto-serif/v33.0.0/normal-200.woff2 */
+@font-face {
+  font-family: 'Noto Serif Fallback';
+  font-weight: 200;
+  font-style: normal;
+  src: local('Times New Roman');
+  ascent-override: 95.37%;
+  descent-override: 26.14%;
+  line-gap-override: 0%;
+  size-adjust: 112.09%;
+}
+
+@font-face {
+  font-family: 'Noto Serif';
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-serif/v33.0.0/normal-300.woff2') format('woff2'),
+    url('/fonts/noto-serif/v33.0.0/normal-300.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=serif --name='Noto Serif' --style=normal --weight=300 public/fonts/noto-serif/v33.0.0/normal-300.woff2 */
+@font-face {
+  font-family: 'Noto Serif Fallback';
+  font-weight: 300;
+  font-style: normal;
+  src: local('Times New Roman');
+  ascent-override: 92.88%;
+  descent-override: 25.46%;
+  line-gap-override: 0%;
+  size-adjust: 115.1%;
+}
+
+@font-face {
+  font-family: 'Noto Serif';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-serif/v33.0.0/normal-400.woff2') format('woff2'),
+    url('/fonts/noto-serif/v33.0.0/normal-400.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=serif --name='Noto Serif' --style=normal --weight=400 public/fonts/noto-serif/v33.0.0/normal-400.woff2 */
+@font-face {
+  font-family: 'Noto Serif Fallback';
+  font-weight: 400;
+  font-style: normal;
+  src: local('Times New Roman');
+  ascent-override: 89.69%;
+  descent-override: 24.58%;
+  line-gap-override: 0%;
+  size-adjust: 119.19%;
+}
+
+@font-face {
+  font-family: 'Noto Serif';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-serif/v33.0.0/normal-500.woff2') format('woff2'),
+    url('/fonts/noto-serif/v33.0.0/normal-500.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=serif --name='Noto Serif' --style=normal --weight=500 public/fonts/noto-serif/v33.0.0/normal-500.woff2 */
+@font-face {
+  font-family: 'Noto Serif Fallback';
+  font-weight: 500;
+  font-style: normal;
+  src: local('Times New Roman');
+  ascent-override: 88.21%;
+  descent-override: 24.18%;
+  line-gap-override: 0%;
+  size-adjust: 121.19%;
+}
+
+@font-face {
+  font-family: 'Noto Serif';
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-serif/v33.0.0/normal-600.woff2') format('woff2'),
+    url('/fonts/noto-serif/v33.0.0/normal-600.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=serif --name='Noto Serif' --style=normal --weight=600 public/fonts/noto-serif/v33.0.0/normal-600.woff2 */
+@font-face {
+  font-family: 'Noto Serif Fallback';
+  font-weight: 600;
+  font-style: normal;
+  src: local('Times New Roman Bold');
+  ascent-override: 91.79%;
+  descent-override: 25.16%;
+  line-gap-override: 0%;
+  size-adjust: 116.47%;
+}
+
+@font-face {
+  font-family: 'Noto Serif';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-serif/v33.0.0/normal-700.woff2') format('woff2'),
+    url('/fonts/noto-serif/v33.0.0/normal-700.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=serif --name='Noto Serif' --style=normal --weight=700 public/fonts/noto-serif/v33.0.0/normal-700.woff2 */
+@font-face {
+  font-family: 'Noto Serif Fallback';
+  font-weight: 700;
+  font-style: normal;
+  src: local('Times New Roman Bold');
+  ascent-override: 89.79%;
+  descent-override: 24.61%;
+  line-gap-override: 0%;
+  size-adjust: 119.06%;
+}
+
+@font-face {
+  font-family: 'Noto Serif';
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-serif/v33.0.0/normal-800.woff2') format('woff2'),
+    url('/fonts/noto-serif/v33.0.0/normal-800.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=serif --name='Noto Serif' --style=normal --weight=800 public/fonts/noto-serif/v33.0.0/normal-800.woff2 */
+@font-face {
+  font-family: 'Noto Serif Fallback';
+  font-weight: 800;
+  font-style: normal;
+  src: local('Times New Roman Bold');
+  ascent-override: 87.78%;
+  descent-override: 24.06%;
+  line-gap-override: 0%;
+  size-adjust: 121.78%;
+}
+
+@font-face {
+  font-family: 'Noto Serif';
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-serif/v33.0.0/normal-900.woff2') format('woff2'),
+    url('/fonts/noto-serif/v33.0.0/normal-900.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=serif --name='Noto Serif' --style=normal --weight=900 public/fonts/noto-serif/v33.0.0/normal-900.woff2 */
+@font-face {
+  font-family: 'Noto Serif Fallback';
+  font-weight: 900;
+  font-style: normal;
+  src: local('Times New Roman Bold');
+  ascent-override: 86.19%;
+  descent-override: 23.62%;
+  line-gap-override: 0%;
+  size-adjust: 124.03%;
+}
+
+@font-face {
+  font-family: 'Noto Sans Mono';
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-sans-mono/v37.0.0/normal-100.woff2') format('woff2'),
+    url('/fonts/noto-sans-mono/v37.0.0/normal-100.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=mono --name='Noto Sans Mono' --style=normal --weight=100 public/fonts/noto-sans-mono/v37.0.0/normal-100.woff2 */
+@font-face {
+  font-family: 'Noto Sans Mono Fallback';
+  font-weight: 100;
+  font-style: normal;
+  src: local('Courier New');
+  ascent-override: 106.92%;
+  descent-override: 29.3%;
+  line-gap-override: 0%;
+  size-adjust: 99.98%;
+}
+
+@font-face {
+  font-family: 'Noto Sans Mono';
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-sans-mono/v37.0.0/normal-200.woff2') format('woff2'),
+    url('/fonts/noto-sans-mono/v37.0.0/normal-200.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=mono --name='Noto Sans Mono' --style=normal --weight=200 public/fonts/noto-sans-mono/v37.0.0/normal-200.woff2 */
+@font-face {
+  font-family: 'Noto Sans Mono Fallback';
+  font-weight: 200;
+  font-style: normal;
+  src: local('Courier New');
+  ascent-override: 106.92%;
+  descent-override: 29.3%;
+  line-gap-override: 0%;
+  size-adjust: 99.98%;
+}
+
+@font-face {
+  font-family: 'Noto Sans Mono';
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-sans-mono/v37.0.0/normal-300.woff2') format('woff2'),
+    url('/fonts/noto-sans-mono/v37.0.0/normal-300.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=mono --name='Noto Sans Mono' --style=normal --weight=300 public/fonts/noto-sans-mono/v37.0.0/normal-300.woff2 */
+@font-face {
+  font-family: 'Noto Sans Mono Fallback';
+  font-weight: 300;
+  font-style: normal;
+  src: local('Courier New');
+  ascent-override: 106.92%;
+  descent-override: 29.3%;
+  line-gap-override: 0%;
+  size-adjust: 99.98%;
+}
+
+@font-face {
+  font-family: 'Noto Sans Mono';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-sans-mono/v37.0.0/normal-400.woff2') format('woff2'),
+    url('/fonts/noto-sans-mono/v37.0.0/normal-400.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=mono --name='Noto Sans Mono' --style=normal --weight=400 public/fonts/noto-sans-mono/v37.0.0/normal-400.woff2 */
+@font-face {
+  font-family: 'Noto Sans Mono Fallback';
+  font-weight: 400;
+  font-style: normal;
+  src: local('Courier New');
+  ascent-override: 106.92%;
+  descent-override: 29.3%;
+  line-gap-override: 0%;
+  size-adjust: 99.98%;
+}
+
+@font-face {
+  font-family: 'Noto Sans Mono';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-sans-mono/v37.0.0/normal-500.woff2') format('woff2'),
+    url('/fonts/noto-sans-mono/v37.0.0/normal-500.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=mono --name='Noto Sans Mono' --style=normal --weight=500 public/fonts/noto-sans-mono/v37.0.0/normal-500.woff2 */
+@font-face {
+  font-family: 'Noto Sans Mono Fallback';
+  font-weight: 500;
+  font-style: normal;
+  src: local('Courier New');
+  ascent-override: 106.92%;
+  descent-override: 29.3%;
+  line-gap-override: 0%;
+  size-adjust: 99.98%;
+}
+
+@font-face {
+  font-family: 'Noto Sans Mono';
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-sans-mono/v37.0.0/normal-600.woff2') format('woff2'),
+    url('/fonts/noto-sans-mono/v37.0.0/normal-600.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=mono --name='Noto Sans Mono' --style=normal --weight=600 public/fonts/noto-sans-mono/v37.0.0/normal-600.woff2 */
+@font-face {
+  font-family: 'Noto Sans Mono Fallback';
+  font-weight: 600;
+  font-style: normal;
+  src: local('Courier New Bold');
+  ascent-override: 106.92%;
+  descent-override: 29.3%;
+  line-gap-override: 0%;
+  size-adjust: 99.98%;
+}
+
+@font-face {
+  font-family: 'Noto Sans Mono';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-sans-mono/v37.0.0/normal-700.woff2') format('woff2'),
+    url('/fonts/noto-sans-mono/v37.0.0/normal-700.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=mono --name='Noto Sans Mono' --style=normal --weight=700 public/fonts/noto-sans-mono/v37.0.0/normal-700.woff2 */
+@font-face {
+  font-family: 'Noto Sans Mono Fallback';
+  font-weight: 700;
+  font-style: normal;
+  src: local('Courier New Bold');
+  ascent-override: 106.92%;
+  descent-override: 29.3%;
+  line-gap-override: 0%;
+  size-adjust: 99.98%;
+}
+
+@font-face {
+  font-family: 'Noto Sans Mono';
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-sans-mono/v37.0.0/normal-800.woff2') format('woff2'),
+    url('/fonts/noto-sans-mono/v37.0.0/normal-800.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=mono --name='Noto Sans Mono' --style=normal --weight=800 public/fonts/noto-sans-mono/v37.0.0/normal-800.woff2 */
+@font-face {
+  font-family: 'Noto Sans Mono Fallback';
+  font-weight: 800;
+  font-style: normal;
+  src: local('Courier New Bold');
+  ascent-override: 106.92%;
+  descent-override: 29.3%;
+  line-gap-override: 0%;
+  size-adjust: 99.98%;
+}
+
+@font-face {
+  font-family: 'Noto Sans Mono';
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  font-stretch: normal;
+  src:
+    url('/fonts/noto-sans-mono/v37.0.0/normal-900.woff2') format('woff2'),
+    url('/fonts/noto-sans-mono/v37.0.0/normal-900.woff') format('woff');
+}
+
+/* Generated with fontpie --fallback=mono --name='Noto Sans Mono' --style=normal --weight=900 public/fonts/noto-sans-mono/v37.0.0/normal-900.woff2 */
+@font-face {
+  font-family: 'Noto Sans Mono Fallback';
+  font-weight: 900;
+  font-style: normal;
+  src: local('Courier New Bold');
+  ascent-override: 106.92%;
+  descent-override: 29.3%;
+  line-gap-override: 0%;
+  size-adjust: 99.98%;
+}

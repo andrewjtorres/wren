@@ -1,0 +1,54 @@
+# wren
+
+> Personal agent workspace
+
+[![Code Style](https://flat.badgen.net/badge/code%20style/prettier/ff69b4)](https://github.com/prettier/prettier)
+[![Commitizen](https://flat.badgen.net/badge/commitizen/friendly/green)](https://github.com/commitizen/cz-cli)
+
+## Setup
+
+The following external dependencies are needed to perform the various tasks
+defined within the package configuration files (package.json). Please follow the
+installation instructions for each dependency to get started.
+
+- [Node.js](https://nodejs.org/en/download)
+- [Yarn](https://yarn6.netlify.app/getting-started)
+
+## Getting Started
+
+Install the project dependencies:
+
+```shell
+yarn install
+```
+
+## Version Control System
+
+Record repository changes and create a commit message through a guided prompt:
+
+```shell
+yarn run cz
+```
+
+## Scripts
+
+- `yarn run clean` — remove artifacts, compiled output, and logs
+- `yarn run format` — perform stylization ([Prettier](https://prettier.io))
+- `yarn run lint` — perform static analysis ([ESLint](https://eslint.org) and [TypeScript](https://typescriptlang.org))
+- `yarn run refine` — perform stylization and static analysis
+
+### Style
+
+Edit unformatted files in-place:
+
+```shell
+yarn run format --write
+```
+
+### Static Analysis
+
+Automatically fix JavaScript problems:
+
+```shell
+yarn run lint:javascript --fix
+```

@@ -1,0 +1,30 @@
+{
+  "extends": "../../../../config/typescript/tsconfig.base",
+  "include": [
+    "../../.react-router/types/**/*.ts",
+    "../../src/**/*",
+    "../../types/lib/*.d.ts",
+    "../../types/node/*.d.ts",
+    "../../types/react-intl/*.d.ts",
+    "../../types/react-router/*.d.ts",
+    "../../types/vitest/*.d.ts",
+    "../vitest/**/*.ts"
+  ],
+  "exclude": [
+    "../../src/**/*.component.test.ts",
+    "../../src/**/*.end-to-end.test.ts",
+    "../../src/**/*.stories.*",
+    "../../src/**/component.test.ts",
+    "../../src/**/end-to-end.test.ts",
+    "../../src/**/stories.*",
+    "../../src/utils/decorator.tsx"
+  ],
+  "compilerOptions": {
+    "rootDirs": ["../..", "../../.react-router/types"],
+    "types": ["@react-router/node", "@total-typescript/ts-reset", "vite/client"],
+    "jsx": "react-jsx",
+    "composite": true,
+    "tsBuildInfoFile": "../../node_modules/.cache/typescript/tsconfig.vitest.tsbuildinfo",
+    "skipLibCheck": true
+  }
+}

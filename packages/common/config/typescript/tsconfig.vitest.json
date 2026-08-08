@@ -1,0 +1,10 @@
+{
+  "extends": "../../../../config/typescript/tsconfig.base",
+  "include": ["../../src/**/*.ts", "../../types/vitest/*.d.ts", "../vitest/**/*.ts"],
+  "compilerOptions": {
+    "rootDir": "../..",
+    "types": ["node", "@total-typescript/ts-reset"],
+    "composite": true,
+    "tsBuildInfoFile": "../../node_modules/.cache/typescript/tsconfig.vitest.tsbuildinfo"
+  }
+}

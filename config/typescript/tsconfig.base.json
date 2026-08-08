@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "exactOptionalPropertyTypes": false,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true,
+    "allowImportingTsExtensions": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "noUncheckedSideEffectImports": true,
+    "newLine": "lf",
+    "noEmit": true,
+    "isolatedDeclarations": false,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "target": "es2025"
+  }
+}
