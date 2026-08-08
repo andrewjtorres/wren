@@ -26,7 +26,7 @@ jobs:
       - name: Load secrets
         id: secrets
         if: ${{ contains(fromJSON('["version-update:semver-minor", "version-update:semver-patch"]'), steps.dependabot-metadata.outputs.update-type) }}
-        uses: 1password/load-secrets-action@3a12b0ab99d9cd590a3e9b5a90ea017210ed9556 # v4.0.1
+        uses: 1password/load-secrets-action@e544b780808654ba8ceba5fb2fe2897103d92ff4 # v5.0.0
         env:
           WREN_AUTO_MERGE_PRIVATE_KEY: op://6s6jmi6tnbi44abtzzetlmbvo4/zwvowe4zs5akq7y3yqeo2v73gu/rfmgshb4sxmm6uoesboacosgmq
       - name: Configure GitHub App credentials
