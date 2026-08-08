@@ -91,7 +91,7 @@ Update component and end-to-end screenshots in an emulated Continuous
 Integration environment:
 
 ```shell
-docker run --env=CI=true --interactive --network=host --platform=linux/amd64 --rm --tty --volume="$(pwd)/../..:/work" --workdir=/work mcr.microsoft.com/playwright:v1.62.0-resolute /bin/bash
+docker run --env=CI=true --interactive --network=host --platform=linux/amd64 --rm --tty --volume="$(pwd)/../..:/work" --workdir=/work mcr.microsoft.com/playwright:v1.62.1-resolute /bin/bash
 corepack enable yarn
 yarn install
 yarn workspace @wren/console-portal run playwright install --with-deps chrome firefox webkit
