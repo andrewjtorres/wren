@@ -3996,7 +3996,7 @@ __metadata:
     eslint-plugin-testing-library: "npm:^7.16.2"
     eslint-plugin-unicorn: "npm:^72.0.0"
     happy-dom: "npm:^20.11.1"
-    hono: "npm:^4.12.33"
+    hono: "npm:^4.12.34"
     isbot: "npm:^5.2.1"
     lint-staged: "npm:^17.3.0"
     make-dir-cli: "npm:^4.0.0"
@@ -7278,10 +7278,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hono@npm:^4.12.33":
-  version: 4.12.33
-  resolution: "hono@npm:4.12.33"
-  checksum: 10/1a4d8c2f05731d28785b19488d53ed629dd83f10dce79042da75dbbc9581a7205c20a840a6657d79c50c0d638057cb42adc4656ee6e8a73bde6ab0d0c4f68719
+"hono@npm:^4.12.34":
+  version: 4.12.34
+  resolution: "hono@npm:4.12.34"
+  checksum: 10/c33104233b751c50e1821382eefad5584823ff2b635af261eb1e85c17bab706f73f3c1e5ace4d2f4c23a7fdced24e4e4de9cc5a32404b134ac93b66ff0e81a0a
   languageName: node
   linkType: hard
 
