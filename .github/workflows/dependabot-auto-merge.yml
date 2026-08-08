@@ -20,7 +20,7 @@ jobs:
         uses: dependabot/fetch-metadata@25dd0e34f4fe68f24cc83900b1fe3fe149efef98 # v3.1.0
       - name: Configure 1Password credentials
         if: ${{ contains(fromJSON('["version-update:semver-minor", "version-update:semver-patch"]'), steps.dependabot-metadata.outputs.update-type) }}
-        uses: 1password/load-secrets-action/configure@3a12b0ab99d9cd590a3e9b5a90ea017210ed9556 # v4.0.1
+        uses: 1password/load-secrets-action/configure@e544b780808654ba8ceba5fb2fe2897103d92ff4 # v5.0.0
         with:
           service-account-token: ${{ secrets.ONEPASSWORD_GITHUB_ACTIONS_SERVICE_ACCOUNT_ACCESS_TOKEN }}
       - name: Load secrets
