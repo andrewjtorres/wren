@@ -1,4 +1,4 @@
-# @sentinel/common
+# @wren/common
 
 > Shared utilities and primitives
 

@@ -35,7 +35,7 @@
     "@total-typescript/ts-reset": "^0.6.1",
     "@types/eslint-plugin-jsx-a11y": "^6.10.1",
     "@types/node": "^26.1.2",
-    "@vitest/eslint-plugin": "^1.6.24",
+    "@vitest/eslint-plugin": "^1.6.25",
     "commitizen": "^4.3.2",
     "concurrently": "^10.0.4",
     "cz-conventional-changelog": "^3.3.0",
