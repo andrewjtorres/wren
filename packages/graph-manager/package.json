@@ -39,7 +39,7 @@
     "refine": "concurrently --group --raw \"yarn:format\" \"yarn:lint\""
   },
   "devDependencies": {
-    "@ariga/atlas": "^1.2.3",
+    "@ariga/atlas": "^1.3.0",
     "@eslint/js": "^10.0.1",
     "@total-typescript/ts-reset": "^0.6.1",
     "@tursodatabase/database": "^0.7.2",
