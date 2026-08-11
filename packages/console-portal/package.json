@@ -36,7 +36,7 @@
     "test:unit": "vitest --config=config/vitest/vitest.config.unit.ts"
   },
   "dependencies": {
-    "@hono/node-server": "^2.0.12",
+    "@hono/node-server": "^2.1.0",
     "@react-router/fs-routes": "^8.3.0",
     "@react-router/node": "^8.3.0",
     "@tursodatabase/database": "^0.7.2",
@@ -46,7 +46,7 @@
     "close-with-grace": "^2.5.0",
     "debug": "^4.4.3",
     "drizzle-orm": "1.0.0-rc.4",
-    "hono": "^4.12.34",
+    "hono": "^4.13.0",
     "isbot": "^5.2.1",
     "nanoid": "^6.0.0",
     "pino": "^10.3.1",
@@ -122,7 +122,7 @@
     "turbo": "^2.10.8",
     "type-fest": "^5.8.0",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.65.0",
+    "typescript-eslint": "^8.66.0",
     "valibot": "^1.4.2",
     "vite": "^8.2.0",
     "vitest": "^4.1.10"
