@@ -43,7 +43,7 @@
     "@eslint/js": "^10.0.1",
     "@total-typescript/ts-reset": "^0.6.1",
     "@tursodatabase/database": "^0.7.2",
-    "@types/node": "^26.1.2",
+    "@types/node": "^26.2.0",
     "concurrently": "^10.0.4",
     "del-cli": "^7.0.0",
     "drizzle-kit": "1.0.0-rc.4",
