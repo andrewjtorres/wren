@@ -3174,7 +3174,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:>=20.0.0, @types/node@npm:^26.1.2":
+"@types/node@npm:*, @types/node@npm:>=20.0.0":
   version: 26.1.2
   resolution: "@types/node@npm:26.1.2"
   dependencies:
@@ -3189,6 +3189,15 @@ __metadata:
   dependencies:
     undici-types: "npm:~7.18.0"
   checksum: 10/2b8cb95ada191ecc788fef91d7cdb86dff24f6895b510e1fb495cc001832709fa8fc3e1eeb27d64bda52b3f74f9e91acf42431e98e3e6876de1e53acce7f7602
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^26.2.0":
+  version: 26.2.0
+  resolution: "@types/node@npm:26.2.0"
+  dependencies:
+    undici-types: "npm:~8.3.0"
+  checksum: 10/3829dd8c82e7d4858f3cc946ec9e5133c9fa39a0a9173874a6392230665121b42dac1b134e5e10ee132a5487293708c77df253cf41a125e9fd838cc3af72d700
   languageName: node
   linkType: hard
 
@@ -3898,7 +3907,7 @@ __metadata:
   dependencies:
     "@eslint/js": "npm:^10.0.1"
     "@total-typescript/ts-reset": "npm:^0.6.1"
-    "@types/node": "npm:^26.1.2"
+    "@types/node": "npm:^26.2.0"
     "@vitest/coverage-v8": "npm:^4.1.10"
     "@vitest/eslint-plugin": "npm:^1.6.26"
     "@vitest/ui": "npm:^4.1.10"
@@ -3965,7 +3974,7 @@ __metadata:
     "@tursodatabase/database-common": "npm:^0.7.2"
     "@types/debug": "npm:^4.1.13"
     "@types/eslint-plugin-jsx-a11y": "npm:^6.10.1"
-    "@types/node": "npm:^26.1.2"
+    "@types/node": "npm:^26.2.0"
     "@types/react": "npm:^19.2.18"
     "@types/react-dom": "npm:^19.2.4"
     "@vitejs/plugin-react": "npm:^6.0.5"
@@ -4039,7 +4048,7 @@ __metadata:
     "@eslint/js": "npm:^10.0.1"
     "@total-typescript/ts-reset": "npm:^0.6.1"
     "@tursodatabase/database": "npm:^0.7.2"
-    "@types/node": "npm:^26.1.2"
+    "@types/node": "npm:^26.2.0"
     concurrently: "npm:^10.0.4"
     del-cli: "npm:^7.0.0"
     drizzle-kit: "npm:1.0.0-rc.4"
@@ -4071,7 +4080,7 @@ __metadata:
   dependencies:
     "@eslint/js": "npm:^10.0.1"
     "@total-typescript/ts-reset": "npm:^0.6.1"
-    "@types/node": "npm:^26.1.2"
+    "@types/node": "npm:^26.2.0"
     "@vitest/coverage-v8": "npm:^4.1.10"
     "@vitest/eslint-plugin": "npm:^1.6.26"
     "@vitest/ui": "npm:^4.1.10"
@@ -11773,7 +11782,7 @@ __metadata:
     "@stylistic/eslint-plugin": "npm:^5.10.0"
     "@total-typescript/ts-reset": "npm:^0.6.1"
     "@types/eslint-plugin-jsx-a11y": "npm:^6.10.1"
-    "@types/node": "npm:^26.1.2"
+    "@types/node": "npm:^26.2.0"
     "@vitest/eslint-plugin": "npm:^1.6.26"
     commitizen: "npm:^4.3.2"
     concurrently: "npm:^10.0.4"
