@@ -109,7 +109,7 @@
     "playwright-core": "^1.62.1",
     "prettier": "^3.9.6",
     "prettier-plugin-tailwindcss": "^0.8.1",
-    "rolldown": "^1.2.3",
+    "rolldown": "^1.2.4",
     "storybook": "^10.5.7",
     "storybook-i18n": "^10.1.1",
     "stylelint": "^17.14.1",
