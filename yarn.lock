@@ -4091,7 +4091,7 @@ __metadata:
     "@types/node": "npm:^26.2.0"
     concurrently: "npm:^10.0.4"
     del-cli: "npm:^7.0.0"
-    drizzle-kit: "npm:1.0.0-rc.4"
+    drizzle-kit: "npm:1.0.0-rc.5-ab785fc"
     drizzle-orm: "npm:1.0.0-rc.4"
     eslint: "npm:^10.8.1"
     eslint-config-prettier: "npm:^10.1.8"
@@ -5512,9 +5512,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"drizzle-kit@npm:1.0.0-rc.4":
-  version: 1.0.0-rc.4
-  resolution: "drizzle-kit@npm:1.0.0-rc.4"
+"drizzle-kit@npm:1.0.0-rc.5-ab785fc":
+  version: 1.0.0-rc.5-ab785fc
+  resolution: "drizzle-kit@npm:1.0.0-rc.5-ab785fc"
   dependencies:
     "@drizzle-team/brocli": "npm:^0.12.0"
     "@js-temporal/polyfill": "npm:^0.5.1"
@@ -5523,7 +5523,7 @@ __metadata:
     jiti: "npm:^2.6.1"
   bin:
     drizzle-kit: bin.cjs
-  checksum: 10/c72648607ca9e5b1cd980a07cadb12f4e55d71bdbb7cfc85ad2d1ccaff382a1fe1981376adc3cc67facba4cd34eec3fc40dac092b81e2bc465d6066bc2c3b9d2
+  checksum: 10/7fda1fcab290fbc2196c47843eb2c509eb5fa4fe6026d4dda83a5c7d25022e11dca8ea9a68258d90de3a6911e3967e4a0a0570e40043ac67afa924520f7090da
   languageName: node
   linkType: hard
 
