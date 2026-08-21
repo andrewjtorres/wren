@@ -45,7 +45,7 @@
     "@wren/graph-manager": "workspace:^",
     "close-with-grace": "^2.5.0",
     "debug": "^4.4.3",
-    "drizzle-orm": "1.0.0-rc.4",
+    "drizzle-orm": "1.0.0-rc.5-169397b",
     "hono": "^4.13.1",
     "isbot": "^5.2.1",
     "nanoid": "^6.0.1",
