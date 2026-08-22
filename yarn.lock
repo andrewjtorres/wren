@@ -1971,13 +1971,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@oxc-project/types@npm:=0.143.0":
-  version: 0.143.0
-  resolution: "@oxc-project/types@npm:0.143.0"
-  checksum: 10/27a70f58e15ea5619b94f1be01a0e3d8cdc41442826f3d08cf6eb55e4c24d3d753cef2a68ae9d298eb55b5f1405145af6b1eacf8cbd4834151b9e3e1206f3401
-  languageName: node
-  linkType: hard
-
 "@oxc-project/types@npm:=0.144.0":
   version: 0.144.0
   resolution: "@oxc-project/types@npm:0.144.0"
@@ -2260,24 +2253,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rolldown/binding-android-arm64@npm:1.2.3":
-  version: 1.2.3
-  resolution: "@rolldown/binding-android-arm64@npm:1.2.3"
-  conditions: os=android & cpu=arm64
-  languageName: node
-  linkType: hard
-
 "@rolldown/binding-android-arm64@npm:1.2.4":
   version: 1.2.4
   resolution: "@rolldown/binding-android-arm64@npm:1.2.4"
   conditions: os=android & cpu=arm64
-  languageName: node
-  linkType: hard
-
-"@rolldown/binding-darwin-arm64@npm:1.2.3":
-  version: 1.2.3
-  resolution: "@rolldown/binding-darwin-arm64@npm:1.2.3"
-  conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
@@ -2288,24 +2267,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rolldown/binding-darwin-x64@npm:1.2.3":
-  version: 1.2.3
-  resolution: "@rolldown/binding-darwin-x64@npm:1.2.3"
-  conditions: os=darwin & cpu=x64
-  languageName: node
-  linkType: hard
-
 "@rolldown/binding-darwin-x64@npm:1.2.4":
   version: 1.2.4
   resolution: "@rolldown/binding-darwin-x64@npm:1.2.4"
   conditions: os=darwin & cpu=x64
-  languageName: node
-  linkType: hard
-
-"@rolldown/binding-freebsd-x64@npm:1.2.3":
-  version: 1.2.3
-  resolution: "@rolldown/binding-freebsd-x64@npm:1.2.3"
-  conditions: os=freebsd & cpu=x64
   languageName: node
   linkType: hard
 
@@ -2316,24 +2281,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rolldown/binding-linux-arm-gnueabihf@npm:1.2.3":
-  version: 1.2.3
-  resolution: "@rolldown/binding-linux-arm-gnueabihf@npm:1.2.3"
-  conditions: os=linux & cpu=arm
-  languageName: node
-  linkType: hard
-
 "@rolldown/binding-linux-arm-gnueabihf@npm:1.2.4":
   version: 1.2.4
   resolution: "@rolldown/binding-linux-arm-gnueabihf@npm:1.2.4"
   conditions: os=linux & cpu=arm
-  languageName: node
-  linkType: hard
-
-"@rolldown/binding-linux-arm64-gnu@npm:1.2.3":
-  version: 1.2.3
-  resolution: "@rolldown/binding-linux-arm64-gnu@npm:1.2.3"
-  conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
@@ -2344,24 +2295,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rolldown/binding-linux-arm64-musl@npm:1.2.3":
-  version: 1.2.3
-  resolution: "@rolldown/binding-linux-arm64-musl@npm:1.2.3"
-  conditions: os=linux & cpu=arm64 & libc=musl
-  languageName: node
-  linkType: hard
-
 "@rolldown/binding-linux-arm64-musl@npm:1.2.4":
   version: 1.2.4
   resolution: "@rolldown/binding-linux-arm64-musl@npm:1.2.4"
   conditions: os=linux & cpu=arm64 & libc=musl
-  languageName: node
-  linkType: hard
-
-"@rolldown/binding-linux-ppc64-gnu@npm:1.2.3":
-  version: 1.2.3
-  resolution: "@rolldown/binding-linux-ppc64-gnu@npm:1.2.3"
-  conditions: os=linux & cpu=ppc64 & libc=glibc
   languageName: node
   linkType: hard
 
@@ -2372,24 +2309,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rolldown/binding-linux-s390x-gnu@npm:1.2.3":
-  version: 1.2.3
-  resolution: "@rolldown/binding-linux-s390x-gnu@npm:1.2.3"
-  conditions: os=linux & cpu=s390x & libc=glibc
-  languageName: node
-  linkType: hard
-
 "@rolldown/binding-linux-s390x-gnu@npm:1.2.4":
   version: 1.2.4
   resolution: "@rolldown/binding-linux-s390x-gnu@npm:1.2.4"
   conditions: os=linux & cpu=s390x & libc=glibc
-  languageName: node
-  linkType: hard
-
-"@rolldown/binding-linux-x64-gnu@npm:1.2.3":
-  version: 1.2.3
-  resolution: "@rolldown/binding-linux-x64-gnu@npm:1.2.3"
-  conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
@@ -2400,24 +2323,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rolldown/binding-linux-x64-musl@npm:1.2.3":
-  version: 1.2.3
-  resolution: "@rolldown/binding-linux-x64-musl@npm:1.2.3"
-  conditions: os=linux & cpu=x64 & libc=musl
-  languageName: node
-  linkType: hard
-
 "@rolldown/binding-linux-x64-musl@npm:1.2.4":
   version: 1.2.4
   resolution: "@rolldown/binding-linux-x64-musl@npm:1.2.4"
   conditions: os=linux & cpu=x64 & libc=musl
-  languageName: node
-  linkType: hard
-
-"@rolldown/binding-openharmony-arm64@npm:1.2.3":
-  version: 1.2.3
-  resolution: "@rolldown/binding-openharmony-arm64@npm:1.2.3"
-  conditions: os=openharmony & cpu=arm64
   languageName: node
   linkType: hard
 
@@ -2428,24 +2337,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rolldown/binding-win32-arm64-msvc@npm:1.2.3":
-  version: 1.2.3
-  resolution: "@rolldown/binding-win32-arm64-msvc@npm:1.2.3"
-  conditions: os=win32 & cpu=arm64
-  languageName: node
-  linkType: hard
-
 "@rolldown/binding-win32-arm64-msvc@npm:1.2.4":
   version: 1.2.4
   resolution: "@rolldown/binding-win32-arm64-msvc@npm:1.2.4"
   conditions: os=win32 & cpu=arm64
-  languageName: node
-  linkType: hard
-
-"@rolldown/binding-win32-x64-msvc@npm:1.2.3":
-  version: 1.2.3
-  resolution: "@rolldown/binding-win32-x64-msvc@npm:1.2.3"
-  conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
@@ -2981,44 +2876,44 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@turbo/darwin-64@npm:2.10.9":
-  version: 2.10.9
-  resolution: "@turbo/darwin-64@npm:2.10.9"
+"@turbo/darwin-64@npm:2.10.10":
+  version: 2.10.10
+  resolution: "@turbo/darwin-64@npm:2.10.10"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@turbo/darwin-arm64@npm:2.10.9":
-  version: 2.10.9
-  resolution: "@turbo/darwin-arm64@npm:2.10.9"
+"@turbo/darwin-arm64@npm:2.10.10":
+  version: 2.10.10
+  resolution: "@turbo/darwin-arm64@npm:2.10.10"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@turbo/linux-64@npm:2.10.9":
-  version: 2.10.9
-  resolution: "@turbo/linux-64@npm:2.10.9"
+"@turbo/linux-64@npm:2.10.10":
+  version: 2.10.10
+  resolution: "@turbo/linux-64@npm:2.10.10"
   conditions: (os=android | os=linux) & cpu=x64
   languageName: node
   linkType: hard
 
-"@turbo/linux-arm64@npm:2.10.9":
-  version: 2.10.9
-  resolution: "@turbo/linux-arm64@npm:2.10.9"
+"@turbo/linux-arm64@npm:2.10.10":
+  version: 2.10.10
+  resolution: "@turbo/linux-arm64@npm:2.10.10"
   conditions: (os=android | os=linux) & cpu=arm64
   languageName: node
   linkType: hard
 
-"@turbo/windows-64@npm:2.10.9":
-  version: 2.10.9
-  resolution: "@turbo/windows-64@npm:2.10.9"
+"@turbo/windows-64@npm:2.10.10":
+  version: 2.10.10
+  resolution: "@turbo/windows-64@npm:2.10.10"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
-"@turbo/windows-arm64@npm:2.10.9":
-  version: 2.10.9
-  resolution: "@turbo/windows-arm64@npm:2.10.9"
+"@turbo/windows-arm64@npm:2.10.10":
+  version: 2.10.10
+  resolution: "@turbo/windows-arm64@npm:2.10.10"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
@@ -3951,7 +3846,7 @@ __metadata:
     "@vitest/coverage-v8": "npm:^4.1.10"
     "@vitest/eslint-plugin": "npm:^1.6.27"
     "@vitest/ui": "npm:^4.1.10"
-    concurrently: "npm:^10.0.4"
+    concurrently: "npm:^10.0.5"
     del-cli: "npm:^7.0.0"
     eslint: "npm:^10.8.1"
     eslint-config-prettier: "npm:^10.1.8"
@@ -3965,7 +3860,7 @@ __metadata:
     prettier: "npm:^3.9.6"
     rolldown: "npm:^1.2.4"
     rolldown-plugin-dts: "npm:^0.28.2"
-    turbo: "npm:^2.10.9"
+    turbo: "npm:^2.10.10"
     type-fest: "npm:^5.8.0"
     typescript: "npm:^6.0.3"
     typescript-eslint: "npm:^8.67.0"
@@ -4024,11 +3919,11 @@ __metadata:
     "@wren/common": "workspace:^"
     "@wren/graph-manager": "workspace:^"
     close-with-grace: "npm:^2.5.0"
-    concurrently: "npm:^10.0.4"
+    concurrently: "npm:^10.0.5"
     cross-env: "npm:^10.1.0"
     debug: "npm:^4.4.3"
     del-cli: "npm:^7.0.0"
-    drizzle-orm: "npm:1.0.0-rc.5-169397b"
+    drizzle-orm: "npm:1.0.0-rc.4"
     eslint: "npm:^10.8.1"
     eslint-config-prettier: "npm:^10.1.8"
     eslint-import-resolver-typescript: "npm:^4.4.5"
@@ -4069,7 +3964,7 @@ __metadata:
     supports-color: "npm:^11.0.0"
     tailwindcss: "npm:^4.3.3"
     tsx: "npm:^4.23.12"
-    turbo: "npm:^2.10.9"
+    turbo: "npm:^2.10.10"
     type-fest: "npm:^5.8.0"
     typescript: "npm:^6.0.3"
     typescript-eslint: "npm:^8.67.0"
@@ -4089,10 +3984,10 @@ __metadata:
     "@total-typescript/ts-reset": "npm:^0.6.1"
     "@tursodatabase/database": "npm:0.7.2"
     "@types/node": "npm:^26.2.0"
-    concurrently: "npm:^10.0.4"
+    concurrently: "npm:^10.0.5"
     del-cli: "npm:^7.0.0"
-    drizzle-kit: "npm:1.0.0-rc.5-ab785fc"
-    drizzle-orm: "npm:1.0.0-rc.5-169397b"
+    drizzle-kit: "npm:1.0.0-rc.4"
+    drizzle-orm: "npm:1.0.0-rc.4"
     eslint: "npm:^10.8.1"
     eslint-config-prettier: "npm:^10.1.8"
     eslint-import-resolver-typescript: "npm:^4.4.5"
@@ -4104,7 +3999,7 @@ __metadata:
     prettier: "npm:^3.9.6"
     rolldown: "npm:^1.2.4"
     rolldown-plugin-dts: "npm:^0.28.2"
-    turbo: "npm:^2.10.9"
+    turbo: "npm:^2.10.10"
     typescript: "npm:^6.0.3"
     typescript-eslint: "npm:^8.67.0"
     valibot: "npm:^1.4.2"
@@ -4125,7 +4020,7 @@ __metadata:
     "@vitest/eslint-plugin": "npm:^1.6.27"
     "@vitest/ui": "npm:^4.1.10"
     "@wren/common": "workspace:^"
-    concurrently: "npm:^10.0.4"
+    concurrently: "npm:^10.0.5"
     cross-env: "npm:^10.1.0"
     del-cli: "npm:^7.0.0"
     eslint: "npm:^10.8.1"
@@ -4140,7 +4035,7 @@ __metadata:
     prettier: "npm:^3.9.6"
     rolldown: "npm:^1.2.4"
     tsx: "npm:^4.23.12"
-    turbo: "npm:^2.10.9"
+    turbo: "npm:^2.10.10"
     typescript: "npm:^6.0.3"
     typescript-eslint: "npm:^8.67.0"
     vitest: "npm:^4.1.10"
@@ -5064,9 +4959,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"concurrently@npm:^10.0.4":
-  version: 10.0.4
-  resolution: "concurrently@npm:10.0.4"
+"concurrently@npm:^10.0.5":
+  version: 10.0.5
+  resolution: "concurrently@npm:10.0.5"
   dependencies:
     chalk: "npm:5.6.2"
     rxjs: "npm:7.8.2"
@@ -5077,7 +4972,7 @@ __metadata:
   bin:
     conc: dist/bin/index.js
     concurrently: dist/bin/index.js
-  checksum: 10/609696fc32213917aa395d79cae085e83fb0a49ddd47fd635d9cfe7411f27d17b362cf81b4d6e3c0c18566d1974d9a1661ccb81ec213b2fa739cca73876eb6af
+  checksum: 10/1bfd879dbd1f6f9d6a1df717c73546a6f03cf3d3e838e5ac7b5eb14da78ed0d2eeade6ff7ec803f6fc74f8d0ffc7157650328550e2e29fbbfb272037e68027b5
   languageName: node
   linkType: hard
 
@@ -5512,9 +5407,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"drizzle-kit@npm:1.0.0-rc.5-ab785fc":
-  version: 1.0.0-rc.5-ab785fc
-  resolution: "drizzle-kit@npm:1.0.0-rc.5-ab785fc"
+"drizzle-kit@npm:1.0.0-rc.4":
+  version: 1.0.0-rc.4
+  resolution: "drizzle-kit@npm:1.0.0-rc.4"
   dependencies:
     "@drizzle-team/brocli": "npm:^0.12.0"
     "@js-temporal/polyfill": "npm:^0.5.1"
@@ -5523,41 +5418,40 @@ __metadata:
     jiti: "npm:^2.6.1"
   bin:
     drizzle-kit: bin.cjs
-  checksum: 10/7fda1fcab290fbc2196c47843eb2c509eb5fa4fe6026d4dda83a5c7d25022e11dca8ea9a68258d90de3a6911e3967e4a0a0570e40043ac67afa924520f7090da
+  checksum: 10/c72648607ca9e5b1cd980a07cadb12f4e55d71bdbb7cfc85ad2d1ccaff382a1fe1981376adc3cc67facba4cd34eec3fc40dac092b81e2bc465d6066bc2c3b9d2
   languageName: node
   linkType: hard
 
-"drizzle-orm@npm:1.0.0-rc.5-169397b":
-  version: 1.0.0-rc.5-169397b
-  resolution: "drizzle-orm@npm:1.0.0-rc.5-169397b"
+"drizzle-orm@npm:1.0.0-rc.4":
+  version: 1.0.0-rc.4
+  resolution: "drizzle-orm@npm:1.0.0-rc.4"
   peerDependencies:
     "@aws-sdk/client-rds-data": ">=3"
     "@cloudflare/workers-types": ">=4"
-    "@drizzle-team/minipg": ">=0.3.2"
-    "@effect/sql-d1": ">=4.0.0-beta.105 || >=4.0.0"
-    "@effect/sql-libsql": ">=4.0.0-beta.105 || >=4.0.0"
-    "@effect/sql-mysql2": ">=4.0.0-beta.105 || >=4.0.0"
-    "@effect/sql-pg": ">=4.0.0-beta.105 || >=4.0.0"
-    "@effect/sql-pglite": ">=4.0.0-beta.105 || >=4.0.0"
-    "@effect/sql-sqlite-bun": ">=4.0.0-beta.105 || >=4.0.0"
-    "@effect/sql-sqlite-do": ">=4.0.0-beta.105 || >=4.0.0"
-    "@effect/sql-sqlite-node": ">=4.0.0-beta.105 || >=4.0.0"
-    "@effect/sql-sqlite-wasm": ">=4.0.0-beta.105 || >=4.0.0"
+    "@effect/sql-d1": ">=4.0.0-beta.83 || >=4.0.0"
+    "@effect/sql-libsql": ">=4.0.0-beta.83 || >=4.0.0"
+    "@effect/sql-mysql2": ">=4.0.0-beta.83 || >=4.0.0"
+    "@effect/sql-pg": ">=4.0.0-beta.83 || >=4.0.0"
+    "@effect/sql-pglite": ">=4.0.0-beta.83 || >=4.0.0"
+    "@effect/sql-sqlite-bun": ">=4.0.0-beta.83 || >=4.0.0"
+    "@effect/sql-sqlite-do": ">=4.0.0-beta.83 || >=4.0.0"
+    "@effect/sql-sqlite-node": ">=4.0.0-beta.83 || >=4.0.0"
+    "@effect/sql-sqlite-wasm": ">=4.0.0-beta.83 || >=4.0.0"
     "@electric-sql/pglite": ">=0.2.0"
     "@libsql/client": ">=0.10.0"
     "@libsql/client-wasm": ">=0.10.0"
     "@neondatabase/serverless": ">=0.10.0"
-    "@op-engineering/op-sqlite": ">=17"
+    "@op-engineering/op-sqlite": ">=2"
     "@opentelemetry/api": ^1.4.1
     "@planetscale/database": ">=1.13"
     "@sinclair/typebox": ">=0.34.8"
     "@sqlitecloud/drivers": ">=1.0.653"
     "@tidbcloud/serverless": "*"
-    "@tursodatabase/database": ">=0.7.1"
-    "@tursodatabase/database-common": ">=0.7.1"
-    "@tursodatabase/database-wasm": ">=0.7.1"
-    "@tursodatabase/serverless": ">=1.4.0"
-    "@tursodatabase/sync": ">=0.7.1"
+    "@tursodatabase/database": ">=0.6.0-pre.28 || >=0.6.0"
+    "@tursodatabase/database-common": ">=0.6.0-pre.28 || >=0.6.0"
+    "@tursodatabase/database-wasm": ">=0.6.0-pre.28 || >=0.6.0"
+    "@tursodatabase/serverless": ">=1.1.3"
+    "@tursodatabase/sync": ">=0.6.0-pre.28 || >=0.6.0"
     "@types/better-sqlite3": "*"
     "@types/mssql": ^9.1.4
     "@types/pg": "*"
@@ -5568,7 +5462,7 @@ __metadata:
     arktype: ">=2.0.0"
     better-sqlite3: ">=9.3.0"
     bun-types: "*"
-    effect: ">=4.0.0-beta.105 || >=4.0.0"
+    effect: ">=4.0.0-beta.83 || >=4.0.0"
     expo-sqlite: ">=14.0.0"
     mssql: ^11.0.1
     mysql2: ">=2"
@@ -5576,15 +5470,13 @@ __metadata:
     postgres: ">=3"
     sql.js: ">=1"
     sqlite3: ">=5"
-    typebox: ">=1.2.0"
+    typebox: ">=1.0.0"
     valibot: ">=1.0.0-beta.7"
     zod: ^3.25.0 || ^4.0.0
   peerDependenciesMeta:
     "@aws-sdk/client-rds-data":
       optional: true
     "@cloudflare/workers-types":
-      optional: true
-    "@drizzle-team/minipg":
       optional: true
     "@effect/sql-d1":
       optional: true
@@ -5676,7 +5568,7 @@ __metadata:
       optional: true
     zod:
       optional: true
-  checksum: 10/23a66c91a1a2a24fdd1b44233913969748e475b72ae9a15e5f7e3c0ec27b504083cc3b9306f486d95d685233f73ca7f0bf0c7f2a284476ffa5174d138d059ccc
+  checksum: 10/ac51865006a95a846c5672e4154edc1e7de4ee0bae536779ceb4c78a34701076597fb2f7c485c1f9d839e9c316ad5487a2a539a221242d1564808c4bea2879d8
   languageName: node
   linkType: hard
 
@@ -10018,7 +9910,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rolldown@npm:^1.2.4":
+"rolldown@npm:^1.2.4, rolldown@npm:~1.2.1":
   version: 1.2.4
   resolution: "rolldown@npm:1.2.4"
   dependencies:
@@ -10070,61 +9962,6 @@ __metadata:
   bin:
     rolldown: ./bin/cli.mjs
   checksum: 10/89447addc6695e0fe1224592ac7648545faf2077c18361b48df01d1f453a0a9b3390cedad58daccaf5dce7b37646cb5fb7e318c42b8b85d4998b33be43d05b43
-  languageName: node
-  linkType: hard
-
-"rolldown@npm:~1.2.1":
-  version: 1.2.3
-  resolution: "rolldown@npm:1.2.3"
-  dependencies:
-    "@oxc-project/types": "npm:=0.143.0"
-    "@rolldown/binding-android-arm64": "npm:1.2.3"
-    "@rolldown/binding-darwin-arm64": "npm:1.2.3"
-    "@rolldown/binding-darwin-x64": "npm:1.2.3"
-    "@rolldown/binding-freebsd-x64": "npm:1.2.3"
-    "@rolldown/binding-linux-arm-gnueabihf": "npm:1.2.3"
-    "@rolldown/binding-linux-arm64-gnu": "npm:1.2.3"
-    "@rolldown/binding-linux-arm64-musl": "npm:1.2.3"
-    "@rolldown/binding-linux-ppc64-gnu": "npm:1.2.3"
-    "@rolldown/binding-linux-s390x-gnu": "npm:1.2.3"
-    "@rolldown/binding-linux-x64-gnu": "npm:1.2.3"
-    "@rolldown/binding-linux-x64-musl": "npm:1.2.3"
-    "@rolldown/binding-openharmony-arm64": "npm:1.2.3"
-    "@rolldown/binding-win32-arm64-msvc": "npm:1.2.3"
-    "@rolldown/binding-win32-x64-msvc": "npm:1.2.3"
-    "@rolldown/pluginutils": "npm:^1.0.0"
-  dependenciesMeta:
-    "@rolldown/binding-android-arm64":
-      optional: true
-    "@rolldown/binding-darwin-arm64":
-      optional: true
-    "@rolldown/binding-darwin-x64":
-      optional: true
-    "@rolldown/binding-freebsd-x64":
-      optional: true
-    "@rolldown/binding-linux-arm-gnueabihf":
-      optional: true
-    "@rolldown/binding-linux-arm64-gnu":
-      optional: true
-    "@rolldown/binding-linux-arm64-musl":
-      optional: true
-    "@rolldown/binding-linux-ppc64-gnu":
-      optional: true
-    "@rolldown/binding-linux-s390x-gnu":
-      optional: true
-    "@rolldown/binding-linux-x64-gnu":
-      optional: true
-    "@rolldown/binding-linux-x64-musl":
-      optional: true
-    "@rolldown/binding-openharmony-arm64":
-      optional: true
-    "@rolldown/binding-win32-arm64-msvc":
-      optional: true
-    "@rolldown/binding-win32-x64-msvc":
-      optional: true
-  bin:
-    rolldown: ./bin/cli.mjs
-  checksum: 10/553fae06b40d5df3679685807971525b5b5b5fc4e0b5bc661d4cc4214aa6f316b460c6cb296d0352db75287f1fc38cfad1505e54920714e94ac837d1f6e8eceb
   languageName: node
   linkType: hard
 
@@ -11044,16 +10881,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"turbo@npm:^2.10.9":
-  version: 2.10.9
-  resolution: "turbo@npm:2.10.9"
+"turbo@npm:^2.10.10":
+  version: 2.10.10
+  resolution: "turbo@npm:2.10.10"
   dependencies:
-    "@turbo/darwin-64": "npm:2.10.9"
-    "@turbo/darwin-arm64": "npm:2.10.9"
-    "@turbo/linux-64": "npm:2.10.9"
-    "@turbo/linux-arm64": "npm:2.10.9"
-    "@turbo/windows-64": "npm:2.10.9"
-    "@turbo/windows-arm64": "npm:2.10.9"
+    "@turbo/darwin-64": "npm:2.10.10"
+    "@turbo/darwin-arm64": "npm:2.10.10"
+    "@turbo/linux-64": "npm:2.10.10"
+    "@turbo/linux-arm64": "npm:2.10.10"
+    "@turbo/windows-64": "npm:2.10.10"
+    "@turbo/windows-arm64": "npm:2.10.10"
   dependenciesMeta:
     "@turbo/darwin-64":
       optional: true
@@ -11069,7 +10906,7 @@ __metadata:
       optional: true
   bin:
     turbo: bin/turbo
-  checksum: 10/b278e7754bcfb4a5741df7fd1f27854f5dffc80ae7ee9ca5a13fe5429204186486f35d45bec7f9f7c503ba3a5e14256b4813a38cff72b6acdc29505854ec7db9
+  checksum: 10/0064f916c4ca4d19a264ab7c91b9fb58c9292ede42c38caec9d19445db647e87281ee684bfa7ce3eabf7be647af88f9e00aa51bb7fa6fac373666f38eef5c51a
   languageName: node
   linkType: hard
 
@@ -11880,7 +11717,7 @@ __metadata:
     "@types/node": "npm:^26.2.0"
     "@vitest/eslint-plugin": "npm:^1.6.27"
     commitizen: "npm:^4.3.2"
-    concurrently: "npm:^10.0.4"
+    concurrently: "npm:^10.0.5"
     cz-conventional-changelog: "npm:^3.3.0"
     del-cli: "npm:^7.0.0"
     eslint: "npm:^10.8.1"
@@ -11908,7 +11745,7 @@ __metadata:
     stylelint-config-recommended: "npm:^18.0.0"
     stylelint-order: "npm:^8.1.1"
     stylelint-prettier: "npm:^5.0.3"
-    turbo: "npm:^2.10.9"
+    turbo: "npm:^2.10.10"
     typescript: "npm:^6.0.3"
     typescript-eslint: "npm:^8.67.0"
     vitest: "npm:^4.1.10"
