@@ -21,11 +21,19 @@ updates:
       minor:
         patterns:
           - '*'
+        exclude-patterns:
+          - 1password/load-secrets-action
+          - 1password/load-secrets-action/*
+          - actions/create-github-app-token
         update-types:
           - minor
       patch:
         patterns:
           - '*'
+        exclude-patterns:
+          - 1password/load-secrets-action
+          - 1password/load-secrets-action/*
+          - actions/create-github-app-token
         update-types:
           - patch
     labels:
@@ -51,18 +59,22 @@ updates:
       minor:
         patterns:
           - '*'
+        exclude-patterns:
+          - '@ariga/atlas'
+          - '@tursodatabase/*'
+          - drizzle-*
         update-types:
           - minor
       patch:
         patterns:
           - '*'
+        exclude-patterns:
+          - '@ariga/atlas'
+          - '@tursodatabase/*'
+          - drizzle-*
         update-types:
           - patch
     ignore:
-      - dependency-name: drizzle-kit
-        versions: '>=1.0.0-rc.5'
-      - dependency-name: drizzle-orm
-        versions: '>=1.0.0-rc.5'
       - dependency-name: typescript
         versions: '>=7.0.0'
     labels:

@@ -30,29 +30,29 @@ jobs:
               auto_approve=true
 
               while IFS= read -r dependency_name; do
-                  if [[ "$dependency_name" =~ ^(1password/load-secrets-action(/.*)?|actions/create-github-app-token|@ariga/atlas|@tursodatabase/.*)$ ]]; then
+                  if [[ "$dependency_name" =~ ^[[:space:]]*(1password/load-secrets-action(/.+)?|actions/create-github-app-token|@ariga/atlas|@tursodatabase/.+|drizzle-.+)[[:space:]]*$ ]]; then
                       auto_approve=false
 
                       break
                   fi
-              done < <(dependency_names="${{ steps.dependabot-metadata.outputs.dependency-names }}"; printf '%s\n' "${dependency_names//, /$'\n'}")
+              done < <(dependency_names="${{ steps.dependabot-metadata.outputs.dependency-names }}"; printf '%s\n' "${dependency_names//,/$'\n'}")
           fi
 
           echo "auto-approve=$auto_approve" >> "$GITHUB_OUTPUT"
       - name: Configure 1Password credentials
-        if: ${{ steps.eligibility.outputs.auto-approve == 'true' }}
+        if: ${{ steps.metadata.outputs.auto-approve == 'true' }}
         uses: 1password/load-secrets-action/configure@e544b780808654ba8ceba5fb2fe2897103d92ff4 # v5.0.0
         with:
           service-account-token: ${{ secrets.ONEPASSWORD_GITHUB_ACTIONS_SERVICE_ACCOUNT_ACCESS_TOKEN }}
       - name: Load secrets
         id: secrets
-        if: ${{ steps.eligibility.outputs.auto-approve == 'true' }}
+        if: ${{ steps.metadata.outputs.auto-approve == 'true' }}
         uses: 1password/load-secrets-action@e544b780808654ba8ceba5fb2fe2897103d92ff4 # v5.0.0
         env:
           WREN_AUTO_MERGE_PRIVATE_KEY: op://6s6jmi6tnbi44abtzzetlmbvo4/zwvowe4zs5akq7y3yqeo2v73gu/rfmgshb4sxmm6uoesboacosgmq
       - name: Configure GitHub App credentials
         id: github-app-credentials
-        if: ${{ steps.eligibility.outputs.auto-approve == 'true' }}
+        if: ${{ steps.metadata.outputs.auto-approve == 'true' }}
         uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
         with:
           client-id: Iv23litKumpfzjeEoxZT # Wren Auto-merge
@@ -60,7 +60,7 @@ jobs:
           permission-contents: write
           permission-pull-requests: write
       - name: Approve and merge pull request
-        if: ${{ steps.eligibility.outputs.auto-approve == 'true' }}
+        if: ${{ steps.metadata.outputs.auto-approve == 'true' }}
         timeout-minutes: 5
         shell: bash
         run: |
