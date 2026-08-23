@@ -8697,14 +8697,14 @@ __metadata:
   linkType: hard
 
 "node-exports-info@npm:^1.6.0":
-  version: 1.6.0
-  resolution: "node-exports-info@npm:1.6.0"
+  version: 1.6.2
+  resolution: "node-exports-info@npm:1.6.2"
   dependencies:
     array.prototype.flatmap: "npm:^1.3.3"
     es-errors: "npm:^1.3.0"
     object.entries: "npm:^1.1.9"
     semver: "npm:^6.3.1"
-  checksum: 10/0a1667d535f499ac1fe6c6d22f8146bc8b68abc76fa355856219202f6cf5f386027e0ff054e66a22d08be02acbc63fcdc9f98d0fbc97993f5eabc66408fdadad
+  checksum: 10/6c9593094b3dd9b8a338f31490c0bad6da886a964b1bc6d95416dfe83810d4ab3493e53290b951d131a3148bf529f33bd908302aa4fd57c45c7b3d55e2cff848
   languageName: node
   linkType: hard
 
