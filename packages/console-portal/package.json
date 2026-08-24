@@ -59,7 +59,7 @@
   "devDependencies": {
     "@axe-core/playwright": "^4.13.0",
     "@eslint/js": "^10.0.1",
-    "@formatjs/cli": "^6.16.16",
+    "@formatjs/cli": "^6.16.18",
     "@formatjs/unplugin": "^1.2.4",
     "@playwright/test": "^1.62.1",
     "@react-router/dev": "^8.3.0",

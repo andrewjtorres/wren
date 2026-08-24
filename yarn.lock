@@ -1294,58 +1294,58 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@formatjs/cli-native-darwin-arm64@npm:1.1.10":
-  version: 1.1.10
-  resolution: "@formatjs/cli-native-darwin-arm64@npm:1.1.10"
+"@formatjs/cli-native-darwin-arm64@npm:1.1.12":
+  version: 1.1.12
+  resolution: "@formatjs/cli-native-darwin-arm64@npm:1.1.12"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@formatjs/cli-native-linux-arm64-musl@npm:1.0.8":
-  version: 1.0.8
-  resolution: "@formatjs/cli-native-linux-arm64-musl@npm:1.0.8"
+"@formatjs/cli-native-linux-arm64-musl@npm:1.0.10":
+  version: 1.0.10
+  resolution: "@formatjs/cli-native-linux-arm64-musl@npm:1.0.10"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@formatjs/cli-native-linux-arm64@npm:1.2.10":
-  version: 1.2.10
-  resolution: "@formatjs/cli-native-linux-arm64@npm:1.2.10"
+"@formatjs/cli-native-linux-arm64@npm:1.2.12":
+  version: 1.2.12
+  resolution: "@formatjs/cli-native-linux-arm64@npm:1.2.12"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@formatjs/cli-native-linux-x64-musl@npm:1.0.8":
-  version: 1.0.8
-  resolution: "@formatjs/cli-native-linux-x64-musl@npm:1.0.8"
+"@formatjs/cli-native-linux-x64-musl@npm:1.0.10":
+  version: 1.0.10
+  resolution: "@formatjs/cli-native-linux-x64-musl@npm:1.0.10"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@formatjs/cli-native-linux-x64@npm:1.1.10":
-  version: 1.1.10
-  resolution: "@formatjs/cli-native-linux-x64@npm:1.1.10"
+"@formatjs/cli-native-linux-x64@npm:1.1.12":
+  version: 1.1.12
+  resolution: "@formatjs/cli-native-linux-x64@npm:1.1.12"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@formatjs/cli-native-win32-x64@npm:1.1.11":
-  version: 1.1.11
-  resolution: "@formatjs/cli-native-win32-x64@npm:1.1.11"
+"@formatjs/cli-native-win32-x64@npm:1.1.13":
+  version: 1.1.13
+  resolution: "@formatjs/cli-native-win32-x64@npm:1.1.13"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
-"@formatjs/cli@npm:^6.16.16":
-  version: 6.16.16
-  resolution: "@formatjs/cli@npm:6.16.16"
+"@formatjs/cli@npm:^6.16.18":
+  version: 6.16.18
+  resolution: "@formatjs/cli@npm:6.16.18"
   dependencies:
-    "@formatjs/cli-native-darwin-arm64": "npm:1.1.10"
-    "@formatjs/cli-native-linux-arm64": "npm:1.2.10"
-    "@formatjs/cli-native-linux-arm64-musl": "npm:1.0.8"
-    "@formatjs/cli-native-linux-x64": "npm:1.1.10"
-    "@formatjs/cli-native-linux-x64-musl": "npm:1.0.8"
-    "@formatjs/cli-native-win32-x64": "npm:1.1.11"
+    "@formatjs/cli-native-darwin-arm64": "npm:1.1.12"
+    "@formatjs/cli-native-linux-arm64": "npm:1.2.12"
+    "@formatjs/cli-native-linux-arm64-musl": "npm:1.0.10"
+    "@formatjs/cli-native-linux-x64": "npm:1.1.12"
+    "@formatjs/cli-native-linux-x64-musl": "npm:1.0.10"
+    "@formatjs/cli-native-win32-x64": "npm:1.1.13"
   peerDependencies:
     "@glimmer/syntax": ^0.84.3 || ^0.95.0
     "@vue/compiler-core": 3
@@ -1381,7 +1381,7 @@ __metadata:
       optional: true
   bin:
     formatjs: bin/formatjs
-  checksum: 10/ddd891eefb7c9c87d943109bcd39b25ef3455804663e89db993f8d3615a6403b24e6cdae49ca090e90a1ba01aa9de1608c311a77788c78c8d0857b7dd0913a4e
+  checksum: 10/fff0074acf901a3cf7abaff8d289b08c65b2acbeb2c258b4a673baaf499c2c24d08fa00e272215dcf32b23b70d3625cd4dd7084d1945812a2ba9609dbc1ca078
   languageName: node
   linkType: hard
 
@@ -3886,7 +3886,7 @@ __metadata:
   dependencies:
     "@axe-core/playwright": "npm:^4.13.0"
     "@eslint/js": "npm:^10.0.1"
-    "@formatjs/cli": "npm:^6.16.16"
+    "@formatjs/cli": "npm:^6.16.18"
     "@formatjs/unplugin": "npm:^1.2.4"
     "@hono/node-server": "npm:^2.1.1"
     "@playwright/test": "npm:^1.62.1"
@@ -5264,12 +5264,12 @@ __metadata:
   linkType: hard
 
 "default-browser@npm:^5.2.1":
-  version: 5.5.0
-  resolution: "default-browser@npm:5.5.0"
+  version: 5.5.1
+  resolution: "default-browser@npm:5.5.1"
   dependencies:
     bundle-name: "npm:^4.1.0"
     default-browser-id: "npm:^5.0.0"
-  checksum: 10/c5c5d84a4abd82850e98f06798a55dee87fc1064538bea00cc14c0fb2dccccbff5e9e07eeea80385fa653202d5d92509838b4239d610ddfa1c76a04a1f65e767
+  checksum: 10/e2a74668f0dffff543a2e207ff400a2a99a13f50e99db3c23ad288c6fbc26d6133145e13762c842350ea1d854d876ca6328abc0031e56fd9d33b8f5080ead028
   languageName: node
   linkType: hard
 
@@ -5596,9 +5596,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.5.402":
-  version: 1.5.407
-  resolution: "electron-to-chromium@npm:1.5.407"
-  checksum: 10/9c4507ef13786d3e4fe16d04929b662b500ac814b2f09f8bda94858ae0bc9962f9a26bfb00bf519b94724eb97bcdc6409cf40cf1b9b540c3443d8f2850fa066a
+  version: 1.5.408
+  resolution: "electron-to-chromium@npm:1.5.408"
+  checksum: 10/02084c418bb1577f7f768e377c2d9f9c83b718ee272a6122b1cb4913ff7c12888116a24313dd6c642d1c74c41ab1d24adfa14d9649184ea4162920a15e5a5b41
   languageName: node
   linkType: hard
 
@@ -5783,9 +5783,9 @@ __metadata:
   linkType: hard
 
 "es-module-lexer@npm:^2.0.0, es-module-lexer@npm:^2.1.0":
-  version: 2.3.1
-  resolution: "es-module-lexer@npm:2.3.1"
-  checksum: 10/15bd9f6d70ec7f046a308b7fbeb56a1fd4bde09e6a46df0015caee58bd5888fc114029754e922ca68577b761890ac95cc450683424209464530cfe54f69b8566
+  version: 2.3.2
+  resolution: "es-module-lexer@npm:2.3.2"
+  checksum: 10/065246d6e2b2dfea3287650b5800a30326771e0d9d238570e81371d7ae8d53db239bccb2166e272926bba44917da7c66dd7407a5214d17b0af5269005b1fec52
   languageName: node
   linkType: hard
 
