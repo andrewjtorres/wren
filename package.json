@@ -40,7 +40,7 @@
     "concurrently": "^10.0.5",
     "cz-conventional-changelog": "^3.3.0",
     "del-cli": "^7.0.0",
-    "eslint": "^10.8.1",
+    "eslint": "^10.9.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-import-resolver-typescript": "^4.4.5",
     "eslint-plugin-formatjs": "^6.5.0",
