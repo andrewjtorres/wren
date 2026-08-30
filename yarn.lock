@@ -3930,7 +3930,7 @@ __metadata:
     eslint: "npm:^10.9.0"
     eslint-config-prettier: "npm:^10.1.8"
     eslint-import-resolver-typescript: "npm:^4.4.5"
-    eslint-plugin-formatjs: "npm:^6.5.0"
+    eslint-plugin-formatjs: "npm:^6.6.0"
     eslint-plugin-import-x: "npm:^4.17.1"
     eslint-plugin-jest-dom: "npm:^5.10.1"
     eslint-plugin-jsx-a11y: "npm:^6.10.2"
@@ -6099,9 +6099,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-formatjs@npm:^6.5.0":
-  version: 6.5.0
-  resolution: "eslint-plugin-formatjs@npm:6.5.0"
+"eslint-plugin-formatjs@npm:^6.6.0":
+  version: 6.6.0
+  resolution: "eslint-plugin-formatjs@npm:6.6.0"
   dependencies:
     "@formatjs/icu-messageformat-parser": "npm:3.5.17"
     "@formatjs/ts-transformer": "npm:4.4.19"
@@ -6112,7 +6112,7 @@ __metadata:
     picomatch: "npm:2 || 3 || 4"
   peerDependencies:
     eslint: 9 || 10
-  checksum: 10/e03fdbaacecbe696261df25e40ee87c743bcaff8a2344c2d57628d2bf8b65d2f772f7e42419b8151e295af56dc6f0b7f63f6b12fcbc77218f2029e274e7d6175
+  checksum: 10/94e4b18bbc5776dfc3ea6e53204adeb72560491c8af07c9b9e71df4be56bf257c19cd8a5c263a3289530fcea03131e5d541d4569db42378bee1632af846207e0
   languageName: node
   linkType: hard
 
@@ -11735,7 +11735,7 @@ __metadata:
     eslint: "npm:^10.9.0"
     eslint-config-prettier: "npm:^10.1.8"
     eslint-import-resolver-typescript: "npm:^4.4.5"
-    eslint-plugin-formatjs: "npm:^6.5.0"
+    eslint-plugin-formatjs: "npm:^6.6.0"
     eslint-plugin-import-x: "npm:^4.17.1"
     eslint-plugin-jest-dom: "npm:^5.10.1"
     eslint-plugin-jsx-a11y: "npm:^6.10.2"
