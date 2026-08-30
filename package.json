@@ -43,7 +43,7 @@
     "eslint": "^10.9.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-import-resolver-typescript": "^4.4.5",
-    "eslint-plugin-formatjs": "^6.5.0",
+    "eslint-plugin-formatjs": "^6.6.0",
     "eslint-plugin-import-x": "^4.17.1",
     "eslint-plugin-jest-dom": "^5.10.1",
     "eslint-plugin-jsx-a11y": "^6.10.2",
