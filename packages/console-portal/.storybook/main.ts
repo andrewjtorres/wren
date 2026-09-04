@@ -72,7 +72,11 @@ const config: StorybookConfig = {
       </script>
     `
   },
-  viteFinal(config) {
+  viteFinal(config, options) {
+    if (options.configType === 'DEVELOPMENT' && options.host !== '127.0.0.1') {
+      throw new Error('@wren/console-portal listeners must bind to 127.0.0.1; pass --host=127.0.0.1 or run "yarn studio"') // prettier-ignore
+    }
+
     return mergeConfig(config, {
       build: {
         target: 'es2025',

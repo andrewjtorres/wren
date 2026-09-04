@@ -29,7 +29,7 @@
     "lint:javascript": "react-router typegen && eslint --cache --cache-location=node_modules/.cache/eslint/ \"**/*.[jt]s?(x)\"",
     "lint:typescript": "react-router typegen && tsc --build",
     "refine": "concurrently --group --raw \"yarn:format\" \"yarn:lint\"",
-    "studio": "storybook dev --no-open --port=6006",
+    "studio": "storybook dev --host=127.0.0.1 --no-open --port=6006",
     "test": "concurrently --group --raw \"yarn:test:*\"",
     "test:component": "playwright test --config=config/playwright/playwright.config.component.ts",
     "test:end-to-end": "playwright test --config=config/playwright/playwright.config.end-to-end.ts",

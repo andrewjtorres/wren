@@ -46,6 +46,12 @@ carry look alike.
 import fails to resolve. That is how architectural boundaries are enforced — do not work around
 it.
 
+**Environment variables are declared, not indexed.** Every variable a package reads is declared in that
+package's `types/<tool>/process.d.ts` and read by property — `env.PORTAL_URL`, never `env['PORTAL_URL']`.
+`noPropertyAccessFromIndexSignature` is enabled, so bracket access is the escape hatch that skips the
+declaration, and the declaration is what keeps the accepted set discoverable in one place. This applies to
+`process.env`. Values from `loadEnv` and other `Record` types are index signatures and still require brackets.
+
 **Tests are colocated** in `src/` as `*.unit.test.ts`.
 
 **Conventional commits**, matching the existing log.

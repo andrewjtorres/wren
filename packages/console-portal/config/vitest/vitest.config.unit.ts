@@ -1,7 +1,7 @@
 import reactPlugin from '@vitejs/plugin-react'
 import { env } from 'node:process'
 import { fileURLToPath } from 'node:url'
-import { defineConfig } from 'vitest/config'
+import { type Plugin, defineConfig } from 'vitest/config'
 import { z } from 'zod'
 
 const packageDirUrl = new URL('../..', import.meta.url)
@@ -27,9 +27,23 @@ const isContinuousIntegrationEnvironment = z
   .pipe(z.string().transform(stringToBoolean).default(false))
   .parse(env.CI)
 
+function assertHostPlugin(host: string): Plugin {
+  return {
+    name: 'wren-console-portal:assert-host',
+    configResolved(config) {
+      if (config.server.host !== undefined && config.server.host !== host) {
+        throw new Error(`@wren/console-portal listeners must bind to ${host}`)
+      }
+    },
+  }
+}
+
 const config = defineConfig({
   root: packageDirPath,
-  plugins: [reactPlugin()],
+  plugins: [assertHostPlugin('127.0.0.1'), reactPlugin()],
+  server: {
+    host: '127.0.0.1',
+  },
   test: {
     name: 'wren-console-portal-unit',
     include: ['src/**/?(*.)unit.test.[jt]s?(x)'],

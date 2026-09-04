@@ -3,6 +3,7 @@ import { fileURLToPath } from 'node:url'
 
 import {
   baseConfig,
+  htmlHost,
   isContinuousIntegrationEnvironment,
   packageDirPath,
   packageDirUrl,
@@ -17,6 +18,7 @@ const config = defineConfig(baseConfig, {
     [
       'html',
       {
+        host: htmlHost,
         outputFolder: fileURLToPath(new URL('test-reports/component/', packageDirUrl)),
       },
     ],

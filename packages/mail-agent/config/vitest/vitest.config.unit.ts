@@ -1,6 +1,6 @@
 import { env } from 'node:process'
 import { fileURLToPath } from 'node:url'
-import { defineConfig } from 'vitest/config'
+import { type Plugin, defineConfig } from 'vitest/config'
 import { z } from 'zod'
 
 const packageDirUrl = new URL('../..', import.meta.url)
@@ -26,8 +26,23 @@ const isContinuousIntegrationEnvironment = z
   .pipe(z.string().transform(stringToBoolean).default(false))
   .parse(env.CI)
 
+function assertHostPlugin(host: string): Plugin {
+  return {
+    name: 'wren-mail-agent:assert-host',
+    configResolved(config) {
+      if (config.server.host !== undefined && config.server.host !== host) {
+        throw new Error(`@wren/mail-agent listeners must bind to ${host}`)
+      }
+    },
+  }
+}
+
 const config = defineConfig({
   root: packageDirPath,
+  plugins: [assertHostPlugin('127.0.0.1')],
+  server: {
+    host: '127.0.0.1',
+  },
   test: {
     name: 'wren-mail-agent-unit',
     include: ['src/**/?(*.)unit.test.[jt]s'],

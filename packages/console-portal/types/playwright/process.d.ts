@@ -5,6 +5,7 @@ declare module 'process' {
       interface ProcessEnv {
         readonly CI?: string
         readonly LOCAL?: string
+        readonly PLAYWRIGHT_HTML_HOST?: string
         readonly PORTAL_URL?: string
       }
     }

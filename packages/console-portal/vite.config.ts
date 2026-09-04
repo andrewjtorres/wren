@@ -5,7 +5,7 @@ import reactPlugin from '@vitejs/plugin-react'
 import { argv } from 'node:process'
 import { fileURLToPath } from 'node:url'
 import { replacePlugin } from 'rolldown/plugins'
-import { defineConfig, loadEnv, perEnvironmentPlugin } from 'vite'
+import { type Plugin, defineConfig, loadEnv, perEnvironmentPlugin } from 'vite'
 
 const packageDirUrl = new URL('.', import.meta.url)
 
@@ -17,6 +17,20 @@ const isReactRouterPluginEnabled = !isAllPluginsDisabled && !isReactPluginEnable
 
 function stringify(value: string | undefined): string {
   return JSON.stringify(value ?? '')
+}
+
+function assertHostPlugin(host: string): Plugin {
+  return {
+    name: 'wren-console-portal:assert-host',
+    configResolved(config) {
+      if (
+        (config.server.host !== undefined && config.server.host !== host) ||
+        (config.preview.host !== undefined && config.preview.host !== host)
+      ) {
+        throw new Error(`@wren/console-portal listeners must bind to ${host}`)
+      }
+    },
+  }
 }
 
 const config = defineConfig(({ mode }) => {
@@ -35,6 +49,7 @@ const config = defineConfig(({ mode }) => {
     },
     root: packageDirPath,
     plugins: [
+      assertHostPlugin('127.0.0.1'),
       perEnvironmentPlugin('wren-console-portal:replace-server-environment', (environment) => {
         if (environment.name !== 'ssr') {
           return false
@@ -58,6 +73,12 @@ const config = defineConfig(({ mode }) => {
       isReactPluginEnabled && reactPlugin(),
       isReactRouterPluginEnabled && reactRouterPlugin(),
     ],
+    server: {
+      host: '127.0.0.1',
+    },
+    preview: {
+      host: '127.0.0.1',
+    },
     environments: {
       ssr: {
         build: {

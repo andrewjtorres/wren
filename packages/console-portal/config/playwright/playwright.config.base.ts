@@ -34,6 +34,13 @@ export const isLocalEnvironment = z
   .pipe(z.string().transform(stringToBoolean).default(true))
   .parse(env.LOCAL)
 
+export const htmlHost = z
+  .string()
+  .transform(zeroValueStringToUndefined)
+  .optional()
+  .pipe(z.literal('127.0.0.1').default('127.0.0.1'))
+  .parse(env.PLAYWRIGHT_HTML_HOST)
+
 export const baseConfig = defineConfig({
   snapshotPathTemplate: '{testDir}/{testFileDir}/snapshots/{arg}-{projectName}{ext}',
   ignoreSnapshots: !isContinuousIntegrationEnvironment,

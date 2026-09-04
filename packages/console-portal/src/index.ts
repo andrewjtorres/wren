@@ -305,7 +305,7 @@ export async function main({ interceptorMiddleware, prepareError, ...restOptions
     {
       fetch: httpApp.fetch,
       port: portal.httpPort,
-      hostname: '::',
+      hostname: '127.0.0.1',
     },
     ({ port }) => {
       logger.info(`HTTP server listening at http://localhost:${port}`)
@@ -369,7 +369,7 @@ export async function main({ interceptorMiddleware, prepareError, ...restOptions
     {
       fetch: probeApp.fetch,
       port: portal.probePort,
-      hostname: '::',
+      hostname: '127.0.0.1',
     },
     ({ port }) => {
       logger.info(`Probe server listening at http://localhost:${port}`)

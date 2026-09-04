@@ -5,6 +5,7 @@ import { z } from 'zod'
 
 import {
   baseConfig,
+  htmlHost,
   isContinuousIntegrationEnvironment,
   isLocalEnvironment,
   packageDirPath,
@@ -38,6 +39,7 @@ const config = defineConfig(baseConfig, {
     [
       'html',
       {
+        host: htmlHost,
         outputFolder: fileURLToPath(new URL('test-reports/end-to-end/', packageDirUrl)),
       },
     ],
