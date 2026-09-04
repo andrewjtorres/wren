@@ -5,6 +5,7 @@
     "rootDir": "../..",
     "types": [],
     "composite": true,
-    "tsBuildInfoFile": "../../node_modules/.cache/typescript/tsconfig.lint-staged.tsbuildinfo"
+    "tsBuildInfoFile": "../../node_modules/.cache/typescript/tsconfig.lint-staged.tsbuildinfo",
+    "skipLibCheck": true
   }
 }

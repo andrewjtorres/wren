@@ -58,7 +58,7 @@
     "lint-staged": "^17.4.1",
     "prettier": "^3.9.6",
     "rolldown": "^1.2.6",
-    "rolldown-plugin-dts": "^0.28.2",
+    "rolldown-plugin-dts": "^0.28.3",
     "turbo": "^2.10.12",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.68.0",
