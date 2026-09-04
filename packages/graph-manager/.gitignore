@@ -1,6 +1,7 @@
 # Artifacts and Compiled Output
 .turbo
 dist
+tmp
 
 # Dependencies
 node_modules
@@ -12,3 +13,7 @@ node_modules
 # Logs
 *.log
 yarn-*.log*
+
+# Miscellaneous
+.env*
+!.env.example

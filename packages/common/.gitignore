@@ -13,5 +13,9 @@ node_modules
 *.log
 yarn-*.log*
 
+# Miscellaneous
+.env*
+!.env.example
+
 # Test and Code Coverage
 test-reports

@@ -21,3 +21,7 @@ yarn-*.log*
 
 # Operating Systems
 .DS_Store
+
+# Miscellaneous
+.env*
+!.env.example
