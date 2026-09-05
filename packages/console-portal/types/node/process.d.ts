@@ -18,6 +18,7 @@ declare module 'process' {
         readonly STATE_DATABASE_DSN?: string
         readonly STATE_DATABASE_ENCRYPTION_ALGORITHM?: string
         readonly STATE_DATABASE_ENCRYPTION_KEY?: string
+        readonly SERVER_WS_PORT?: string
         readonly DEBUG?: string
       }
     }

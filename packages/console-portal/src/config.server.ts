@@ -88,6 +88,18 @@ export const stateDatabase = databaseSchema.parse({
 })
 
 // Development
+const serverSchema = z.object({
+  wsPort: z
+    .string()
+    .transform(zeroValueStringToUndefined)
+    .optional()
+    .pipe(z.coerce.number<string | undefined>().int().gte(1024).lte(65_535).default(24_678)),
+})
+
+export const server = serverSchema.parse({
+  wsPort: env.SERVER_WS_PORT,
+})
+
 export const debug = z
   .string()
   .transform(zeroValueStringToUndefined)

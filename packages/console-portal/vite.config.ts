@@ -25,6 +25,7 @@ function assertHostPlugin(host: string): Plugin {
     configResolved(config) {
       if (
         (config.server.host !== undefined && config.server.host !== host) ||
+        (config.server.hmr !== false && config.server.ws !== false && config.server.ws?.host !== host) ||
         (config.preview.host !== undefined && config.preview.host !== host)
       ) {
         throw new Error(`@wren/console-portal listeners must bind to ${host}`)
@@ -75,6 +76,10 @@ const config = defineConfig(({ mode }) => {
     ],
     server: {
       host: '127.0.0.1',
+      ws: {
+        host: '127.0.0.1',
+        port: env['SERVER_WS_PORT'] ? Number(env['SERVER_WS_PORT']) : 24_678,
+      },
     },
     preview: {
       host: '127.0.0.1',

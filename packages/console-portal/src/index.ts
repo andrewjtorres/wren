@@ -23,7 +23,15 @@ import { randomBytes } from 'node:crypto'
 import { env } from 'node:process'
 import { RouterContextProvider, type ServerBuild, createRequestHandler } from 'react-router'
 
-import { cacheDatabase, debug, i18nDefaultLanguageTag, logLevel, portal, stateDatabase } from './config.server.ts'
+import {
+  cacheDatabase,
+  debug,
+  i18nDefaultLanguageTag,
+  logLevel,
+  portal,
+  server,
+  stateDatabase,
+} from './config.server.ts'
 import {
   cacheDatabaseClientContext,
   contentSecurityPolicyNonceContext,
@@ -95,6 +103,7 @@ export async function main({ interceptorMiddleware, prepareError, ...restOptions
       i18nDefaultLanguageTag,
       cacheDatabase,
       stateDatabase,
+      server,
       debug,
     },
   })
@@ -186,7 +195,17 @@ export async function main({ interceptorMiddleware, prepareError, ...restOptions
       contentSecurityPolicy: {
         defaultSrc: ["'self'"],
         baseUri: ["'self'"],
-        connectSrc: ["'self'", ...(env.NODE_ENV === 'development' ? ['http:', 'ws:'] : [])],
+        connectSrc: [
+          "'self'",
+          ...(env.NODE_ENV === 'development'
+            ? [
+                `http://127.0.0.1:${portal.httpPort}`,
+                `http://localhost:${portal.httpPort}`,
+                `ws://127.0.0.1:${server.wsPort}`,
+                `ws://localhost:${server.wsPort}`,
+              ]
+            : []),
+        ],
         frameAncestors: ["'none'"],
         fontSrc: ["'self'"],
         formAction: ["'self'"],
