@@ -47,6 +47,7 @@ const cacheControlLowPathPattern = /^(?!(?:assets|fonts)\/)/i
 
 const acceptLanguageHeaderValuePattern = /^(?:\*|accept-language)$/i
 const forwardSlashPrefixPattern = /^\/+/
+const safeHttpRequestMethodPattern = /^(?:GET|HEAD|OPTIONS|TRACE)$/
 
 type ContentSecurityPolicyVariables = {
   contentSecurityPolicyNonce?: string
@@ -192,10 +193,14 @@ export async function main({ interceptorMiddleware, prepareError, ...restOptions
     return context.json(createStatus404ResponseBody(`${url.pathname}${url.search}`), status404Code)
   })
 
-  const httpLoopbackPattern = new RegExp(String.raw`^(127\.0\.0\.1|localhost):${portal.httpPort}$`)
+  const httpLoopbackHostPattern = new RegExp(String.raw`^(127\.0\.0\.1|localhost):${portal.httpPort}$`)
+  const httpLoopbackOriginPattern = new RegExp(String.raw`^http:\/\/(127\.0\.0\.1|localhost):${portal.httpPort}$`)
 
   httpApp.use(async (context, next) => {
-    if (httpLoopbackPattern.test(context.req.header('host') ?? '')) {
+    if (
+      httpLoopbackHostPattern.test(context.req.header('host') ?? '') &&
+      (safeHttpRequestMethodPattern.test(context.req.method) || httpLoopbackOriginPattern.test(context.req.header('origin') ?? '')) // prettier-ignore
+    ) {
       return next()
     }
 
@@ -370,10 +375,14 @@ export async function main({ interceptorMiddleware, prepareError, ...restOptions
     return context.json(createStatus404ResponseBody(`${url.pathname}${url.search}`), status404Code)
   })
 
-  const probeLoopbackPattern = new RegExp(String.raw`^(127\.0\.0\.1|localhost):${portal.probePort}$`)
+  const probeLoopbackHostPattern = new RegExp(String.raw`^(127\.0\.0\.1|localhost):${portal.probePort}$`)
+  const probeLoopbackOriginPattern = new RegExp(String.raw`^http:\/\/(127\.0\.0\.1|localhost):${portal.probePort}$`)
 
   probeApp.use(async (context, next) => {
-    if (probeLoopbackPattern.test(context.req.header('host') ?? '')) {
+    if (
+      probeLoopbackHostPattern.test(context.req.header('host') ?? '') &&
+      (safeHttpRequestMethodPattern.test(context.req.method) || probeLoopbackOriginPattern.test(context.req.header('origin') ?? '')) // prettier-ignore
+    ) {
       return next()
     }
 
