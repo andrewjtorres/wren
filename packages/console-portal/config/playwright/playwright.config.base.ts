@@ -1,5 +1,5 @@
 import { defineConfig, devices } from '@playwright/test'
-import { env } from 'node:process'
+import { argv, env } from 'node:process'
 import { fileURLToPath } from 'node:url'
 import { z } from 'zod'
 
@@ -18,6 +18,19 @@ export function zeroValueStringToUndefined(value: string): string | undefined {
 // eslint-disable-next-line unicorn/consistent-boolean-name
 export function stringToBoolean(value: string): boolean {
   return booleanPattern.test(value)
+}
+
+function longOptionValue(name: string): string | undefined {
+  const options = argv.slice(2)
+  const i = options.findLastIndex((option) => option === name || option.startsWith(`${name}=`))
+
+  if (i === -1) {
+    return
+  }
+
+  const option = options[i] ?? ''
+
+  return option.includes('=') ? option.slice(name.length + 1) : options[i + 1]
 }
 
 export const isContinuousIntegrationEnvironment = z
@@ -40,6 +53,11 @@ export const htmlHost = z
   .optional()
   .pipe(z.literal('127.0.0.1').default('127.0.0.1'))
   .parse(env.PLAYWRIGHT_HTML_HOST)
+
+// NOTE: Playwright accepts the UI host only from the command line, so it cannot
+// be pinned through configuration. This runs for its validation side effect,
+// rejecting a non-loopback `--ui-host` before the UI server starts.
+z.literal('127.0.0.1').optional().parse(longOptionValue('--ui-host')) // eslint-disable-line unicorn/no-top-level-side-effects
 
 export const baseConfig = defineConfig({
   snapshotPathTemplate: '{testDir}/{testFileDir}/snapshots/{arg}-{projectName}{ext}',
