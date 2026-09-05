@@ -3715,7 +3715,7 @@ __metadata:
     typescript: "npm:^6.0.3"
     typescript-eslint: "npm:^8.68.0"
     vitest: "npm:^4.1.11"
-    zod: "npm:^4.5.1"
+    zod: "npm:^4.5.4"
   peerDependencies:
     nanoid: ^6.0.0
     type-fest: ^5.6.0
@@ -3821,7 +3821,7 @@ __metadata:
     valibot: "npm:^1.4.2"
     vite: "npm:^8.2.2"
     vitest: "npm:^4.1.11"
-    zod: "npm:^4.5.1"
+    zod: "npm:^4.5.4"
   languageName: unknown
   linkType: soft
 
@@ -3853,7 +3853,7 @@ __metadata:
     typescript: "npm:^6.0.3"
     typescript-eslint: "npm:^8.68.0"
     valibot: "npm:^1.4.2"
-    zod: "npm:^4.5.1"
+    zod: "npm:^4.5.4"
   peerDependencies:
     drizzle-orm: ^1.0.0-rc.4
   languageName: unknown
@@ -3889,7 +3889,7 @@ __metadata:
     typescript: "npm:^6.0.3"
     typescript-eslint: "npm:^8.68.0"
     vitest: "npm:^4.1.11"
-    zod: "npm:^4.5.1"
+    zod: "npm:^4.5.4"
   languageName: unknown
   linkType: soft
 
@@ -6490,11 +6490,11 @@ __metadata:
   linkType: hard
 
 "fastq@npm:^1.6.0":
-  version: 1.20.2
-  resolution: "fastq@npm:1.20.2"
+  version: 1.20.3
+  resolution: "fastq@npm:1.20.3"
   dependencies:
     reusify: "npm:^1.0.4"
-  checksum: 10/12ea5ee97d21717afc1c18f9c22e0c5bab3ae985cf2dfd5cb6efc2e5485adc4c2738790a9bf3fa78ab6168e60a10d22d07fe088f7ed13a6deb629ca5aa760b77
+  checksum: 10/952dfa14c62d6a6825baad9c836de6550ece1de4d5d6836203b0851f2c6432ce0aa8cf5fc53dda4560b3b62ce12ef53eeef3d7b9d66efc9a8ea78e5dfc78baf4
   languageName: node
   linkType: hard
 
@@ -11830,9 +11830,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod@npm:^3.25.0 || ^4.0.0, zod@npm:^4.5.1":
-  version: 4.5.1
-  resolution: "zod@npm:4.5.1"
-  checksum: 10/1b09738538d5befcf5ec1dbc670687a815fbc75c6a9a7b5ba41172b4bb41b0ff7a49379b0ccb2bb59aadc12b71bb8e926254cb3a3970c567d5fc59106099aa2e
+"zod@npm:^3.25.0 || ^4.0.0, zod@npm:^4.5.4":
+  version: 4.5.4
+  resolution: "zod@npm:4.5.4"
+  checksum: 10/b2fd4aaf358359650a1f27f303a462f0f49b4e5582f517ad8894ed566fdceb9da391b59babffe3c70574c8064174883735657eb28e12db5c7021455a631866c4
   languageName: node
   linkType: hard
