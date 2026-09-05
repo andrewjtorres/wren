@@ -103,7 +103,7 @@
     "eslint-plugin-storybook": "^10.5.10",
     "eslint-plugin-testing-library": "^7.16.2",
     "eslint-plugin-unicorn": "^74.0.0",
-    "happy-dom": "^20.11.13",
+    "happy-dom": "^20.12.0",
     "lint-staged": "^17.4.1",
     "make-dir-cli": "^4.0.0",
     "playwright-core": "^1.62.1",

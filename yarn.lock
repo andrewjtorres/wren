@@ -3790,7 +3790,7 @@ __metadata:
     eslint-plugin-storybook: "npm:^10.5.10"
     eslint-plugin-testing-library: "npm:^7.16.2"
     eslint-plugin-unicorn: "npm:^74.0.0"
-    happy-dom: "npm:^20.11.13"
+    happy-dom: "npm:^20.12.0"
     hono: "npm:^4.13.5"
     isbot: "npm:^5.2.2"
     lint-staged: "npm:^17.4.1"
@@ -6989,9 +6989,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"happy-dom@npm:^20.11.13":
-  version: 20.11.13
-  resolution: "happy-dom@npm:20.11.13"
+"happy-dom@npm:^20.12.0":
+  version: 20.12.0
+  resolution: "happy-dom@npm:20.12.0"
   dependencies:
     "@types/node": "npm:>=20.0.0"
     "@types/whatwg-mimetype": "npm:^3.0.2"
@@ -7000,7 +7000,7 @@ __metadata:
     entities: "npm:^7.0.1"
     whatwg-mimetype: "npm:^3.0.0"
     ws: "npm:^8.21.0"
-  checksum: 10/3198cf90ec4a2c8310e4f4699292ce79bb03bcc0e35ceeae6b288c34f786ec1beab35b3ef92393c15f867da48b67c7dbd83c3d395829ae75aa4f32255ac31d42
+  checksum: 10/6593656223a22e69db8abefe16d83f06ea0dc5abc0df71f5475543472d792a3ea3bc850abd2a98fa9a8e35cd35c5d0fc74ce270ba87a3d1c14fa3f6285bcef48
   languageName: node
   linkType: hard
 
