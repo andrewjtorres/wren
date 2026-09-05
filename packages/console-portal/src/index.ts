@@ -3,9 +3,11 @@ import { serveStatic } from '@hono/node-server/serve-static'
 import type { EncryptionOpts, ExperimentalFeature } from '@tursodatabase/database-common'
 import { asError } from '@wren/common/error'
 import {
+  createStatus403ResponseBody,
   createStatus404ResponseBody,
   createStatus500ResponseBody,
   status200Code,
+  status403Code,
   status404Code,
   status500Code,
 } from '@wren/common/http'
@@ -190,6 +192,18 @@ export async function main({ interceptorMiddleware, prepareError, ...restOptions
     return context.json(createStatus404ResponseBody(`${url.pathname}${url.search}`), status404Code)
   })
 
+  const httpLoopbackPattern = new RegExp(String.raw`^(127\.0\.0\.1|localhost):${portal.httpPort}$`)
+
+  httpApp.use(async (context, next) => {
+    if (httpLoopbackPattern.test(context.req.header('host') ?? '')) {
+      return next()
+    }
+
+    const url = new URL(context.req.url)
+
+    return context.json(createStatus403ResponseBody(`${url.pathname}${url.search}`), status403Code)
+  })
+
   httpApp.use(
     secureHeaders({
       contentSecurityPolicy: {
@@ -354,6 +368,18 @@ export async function main({ interceptorMiddleware, prepareError, ...restOptions
     const url = new URL(context.req.url)
 
     return context.json(createStatus404ResponseBody(`${url.pathname}${url.search}`), status404Code)
+  })
+
+  const probeLoopbackPattern = new RegExp(String.raw`^(127\.0\.0\.1|localhost):${portal.probePort}$`)
+
+  probeApp.use(async (context, next) => {
+    if (probeLoopbackPattern.test(context.req.header('host') ?? '')) {
+      return next()
+    }
+
+    const url = new URL(context.req.url)
+
+    return context.json(createStatus403ResponseBody(`${url.pathname}${url.search}`), status403Code)
   })
 
   probeApp.get('/health', async (context) => {
