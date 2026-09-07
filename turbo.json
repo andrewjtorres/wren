@@ -96,6 +96,14 @@
     "test:end-to-end": {
       "outputs": ["src/**/snapshots/**", "test-reports/end-to-end/**", "test-results/**"]
     },
+    "test:integration": {
+      "outputs": [
+        "src/**/*.integration.test.ts.snap",
+        "src/**/integration.test.ts.snap",
+        "test-reports/coverage/**",
+        "test-reports/integration/**"
+      ]
+    },
     "test:unit": {
       "outputs": [
         "src/**/*.unit.test.ts.snap",

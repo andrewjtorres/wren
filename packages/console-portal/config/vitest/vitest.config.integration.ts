@@ -5,13 +5,13 @@ import { baseConfig, packageDirUrl } from './vitest.config.base.ts'
 
 const config = mergeConfig(baseConfig, {
   test: {
-    name: 'wren-console-portal-unit',
-    include: ['src/**/?(*.)unit.test.[jt]s?(x)'],
+    name: 'wren-console-portal-integration',
+    include: ['src/**/?(*.)integration.test.[jt]s'],
     reporters: [
       [
         'html',
         {
-          outputFile: fileURLToPath(new URL('test-reports/unit/index.html', packageDirUrl)),
+          outputFile: fileURLToPath(new URL('test-reports/integration/index.html', packageDirUrl)),
         },
       ],
     ],

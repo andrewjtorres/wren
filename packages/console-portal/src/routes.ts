@@ -1,7 +1,12 @@
 import { flatRoutes } from '@react-router/fs-routes'
 
 const config = flatRoutes({
-  ignoredRouteFiles: ['**/snapshots/**/*', '**/?(*.)@(stories|@(component|end-to-end|unit).test).[jt]s?(x)', '**/.*'],
+  ignoredRouteFiles: [
+    '**/snapshots/**/*',
+    '**/?(*.)@(component|end-to-end|integration).test.[jt]s',
+    '**/?(*.)@(stories|unit.test).[jt]s?(x)',
+    '**/.*',
+  ],
 })
 
 export default config

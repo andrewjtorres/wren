@@ -42,8 +42,8 @@ op run --account=<account> --env-file=.env -- yarn run <script>
   and [TypeScript](https://typescriptlang.org))
 - `yarn run refine` — perform stylization and static analysis
 - `yarn run studio` — start the UI development server ([Storybook](https://storybook.js.org))
-- `yarn run test` — perform unit ([Vitest](https://vitest.dev)), component, and
-  end-to-end ([Playwright](https://playwright.dev)) tests
+- `yarn run test` — perform unit ([Vitest](https://vitest.dev)), component ([Playwright](https://playwright.dev)),
+  integration ([Vitest](https://vitest.dev)) and end-to-end ([Playwright](https://playwright.dev)) tests
 
 ### Style
 
@@ -79,6 +79,12 @@ Start the component test development server:
 
 ```shell
 yarn run test:component --ui
+```
+
+Start the integration test development server:
+
+```shell
+yarn run test:integration --coverage --ui --watch
 ```
 
 Start the end-to-end test development server:

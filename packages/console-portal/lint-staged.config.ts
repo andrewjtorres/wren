@@ -6,9 +6,10 @@ const config: Configuration = {
     const filePathsList = filePaths.join(' ')
 
     return [
-      `eslint --cache --cache-location=node_modules/.cache/eslint/ --fix ${filePathsList}`,
       'react-router typegen',
+      `eslint --cache --cache-location=node_modules/.cache/eslint/ --fix ${filePathsList}`,
       'tsc --build',
+      `vitest --config=config/vitest/vitest.config.integration.ts related ${filePathsList}`,
       `vitest --config=config/vitest/vitest.config.unit.ts related ${filePathsList}`,
     ]
   },

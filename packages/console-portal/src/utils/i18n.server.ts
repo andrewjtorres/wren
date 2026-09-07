@@ -3,7 +3,7 @@ import { matchPath } from 'react-router'
 
 import { isSupportedLanguageTag } from './i18n.ts'
 
-function getLanguageTagFromUrl(request: Request): SupportedLanguageTag | undefined {
+function findLanguageTagFromUrl(request: Request): SupportedLanguageTag | undefined {
   const url = new URL(request.url)
   let languageTag = matchPath(':lang?', url.pathname)?.params.lang
 
@@ -16,7 +16,7 @@ function getLanguageTagFromUrl(request: Request): SupportedLanguageTag | undefin
   return isSupportedLanguageTag(languageTag) ? languageTag : undefined
 }
 
-function getLanguageTagFromHeader(request: Request): SupportedLanguageTag | undefined {
+function findLanguageTagFromHeader(request: Request): SupportedLanguageTag | undefined {
   const languageRanges = request.headers.get('accept-language')?.split(',') ?? []
   const languageTagQualityPairs: [SupportedLanguageTag, number][] = []
 
@@ -55,8 +55,8 @@ function getLanguageTagFromHeader(request: Request): SupportedLanguageTag | unde
   return languageTagQualityPairs.toSorted(([, a], [, b]) => b - a)[0]?.[0]
 }
 
-export function getLanguageTag(request: Request): SupportedLanguageTag | undefined {
-  return getLanguageTagFromUrl(request) ?? getLanguageTagFromHeader(request)
+export function findLanguageTag(request: Request): SupportedLanguageTag | undefined {
+  return findLanguageTagFromUrl(request) ?? findLanguageTagFromHeader(request)
 }
 
 export async function getTranslations(languageTag: SupportedLanguageTag): Promise<Messages> {

@@ -22,7 +22,7 @@
     "dev": "cross-env NODE_ENV=\"${NODE_ENV:-development}\" tsx watch --inspect --tsconfig=config/typescript/tsconfig.vite.json server.ts",
     "format": "prettier --cache=node_modules/.cache/prettier/ --check --ignore-path=.prettierignore --log-level=warn \"**/*.@(json|md|webmanifest|yml)\"",
     "i18n:compile": "formatjs compile-folder --ast i18n src/i18n",
-    "i18n:extract": "formatjs extract --id-interpolation-pattern=\"[sha512:contenthash:base64:10]\" --out-file=i18n/en.json --throws \"src/**/*.[jt]s?(x)\" \"!src/**/?(*.)@(stories|@(component|end-to-end|unit).test).[jt]s?(x)\"",
+    "i18n:extract": "formatjs extract --id-interpolation-pattern=\"[sha512:contenthash:base64:10]\" --out-file=i18n/en.json --throws \"src/**/*.[jt]s?(x)\" \"!src/**/?(*.)@(component|end-to-end|integration).test.[jt]s\" \"!src/**/?(*.)@(stories|unit.test).[jt]s?(x)\"",
     "lint": "concurrently --group --raw \"yarn:lint:*\"",
     "lint:css": "stylelint --cache --cache-location=node_modules/.cache/stylelint/ \"**/*.css\"",
     "lint:i18n": "formatjs verify --source-locale=en --missing-keys --extra-keys --structural-equality \"i18n/**/*.json\"",
@@ -33,6 +33,7 @@
     "test": "concurrently --group --raw \"yarn:test:*\"",
     "test:component": "playwright test --config=config/playwright/playwright.config.component.ts",
     "test:end-to-end": "playwright test --config=config/playwright/playwright.config.end-to-end.ts",
+    "test:integration": "vitest --config=config/vitest/vitest.config.integration.ts --passWithNoTests",
     "test:unit": "vitest --config=config/vitest/vitest.config.unit.ts"
   },
   "dependencies": {

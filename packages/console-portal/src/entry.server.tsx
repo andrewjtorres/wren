@@ -20,7 +20,7 @@ import { i18nDefaultLanguageTag } from './config.ts'
 import { contentSecurityPolicyNonceContext, loggerContext } from './context.ts'
 import { getTimeZoneCookieValue } from './utils/client-hint.ts'
 import { isResponse } from './utils/http.ts'
-import { getLanguageTag, getTranslations } from './utils/i18n.server.ts'
+import { findLanguageTag, getTranslations } from './utils/i18n.server.ts'
 
 export function handleError(value: unknown, { request, context }: ActionFunctionArgs | LoaderFunctionArgs): void {
   if (request.signal.aborted) {
@@ -77,7 +77,7 @@ export default async function handleRequest(
     })
   }
 
-  const languageTag = getLanguageTag(request) ?? i18nDefaultLanguageTag
+  const languageTag = findLanguageTag(request) ?? i18nDefaultLanguageTag
   const translations = await getTranslations(languageTag)
 
   function handleIntlError(value: unknown): void {

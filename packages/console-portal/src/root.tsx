@@ -25,7 +25,7 @@ import {
   subscribeToPrefersColorSchemeChange,
   subscribeToPrefersReducedMotionChange,
 } from './utils/client-hint.ts'
-import { getLanguageTag } from './utils/i18n.server.ts'
+import { findLanguageTag } from './utils/i18n.server.ts'
 import { isSupportedLanguageTag } from './utils/i18n.ts'
 
 export type BuildInfo = {
@@ -47,7 +47,7 @@ export function loader({ request, params }: LoaderFunctionArgs): LoaderData {
     })
   }
 
-  const languageTag = getLanguageTag(request) ?? i18nDefaultLanguageTag
+  const languageTag = findLanguageTag(request) ?? i18nDefaultLanguageTag
   const url = new URL(request.url)
 
   if (languageTag !== i18nDefaultLanguageTag && !url.pathname.startsWith(`/${languageTag}`)) {

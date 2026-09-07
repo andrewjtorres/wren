@@ -1,3 +1,5 @@
+// @vitest-environment happy-dom
+
 import { screen } from '@testing-library/react'
 import type { JSX } from 'react'
 import { expect, test } from 'vitest'

@@ -52,7 +52,27 @@ package's `types/<tool>/process.d.ts` and read by property — `env.PORTAL_URL`,
 declaration, and the declaration is what keeps the accepted set discoverable in one place. This applies to
 `process.env`. Values from `loadEnv` and other `Record` types are index signatures and still require brackets.
 
-**Tests are colocated** in `src/` as `*.unit.test.ts`.
+**Tests are colocated** in `src/` as `*.unit.test.ts` or `*.integration.test.ts`. Unit tests cover pure
+functions and modules; middleware and anything whose behavior is a request and a response is tested through
+integration tests, where a status code proves something a fabricated context cannot.
+
+**Prefer fewer seams.** Use the real thing wherever practical and stub only what the environment cannot provide.
+A test standing on several stubs exercises a fiction regardless of how its assertions are written, so this
+matters more than assertion style does. A fake supplied to a port is not a stub in this sense: the port is a
+declared contract, and observing what the domain sent through it is observing behavior.
+
+**Tests assert observable behavior, never implementation.** A test must still pass when the implementation is
+replaced by a different correct one. Assert return values, thrown errors, and effects visible through a declared
+contract. Where a test needs to observe an interaction, capture it into a value the test owns and assert on that
+value — not on a mock's call record. No `toHaveBeenCalledWith`, no spying on internals. Assert ordering, in call
+sequences and in captured collections alike, only where ordering is part of the contract. A stub may know the
+mechanism; assertions may not.
+
+**Declare the test environment when it differs from the package default.** Add
+`// @vitest-environment <name>` as the first line. Defaults live in each package's
+`config/vitest/`, so check there rather than assuming. A file needing a DOM that inherits `node` fails
+loudly and is easy to fix; one that does not need a DOM but inherits it passes silently while hiding an
+accidental dependency on a browser global, which is why the default is the strict one.
 
 **Conventional commits**, matching the existing log.
 

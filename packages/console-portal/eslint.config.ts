@@ -60,7 +60,7 @@ const config = defineConfig([
   },
   {
     ...vitestConfig,
-    files: ['**/?(*.)unit.test.[jt]s?(x)'],
+    files: ['**/?(*.)integration.test.[jt]s', '**/?(*.)unit.test.[jt]s?(x)'],
   },
   {
     ...prettierConfig,

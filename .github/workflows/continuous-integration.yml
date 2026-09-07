@@ -111,13 +111,13 @@ jobs:
           done
 
           exit 1
-      - name: Perform unit, component, and end-to-end tests
+      - name: Perform unit, component, integration, and end-to-end tests
         timeout-minutes: 5
         shell: bash
         run: |
           set -euo pipefail
 
-          yarn run turbo run test:unit --concurrency=1 --output-logs=errors-only -- --coverage
+          yarn run turbo run test:integration test:unit --concurrency=1 --output-logs=errors-only -- --coverage
           yarn run turbo run test:component test:end-to-end --concurrency=1 --output-logs=errors-only
       - name: Prune the Turbo cache
         shell: bash
