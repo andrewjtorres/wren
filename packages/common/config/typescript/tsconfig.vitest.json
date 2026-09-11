@@ -5,6 +5,7 @@
     "rootDir": "../..",
     "types": ["node", "@total-typescript/ts-reset"],
     "composite": true,
-    "tsBuildInfoFile": "../../node_modules/.cache/typescript/tsconfig.vitest.tsbuildinfo"
+    "tsBuildInfoFile": "../../node_modules/.cache/typescript/tsconfig.vitest.tsbuildinfo",
+    "skipLibCheck": true
   }
 }

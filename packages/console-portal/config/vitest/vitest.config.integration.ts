@@ -11,7 +11,7 @@ const config = mergeConfig(baseConfig, {
       [
         'html',
         {
-          outputFile: fileURLToPath(new URL('test-reports/integration/index.html', packageDirUrl)),
+          outputDir: fileURLToPath(new URL('test-reports/integration/', packageDirUrl)),
         },
       ],
     ],
