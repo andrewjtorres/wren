@@ -45,14 +45,14 @@ route modules importing from ./+types/...
 Typical route module:
 
 ```tsx
-import type { Route } from './+types/product'
+import type { Route } from "./+types/product";
 
 export async function loader({ params }: Route.LoaderArgs) {
-  return { product: await getProduct(params.productId) }
+  return { product: await getProduct(params.productId) };
 }
 
 export default function Product({ loaderData }: Route.ComponentProps) {
-  return <h1>{loaderData.product.name}</h1>
+  return <h1>{loaderData.product.name}</h1>;
 }
 ```
 

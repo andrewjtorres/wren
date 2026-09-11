@@ -1,6 +1,10 @@
 # Miscellaneous
 !**/.*
 
+# Agents
+.agents/skills
+.claude/skills
+
 # Artifacts and Compiled Output
 .react-router
 .turbo

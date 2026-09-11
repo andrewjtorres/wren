@@ -4,8 +4,14 @@
     "find-skills": {
       "source": "vercel-labs/skills",
       "sourceType": "github",
-      "skillPath": "skills/find-skills/skill.md",
-      "computedHash": "781bd6d3f9b19f8c9af6b53d8d0e4876d0183841b565db34ca7092ffa412d111"
+      "skillPath": "skills/find-skills/SKILL.md",
+      "computedHash": "b146008599c31057cef1c145774cea5d5afb30e8f43fa802e47a4b461419aaaf"
+    },
+    "turborepo": {
+      "source": "vercel/turborepo",
+      "sourceType": "github",
+      "skillPath": "skills/turborepo/SKILL.md",
+      "computedHash": "01efdc18492dc5cc56520534d571dd6b08d62d48fdc9f4517149adc78efd7273"
     }
   }
 }
