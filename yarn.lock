@@ -528,9 +528,9 @@ __metadata:
   linkType: hard
 
 "@drizzle-team/brocli@npm:^0.12.0":
-  version: 0.12.0
-  resolution: "@drizzle-team/brocli@npm:0.12.0"
-  checksum: 10/76bf457a5951f41464b3d51458d1059b97d3fc1e36e92c0696c6836aae77eea78ab1a3669576228689b8d083b9b6e0dc058aa26e949f42d38c14dfdad3ebefea
+  version: 0.12.1
+  resolution: "@drizzle-team/brocli@npm:0.12.1"
+  checksum: 10/b61a393c583893d614d5d16f88d08bab882f8c4b47cf25aac395d33f8967f17a8ef5aff6b97930473306938d57c6f31d86b555aa0d229c4040ac82b5df871350
   languageName: node
   linkType: hard
 
