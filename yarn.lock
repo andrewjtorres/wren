@@ -528,9 +528,9 @@ __metadata:
   linkType: hard
 
 "@drizzle-team/brocli@npm:^0.12.0":
-  version: 0.12.0
-  resolution: "@drizzle-team/brocli@npm:0.12.0"
-  checksum: 10/76bf457a5951f41464b3d51458d1059b97d3fc1e36e92c0696c6836aae77eea78ab1a3669576228689b8d083b9b6e0dc058aa26e949f42d38c14dfdad3ebefea
+  version: 0.12.1
+  resolution: "@drizzle-team/brocli@npm:0.12.1"
+  checksum: 10/b61a393c583893d614d5d16f88d08bab882f8c4b47cf25aac395d33f8967f17a8ef5aff6b97930473306938d57c6f31d86b555aa0d229c4040ac82b5df871350
   languageName: node
   linkType: hard
 
@@ -4266,13 +4266,13 @@ __metadata:
   linkType: hard
 
 "ast-v8-to-istanbul@npm:^1.0.5":
-  version: 1.0.5
-  resolution: "ast-v8-to-istanbul@npm:1.0.5"
+  version: 1.0.6
+  resolution: "ast-v8-to-istanbul@npm:1.0.6"
   dependencies:
     "@jridgewell/trace-mapping": "npm:^0.3.31"
     estree-walker: "npm:^3.0.3"
     js-tokens: "npm:^10.0.0"
-  checksum: 10/da404c933beb1d3db94158e07c8d87aa86103775e0fb6f9a85f930d5c8327320b5a2099db4cc9d4448c421285a614fe9f73ef7d76dbae589ce815e636a0f1542
+  checksum: 10/30acf9b07fff7dce9c2093b8084e971c6e4f28e5c6ad78c9fd8871d8afcfa301e8d6dc2ae6283cf8a403174274f7b77c668c84258e7e274d97f45e9f4f87bbe9
   languageName: node
   linkType: hard
 
@@ -4774,7 +4774,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"confbox@npm:^0.3.0":
+"confbox@npm:^0.3.1":
   version: 0.3.1
   resolution: "confbox@npm:0.3.1"
   checksum: 10/42c0580cc7bd20009df6c8264247db4fda37a63abcc2d94d7503a41eb00a915ec3328e62d495b8e00de7022e941fee6045545f9351d5e644e77d31ae4a543d0d
@@ -5394,9 +5394,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.5.420":
-  version: 1.5.422
-  resolution: "electron-to-chromium@npm:1.5.422"
-  checksum: 10/a4cc1bd7204bdb3da063f1ad8103f9990e03da3d0dae0aaf75e1669f2c36a9ae807498c5b27eed61fa98d6b10baf7fe05ff6038a99a4a85a0285e623825253d6
+  version: 1.5.423
+  resolution: "electron-to-chromium@npm:1.5.423"
+  checksum: 10/8b5ab0885e043479de00e4b9798d265d5c51e30e6270980c4b649e7dea442b83636d9681a81d7dd1275c8515da762a1213076f3814c88bfd64452649ab56bae8
   languageName: node
   linkType: hard
 
@@ -9045,13 +9045,13 @@ __metadata:
   linkType: hard
 
 "pkg-types@npm:^2.3.1":
-  version: 2.3.2
-  resolution: "pkg-types@npm:2.3.2"
+  version: 2.3.3
+  resolution: "pkg-types@npm:2.3.3"
   dependencies:
-    confbox: "npm:^0.3.0"
+    confbox: "npm:^0.3.1"
     exsolve: "npm:^1.1.1"
     pathe: "npm:^2.0.3"
-  checksum: 10/492075121ea6ac690b82a0c6c6dfe8cae73935fb820dfc3d5d822452ae8af9f86a98b0d642294e78c82d3960350e1de2108378fb6c09d10a2d59feecdb913983
+  checksum: 10/35742c0283c6aaa67e60278e5b229f914343e06603e75b5b862064c6f38fc918843475aae6344f29bca92427187977757b802641081ae6b54f668348f8fd44e8
   languageName: node
   linkType: hard
 
