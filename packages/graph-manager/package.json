@@ -43,7 +43,7 @@
     "@eslint/js": "^10.0.1",
     "@total-typescript/ts-reset": "^0.6.1",
     "@tursodatabase/database": "0.7.2",
-    "@types/node": "^26.4.1",
+    "@types/node": "^26.5.1",
     "concurrently": "^10.0.5",
     "del-cli": "^7.0.0",
     "drizzle-kit": "1.0.0-rc.4",
@@ -61,9 +61,9 @@
     "rolldown-plugin-dts": "^0.28.5",
     "turbo": "^2.10.12",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.69.0",
-    "valibot": "^1.4.2",
-    "zod": "^4.5.4"
+    "typescript-eslint": "^8.70.0",
+    "valibot": "^1.5.0",
+    "zod": "^4.6.1"
   },
   "peerDependencies": {
     "drizzle-orm": "^1.0.0-rc.4"
