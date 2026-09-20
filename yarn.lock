@@ -5429,12 +5429,12 @@ __metadata:
   linkType: hard
 
 "enhanced-resolve@npm:^5.24.1":
-  version: 5.24.5
-  resolution: "enhanced-resolve@npm:5.24.5"
+  version: 5.25.0
+  resolution: "enhanced-resolve@npm:5.25.0"
   dependencies:
     graceful-fs: "npm:^4.2.4"
     tapable: "npm:^2.3.3"
-  checksum: 10/cf3f6f62bd52c1d564d7967e474892d5b43690aedaf7a4e87c831fa6b4b065617baf08eb940907968c711965cbc6ccd773bcc67b8d87a71523c0512372be2a06
+  checksum: 10/3bd2fc3a0452337b4bac9b19f3e5bdd55e4ca42b84e9e502a466df730a89441aa714c234cc19e9d7786a7065978d8e7b5bfbca3265ead04873311884a84006c2
   languageName: node
   linkType: hard
 
