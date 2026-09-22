@@ -20,33 +20,3 @@ test('should not have any automatically detectable accessibility issues', async 
 
   expect(accessibilityAnalysisResults.violations).toEqual([])
 })
-
-test(
-  'should render the not found route in english',
-  {
-    tag: ['@visual'],
-  },
-  async ({ page }) => {
-    await page.goto('/en/not-found')
-    await page.getByTestId('nh9h797tr2').waitFor()
-
-    await expect(page).toHaveScreenshot({
-      fullPage: true,
-    })
-  },
-)
-
-test(
-  'should render the not found route in spanish',
-  {
-    tag: ['@visual'],
-  },
-  async ({ page }) => {
-    await page.goto('/es/not-found')
-    await page.getByTestId('nh9h797tr2').waitFor()
-
-    await expect(page).toHaveScreenshot({
-      fullPage: true,
-    })
-  },
-)

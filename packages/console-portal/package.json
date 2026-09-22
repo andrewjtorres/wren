@@ -5,6 +5,7 @@
   "license": "MIT",
   "author": "Andrew J. Torres <andrew.jonathan.torres@gmail.com> (https://andrewjtorr.es)",
   "imports": {
+    "#.storybook/*": "./.storybook/*",
     "#src/*": "./src/*"
   },
   "repository": {
@@ -22,7 +23,7 @@
     "dev": "cross-env NODE_ENV=\"${NODE_ENV:-development}\" tsx watch --inspect --tsconfig=config/typescript/tsconfig.vite.json server.ts",
     "format": "prettier --cache=node_modules/.cache/prettier/ --check --ignore-path=.prettierignore --log-level=warn \"**/*.@(json|md|webmanifest|yml)\"",
     "i18n:compile": "formatjs compile-folder --ast i18n src/i18n",
-    "i18n:extract": "formatjs extract --id-interpolation-pattern=\"[sha512:contenthash:base64:10]\" --out-file=i18n/en.json --throws \"src/**/*.[jt]s?(x)\" \"!src/**/?(*.)@(component|end-to-end|integration).test.[jt]s\" \"!src/**/?(*.)@(stories|unit.test).[jt]s?(x)\"",
+    "i18n:extract": "formatjs extract --id-interpolation-pattern=\"[sha512:contenthash:base64:10]\" --out-file=i18n/en.json --throws \"src/**/*.[jt]s?(x)\" \"!src/**/?(*.)@(end-to-end|integration|unit).test.[jt]s\" \"!src/**/?(*.)@(stories|@(component|visual-regression).test).[jt]s?(x)\"",
     "lint": "concurrently --group --raw \"yarn:lint:*\"",
     "lint:css": "stylelint --cache --cache-location=node_modules/.cache/stylelint/ \"**/*.css\"",
     "lint:i18n": "formatjs verify --source-locale=en --missing-keys --extra-keys --structural-equality \"i18n/**/*.json\"",
@@ -31,10 +32,11 @@
     "refine": "concurrently --group --raw \"yarn:format\" \"yarn:lint\"",
     "studio": "storybook dev --host=127.0.0.1 --no-open --port=6006",
     "test": "concurrently --group --raw \"yarn:test:*\"",
-    "test:component": "playwright test --config=config/playwright/playwright.config.component.ts",
-    "test:end-to-end": "playwright test --config=config/playwright/playwright.config.end-to-end.ts",
-    "test:integration": "vitest --config=config/vitest/vitest.config.integration.ts --passWithNoTests",
-    "test:unit": "vitest --config=config/vitest/vitest.config.unit.ts"
+    "test:component": "cross-env VITEST_ARTIFACT_ROOT_DIR=test-reports/component vitest --config=config/vitest/vitest.config.ts --project=component",
+    "test:end-to-end": "playwright test --config=config/playwright/playwright.config.ts",
+    "test:integration": "cross-env VITEST_ARTIFACT_ROOT_DIR=test-reports/integration vitest --config=config/vitest/vitest.config.ts --pass-with-no-tests --project=integration",
+    "test:unit": "cross-env VITEST_ARTIFACT_ROOT_DIR=test-reports/unit vitest --config=config/vitest/vitest.config.ts --project=unit",
+    "test:visual-regression": "cross-env VITEST_ARTIFACT_ROOT_DIR=test-reports/visual-regression vitest --config=config/vitest/vitest.config.ts --project=visual-regression"
   },
   "dependencies": {
     "@hono/node-server": "^2.1.1",
@@ -67,7 +69,6 @@
     "@storybook/addon-a11y": "^10.6.0",
     "@storybook/addon-docs": "^10.6.0",
     "@storybook/addon-links": "^10.6.0",
-    "@storybook/addon-vitest": "^10.6.0",
     "@storybook/react-vite": "^10.6.0",
     "@stylistic/eslint-plugin": "^5.10.0",
     "@tailwindcss/vite": "^4.3.3",
@@ -82,6 +83,7 @@
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.1",
+    "@vitest/browser-playwright": "^5.0.0",
     "@vitest/coverage-v8": "^5.0.0",
     "@vitest/eslint-plugin": "^1.6.27",
     "@vitest/ui": "^5.0.0",
@@ -107,6 +109,7 @@
     "happy-dom": "^20.14.3",
     "lint-staged": "^17.5.0",
     "make-dir-cli": "^4.0.0",
+    "playwright": "^1.63.0",
     "playwright-core": "^1.63.0",
     "prettier": "^3.9.6",
     "prettier-plugin-tailwindcss": "^0.8.1",
@@ -126,7 +129,8 @@
     "typescript-eslint": "^8.70.0",
     "valibot": "^1.5.0",
     "vite": "^8.3.0",
-    "vitest": "^5.0.0"
+    "vitest": "^5.0.0",
+    "vitest-browser-react": "^2.3.0"
   },
   "engines": {
     "node": ">=24.21",

@@ -11,10 +11,8 @@
     "../vitest/**/*.ts"
   ],
   "exclude": [
-    "../../src/**/*.component.test.ts",
     "../../src/**/*.end-to-end.test.ts",
     "../../src/**/*.stories.*",
-    "../../src/**/component.test.ts",
     "../../src/**/end-to-end.test.ts",
     "../../src/**/stories.*",
     "../../src/utils/decorator.tsx"

@@ -1,9 +1,7 @@
 {
   "extends": "../../../../config/typescript/tsconfig.base",
   "include": [
-    "../../src/**/*.component.test.ts",
     "../../src/**/*.end-to-end.test.ts",
-    "../../src/**/component.test.ts",
     "../../src/**/end-to-end.test.ts",
     "../../types/node/*.d.ts",
     "../../types/playwright/*.d.ts",

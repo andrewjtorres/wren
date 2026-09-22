@@ -3,8 +3,8 @@ import { flatRoutes } from '@react-router/fs-routes'
 const config = flatRoutes({
   ignoredRouteFiles: [
     '**/snapshots/**/*',
-    '**/?(*.)@(component|end-to-end|integration).test.[jt]s',
-    '**/?(*.)@(stories|unit.test).[jt]s?(x)',
+    '**/?(*.)@(end-to-end|integration|unit).test.[jt]s',
+    '**/?(*.)@(stories|@(component|visual-regression).test).[jt]s?(x)',
     '**/.*',
   ],
 })

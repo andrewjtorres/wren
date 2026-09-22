@@ -1,17 +1,18 @@
-import type { Meta, StoryObj } from '@storybook/react-vite'
-import type { JSX } from 'react'
-
 import { withRouter } from '#src/utils/decorator.tsx'
 import { isSupportedLanguageTag } from '#src/utils/i18n.ts'
-import { ErrorBoundary as ErrorBoundaryComponent } from './index.tsx'
+import preview from '#.storybook/preview.ts'
+import { ErrorBoundary, NotFoundErrorHandler } from './index.tsx'
 
-export type ErrorBoundaryMeta = Meta<typeof ErrorBoundaryComponent>
-
-export type ErrorBoundaryStory = StoryObj<ErrorBoundaryMeta>
-
-const meta: ErrorBoundaryMeta = {
+const meta = preview.meta({
   title: 'Status/Error Boundary',
-  component: ErrorBoundaryComponent,
+  component: ErrorBoundary,
+  decorators: [
+    (Story) => (
+      <div className="flex min-h-full flex-col overflow-x-hidden">
+        <Story />
+      </div>
+    ),
+  ],
   parameters: {
     layout: 'fullscreen',
   },
@@ -26,38 +27,80 @@ const meta: ErrorBoundaryMeta = {
       control: false,
     },
   },
-}
+})
 
-export const ErrorBoundary: ErrorBoundaryStory = {
-  decorators(BaseStory, { globals: { locale } }) {
-    function Story(): JSX.Element {
-      return (
-        <div className="flex min-h-full flex-col overflow-x-hidden">
-          <BaseStory />
-        </div>
-      )
-    }
-
-    return withRouter({
-      ...(isSupportedLanguageTag(locale) && {
-        locale: locale,
-      }),
-      initialEntries: ['/'],
-      routes: [
-        {
-          path: '/',
-          loader() {
-            throw new Response(undefined, {
-              status: 418,
-              statusText: "I'm a teapot",
-            })
+export const Default = meta.story({
+  name: 'Default',
+  decorators: [
+    (Story, { globals: { locale } }) => {
+      return withRouter({
+        ...(isSupportedLanguageTag(locale) && {
+          locale: locale,
+        }),
+        initialEntries: ['/'],
+        routes: [
+          {
+            path: '/',
+            loader() {
+              throw new Response(undefined, {
+                status: 418,
+                statusText: "I'm a teapot",
+              })
+            },
+            ErrorBoundary: Story,
           },
-          Component: Story,
-          ErrorBoundary: Story,
-        },
-      ],
-    })
+        ],
+      })
+    },
+  ],
+})
+
+export const GenericError = meta.story({
+  name: 'Error',
+  decorators: [
+    (Story, { globals: { locale } }) => {
+      return withRouter({
+        ...(isSupportedLanguageTag(locale) && {
+          locale: locale,
+        }),
+        initialEntries: ['/'],
+        routes: [
+          {
+            path: '/',
+            loader() {
+              throw new Error('something went wrong')
+            },
+            ErrorBoundary: Story,
+          },
+        ],
+      })
+    },
+  ],
+})
+
+export const NotFound = meta.story({
+  name: '404 Not Found',
+  decorators: [
+    (Story, { globals: { locale } }) => {
+      return withRouter({
+        ...(isSupportedLanguageTag(locale) && {
+          locale: locale,
+        }),
+        initialEntries: ['/not-found'],
+        routes: [
+          {
+            path: '/',
+            ErrorBoundary: Story,
+          },
+        ],
+      })
+    },
+  ],
+  args: {
+    errorResponseHandlers: {
+      404: NotFoundErrorHandler,
+    },
   },
-}
+})
 
 export default meta

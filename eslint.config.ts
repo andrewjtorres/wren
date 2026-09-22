@@ -291,13 +291,9 @@ export const vitestConfig: Linter.Config = {
   files: [],
   plugins: {
     ...formatjsPlugin.configs.recommended.plugins,
-    ...jestDomPlugin.configs['flat/recommended'].plugins,
-    ...testingLibraryPlugin.configs['flat/react'].plugins,
     ...vitestPlugin.configs.recommended.plugins,
   },
   rules: {
-    ...jestDomPlugin.configs['flat/recommended'].rules,
-    ...testingLibraryPlugin.configs['flat/react'].rules,
     ...vitestPlugin.configs.recommended.rules,
     'formatjs/no-literal-string-in-jsx': 'off',
     'vitest/no-alias-methods': 'error',
@@ -314,6 +310,19 @@ export const vitestConfig: Linter.Config = {
     'vitest/prefer-to-be-truthy': 'error',
     'vitest/prefer-to-contain': 'error',
     'vitest/prefer-to-have-length': 'error',
+  },
+}
+
+export const reactTestingLibraryConfig: Linter.Config = {
+  name: 'react-testing-library',
+  files: [],
+  plugins: {
+    ...jestDomPlugin.configs['flat/recommended'].plugins,
+    ...testingLibraryPlugin.configs['flat/react'].plugins,
+  },
+  rules: {
+    ...jestDomPlugin.configs['flat/recommended'].rules,
+    ...testingLibraryPlugin.configs['flat/react'].rules,
   },
 }
 

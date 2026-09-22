@@ -46,7 +46,7 @@
     "lint:typescript": "tsc --build",
     "refine": "concurrently --group --raw \"yarn:format\" \"yarn:lint\"",
     "test": "concurrently --group --raw \"yarn:test:*\"",
-    "test:unit": "vitest --config=config/vitest/vitest.config.unit.ts"
+    "test:unit": "cross-env VITEST_ARTIFACT_ROOT_DIR=test-reports/unit vitest --config=config/vitest/vitest.config.ts --project=unit"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
@@ -56,6 +56,7 @@
     "@vitest/eslint-plugin": "^1.6.27",
     "@vitest/ui": "^5.0.0",
     "concurrently": "^10.0.5",
+    "cross-env": "^10.1.0",
     "del-cli": "^7.0.0",
     "eslint": "^10.10.0",
     "eslint-config-prettier": "^10.1.8",

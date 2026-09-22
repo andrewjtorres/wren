@@ -1,65 +1,81 @@
+import path from 'node:path'
 import { env } from 'node:process'
 import { fileURLToPath } from 'node:url'
 import { type Plugin, defineConfig } from 'vitest/config'
 import { z } from 'zod'
 
-export const packageDirUrl = new URL('../..', import.meta.url)
+const packageDirUrl = new URL('../..', import.meta.url)
 
-export const packageDirPath = fileURLToPath(packageDirUrl)
+const packageDirPath = fileURLToPath(packageDirUrl)
 
 const booleanPattern = /^(?:1|enabled|on|true|y|yes)$/i
 const logMessageBlockPattern = /^(?:)/i
 
-export function zeroValueStringToUndefined(value: string): string | undefined {
+function zeroValueStringToUndefined(value: string): string | undefined {
   return value === '' ? undefined : value
 }
 
 // eslint-disable-next-line unicorn/consistent-boolean-name
-export function stringToBoolean(value: string): boolean {
+function stringToBoolean(value: string): boolean {
   return booleanPattern.test(value)
 }
 
-export const isContinuousIntegrationEnvironment = z
+const isContinuousIntegrationEnvironment = z
   .string()
   .transform(zeroValueStringToUndefined)
   .optional()
   .pipe(z.string().transform(stringToBoolean).default(false))
   .parse(env.CI)
 
-export function assertHostPlugin(host: string): Plugin {
+const artifactRootDir = z
+  .string()
+  .transform(zeroValueStringToUndefined)
+  .optional()
+  .pipe(z.string().default('test-reports'))
+  .parse(env.VITEST_ARTIFACT_ROOT_DIR)
+
+function assertHostPlugin(host: string): Plugin {
   return {
-    name: 'wren-console-portal:assert-host',
+    name: 'wren-mail-agent:assert-host',
     configResolved(config) {
       if (config.server.host !== undefined && config.server.host !== host) {
-        throw new Error(`@wren/console-portal listeners must bind to ${host}`)
+        throw new Error(`@wren/mail-agent listeners must bind to ${host}`)
       }
     },
   }
 }
 
-export const baseConfig = defineConfig({
+const config = defineConfig({
   root: packageDirPath,
   plugins: [assertHostPlugin('127.0.0.1')],
   server: {
     host: '127.0.0.1',
   },
   test: {
-    reporters: [[isContinuousIntegrationEnvironment ? 'github-actions' : 'default']],
+    reporters: [
+      [isContinuousIntegrationEnvironment ? 'github-actions' : 'default'],
+      [
+        'html',
+        {
+          outputDir: path.join(artifactRootDir, 'html'),
+        },
+      ],
+    ],
     environment: 'node',
+    projects: [
+      {
+        test: {
+          name: 'unit',
+          include: ['src/**/?(*.)unit.test.[jt]s'],
+        },
+      },
+    ],
     watch: false,
     root: packageDirPath,
-    setupFiles: ['config/vitest/setup.ts'],
     coverage: {
-      include: ['src/**/*.[jt]s?(x)'],
-      exclude: [
-        'src/**/?(*.)@(component|end-to-end|integration).test.[jt]s',
-        'src/**/?(*.)@(stories|unit.test).[jt]s?(x)',
-        'src/utils/@(decorator|render).tsx',
-        'src/config?(.server).ts',
-        'src/index.ts',
-        'src/routes.ts',
-      ],
-      reportsDirectory: 'test-reports',
+      include: ['src/**/*.[jt]s'],
+      exclude: ['src/**/?(*.)unit.test.[jt]s', 'src/config.ts'],
+      reportsDirectory: artifactRootDir,
       reporter: [
         [isContinuousIntegrationEnvironment ? 'cobertura' : 'text'],
         [
@@ -76,10 +92,15 @@ export const baseConfig = defineConfig({
     },
     env: {
       NODE_ENV: 'test',
-      DEBUG: '-wren-console-portal',
     },
     onConsoleLog(message) {
       return logMessageBlockPattern.test(message) ? false : undefined
     },
+    provide: {
+      isContinuousIntegrationEnvironment,
+    },
+    attachmentsDir: path.join(artifactRootDir, 'attachments'),
   },
 })
+
+export default config

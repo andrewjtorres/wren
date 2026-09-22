@@ -38,7 +38,7 @@ jobs:
               done < <(dependency_names="${{ steps.dependabot-metadata.outputs.dependency-names }}"; printf '%s\n' "${dependency_names//,/$'\n'}")
           fi
 
-          echo "auto-approve=$auto_approve" >> "$GITHUB_OUTPUT"
+          echo "auto-approve=$auto_approve" >>"$GITHUB_OUTPUT"
       - name: Configure 1Password credentials
         if: ${{ steps.metadata.outputs.auto-approve == 'true' }}
         uses: 1password/load-secrets-action/configure@e544b780808654ba8ceba5fb2fe2897103d92ff4 # v5.0.0

@@ -9,8 +9,7 @@ const config: Configuration = {
       'react-router typegen',
       `eslint --cache --cache-location=node_modules/.cache/eslint/ --fix ${filePathsList}`,
       'tsc --build',
-      `vitest --config=config/vitest/vitest.config.integration.ts related ${filePathsList}`,
-      `vitest --config=config/vitest/vitest.config.unit.ts related ${filePathsList}`,
+      `vitest --config=config/vitest/vitest.config.ts related ${filePathsList}`,
     ]
   },
   '*.@(json|md|webmanifest|yml)': [

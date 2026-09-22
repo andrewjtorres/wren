@@ -16,7 +16,8 @@
     "../../src/**/*.test.*",
     "../../src/**/stories.*",
     "../../src/utils/decorator.tsx",
-    "../../src/utils/render.tsx"
+    "../../src/utils/render.browser.tsx",
+    "../../src/utils/render.dom.tsx"
   ],
   "compilerOptions": {
     "rootDirs": ["../..", "../../.react-router/types"],

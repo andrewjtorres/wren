@@ -403,7 +403,7 @@ yarn run turbo run test:unit
 
 **A phase cannot pass acceptance while an invariant half attributed to it lacks a named passing test.** Two current obstacles, both scheduled:
 
-- `mail-agent` runs Vitest with `--passWithNoTests`, which makes its suite vacuous. The flag is removed when its first real test lands in P2. Until then no acceptance criterion may cite `mail-agent` test success as evidence.
+- `mail-agent` runs Vitest with `--pass-with-no-tests`, which makes its suite vacuous. The flag is removed when its first real test lands in P2. Until then no acceptance criterion may cite `mail-agent` test success as evidence.
 - `graph-manager` has no test harness at all. P1a adds one, because its migration smoke test, phantom-diff test, and per-table `updated_at` trigger test all belong to that package.
 
 A `test:invariants` task, created in P0 and run in CI, holds a registry mapping every invariant ID to its test name and the sub-phase that owns it. It fails when an invariant has no registry entry, and — for entries whose owning sub-phase has passed — when the named test is absent or failing. This is what makes the gating rule above and change-control clause 3 mechanical rather than dependent on self-review.

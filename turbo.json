@@ -48,7 +48,7 @@
       "outputs": ["node_modules/.cache/stylelint/**"]
     },
     "lint:i18n": {
-      "outputs": ["src/i18n/**"]
+      "outputs": []
     },
     "//#lint:javascript": {
       "inputs": [
@@ -91,28 +91,19 @@
       "outputs": ["node_modules/.cache/typescript/**"]
     },
     "test:component": {
-      "outputs": ["src/**/snapshots/**", "test-reports/component/**", "test-results/**"]
+      "outputs": ["test-reports/component/**"]
     },
     "test:end-to-end": {
-      "outputs": ["src/**/snapshots/**", "test-reports/end-to-end/**", "test-results/**"]
+      "outputs": ["test-reports/end-to-end/**", "test-results/**"]
     },
     "test:integration": {
-      "outputs": [
-        "src/**/*.integration.test.ts.snap",
-        "src/**/integration.test.ts.snap",
-        "test-reports/coverage/**",
-        "test-reports/integration/**"
-      ]
+      "outputs": ["test-reports/integration/**"]
     },
     "test:unit": {
-      "outputs": [
-        "src/**/*.unit.test.ts.snap",
-        "src/**/*.unit.test.tsx.snap",
-        "src/**/unit.test.ts.snap",
-        "src/**/unit.test.tsx.snap",
-        "test-reports/coverage/**",
-        "test-reports/unit/**"
-      ]
+      "outputs": ["test-reports/unit/**"]
+    },
+    "test:visual-regression": {
+      "outputs": ["src/**/snapshots/**", "test-reports/visual-regression/**"]
     }
   }
 }

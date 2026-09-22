@@ -1,4 +1,8 @@
-import type { Preview } from '@storybook/react-vite'
+import a11yAddon from '@storybook/addon-a11y'
+import docsAddon from '@storybook/addon-docs'
+import linksAddon from '@storybook/addon-links'
+import { definePreview } from '@storybook/react-vite'
+import i18nAddon from 'storybook-i18n'
 
 import { i18nDefaultLanguageTag } from '#src/config.ts'
 
@@ -8,7 +12,8 @@ import '#src/styles/tailwind.css'
 const colorControlMatcherPattern = /(?:background|color)$/i
 const dateControlMatcherPattern = /date$/i
 
-const preview: Preview = {
+const preview = definePreview({
+  addons: [a11yAddon(), docsAddon(), linksAddon(), i18nAddon()],
   parameters: {
     controls: {
       matchers: {
@@ -28,6 +33,6 @@ const preview: Preview = {
       },
     },
   },
-}
+})
 
 export default preview

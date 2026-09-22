@@ -25,7 +25,7 @@
     "lint:typescript": "tsc --build",
     "refine": "concurrently --group --raw \"yarn:format\" \"yarn:lint\"",
     "test": "concurrently --group --raw \"yarn:test:*\"",
-    "test:unit": "vitest --config=config/vitest/vitest.config.unit.ts --passWithNoTests"
+    "test:unit": "cross-env VITEST_ARTIFACT_ROOT_DIR=test-reports/unit vitest --config=config/vitest/vitest.config.ts --project=unit --pass-with-no-tests"
   },
   "dependencies": {
     "@wren/common": "workspace:^",

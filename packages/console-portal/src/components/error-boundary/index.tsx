@@ -32,13 +32,30 @@ function DefaultErrorHandler(): JSX.Element {
   const intl = useIntl()
 
   return (
-    <div
-      className="bg-red-9 text-red-contrast selection:bg-red-7 selection:text-red-12 flex flex-1 flex-col justify-center"
-      data-testid="9q2qd6swms"
-    >
+    <div className="bg-red-9 text-red-contrast selection:bg-red-7 selection:text-red-12 flex flex-1 flex-col justify-center">
       <div className="text-center leading-none">
         <h1 className="text-[25vw]">{intl.formatMessage(defaultErrorHandlerMessages.title)}</h1>
         <div className="text-3xl">{intl.formatMessage(defaultErrorHandlerMessages.description)}</div>
+      </div>
+    </div>
+  )
+}
+
+const notFoundErrorHandlerMessages = defineMessages({
+  title: {
+    id: 'Zu62i1gQ2Z',
+    description: 'Not found error handler title',
+    defaultMessage: '404',
+  },
+})
+
+export function NotFoundErrorHandler(): JSX.Element {
+  const intl = useIntl()
+
+  return (
+    <div className="bg-blue-9 text-blue-contrast selection:bg-blue-7 selection:text-blue-12 flex flex-1 flex-col justify-center">
+      <div className="text-center leading-none">
+        <h1 className="font-mono text-[25vw]">{intl.formatMessage(notFoundErrorHandlerMessages.title)}</h1>
       </div>
     </div>
   )

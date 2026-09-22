@@ -3,9 +3,9 @@ declare module 'process' {
     namespace NodeJS {
       // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
       interface ProcessEnv {
-        readonly CI?: string
         readonly LOCAL?: string
-        readonly PLAYWRIGHT_HTML_HOST?: string
+        readonly CI?: string
+        readonly PLAYWRIGHT_HTML_REPORTER_HOST?: string
         readonly PORTAL_URL?: string
       }
     }

@@ -53,8 +53,8 @@
     },
     "test:unit": {
       "dependsOn": ["^build"],
-      "env": ["CI"],
-      "inputs": ["config/vitest/**", "src/**"]
+      "env": ["CI", "VITEST_ARTIFACT_ROOT_DIR"],
+      "inputs": ["config/vitest/vitest.config.ts", "src/**"]
     }
   }
 }

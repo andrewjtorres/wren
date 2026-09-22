@@ -5,6 +5,7 @@ import {
   playwrightConfig,
   prettierConfig,
   reactConfig,
+  reactTestingLibraryConfig,
   storybookConfig,
   typescriptConfig,
   vitestConfig,
@@ -56,11 +57,15 @@ const config = defineConfig([
   },
   {
     ...playwrightConfig,
-    files: ['**/?(*.)@(component|end-to-end).test.[jt]s'],
+    files: ['**/?(*.)end-to-end.test.[jt]s'],
   },
   {
     ...vitestConfig,
-    files: ['**/?(*.)integration.test.[jt]s', '**/?(*.)unit.test.[jt]s?(x)'],
+    files: ['**/?(*.)@(integration|unit).test.[jt]s', '**/?(*.)@(component|visual-regression).test.[jt]s?(x)'],
+  },
+  {
+    ...reactTestingLibraryConfig,
+    files: ['**/?(*.)component.test.[jt]s?(x)'],
   },
   {
     ...prettierConfig,

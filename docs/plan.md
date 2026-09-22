@@ -29,7 +29,7 @@ that file is cited and wins on conflict. Do not treat a stale number here as a d
 - Packages manage their own scripts. CI runs repo-wide tasks through Turbo, with two jobs: `refine` and `test`.
 - `common` is `@wren/common`, exposing `error`, `http`, `nanoid`, `transformation`, `validation`.
 - `console-portal` is Hono + React Router SSR + Vite + Tailwind, rendering placeholder output.
-- `mail-agent` is a skeleton with no ports and no domain types. Its Vitest run uses `--passWithNoTests`.
+- `mail-agent` is a skeleton with no ports and no domain types. Its Vitest run uses `--pass-with-no-tests`.
 - `graph-manager` exports schema and types only — no connection code, and **no test harness**.
 - Engine `@tursodatabase/database`, `drizzle-orm`/`drizzle-kit`, and Atlas are exact-pinned; the pinned versions
   live in the package manifests and are not restated here.
@@ -946,7 +946,7 @@ middleware).
 - Strip URLs from generated drafts unless the URL is present in the source thread (INV-12).
 - Make Node Inspector opt-in: remove `--inspect` from the default `dev` scripts, since mailbox data first flows
   here (INV-16).
-- Add the minimum injection gate; add email-derived log redaction in `mail-agent`; remove `--passWithNoTests` once
+- Add the minimum injection gate; add email-derived log redaction in `mail-agent`; remove `--pass-with-no-tests` once
   the first real test lands.
 
 Acceptance: end-to-end dry run completes on the real mailbox; re-run creates no duplicate decisions; no body text

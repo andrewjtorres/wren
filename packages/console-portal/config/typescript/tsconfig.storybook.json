@@ -10,7 +10,12 @@
     "../../types/react-router/*.d.ts",
     "../../vite.config.ts"
   ],
-  "exclude": ["../../src/**/*.test.*", "../../src/utils/render.tsx", "../../src/index.ts"],
+  "exclude": [
+    "../../src/**/*.test.*",
+    "../../src/utils/render.browser.tsx",
+    "../../src/utils/render.dom.tsx",
+    "../../src/index.ts"
+  ],
   "compilerOptions": {
     "rootDirs": ["../..", "../../.react-router/types"],
     "types": ["@react-router/node", "@total-typescript/ts-reset", "vite/client"],

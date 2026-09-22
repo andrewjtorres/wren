@@ -42,8 +42,8 @@ op run --account=<account> --env-file=.env -- yarn run <script>
   and [TypeScript](https://typescriptlang.org))
 - `yarn run refine` — perform stylization and static analysis
 - `yarn run studio` — start the UI development server ([Storybook](https://storybook.js.org))
-- `yarn run test` — perform unit ([Vitest](https://vitest.dev)), component ([Playwright](https://playwright.dev)),
-  integration ([Vitest](https://vitest.dev)) and end-to-end ([Playwright](https://playwright.dev)) tests
+- `yarn run test` — perform unit, component, visual-regression, integration ([Vitest](https://vitest.dev)),
+  and end-to-end ([Playwright](https://playwright.dev)) tests
 
 ### Style
 
@@ -78,7 +78,13 @@ yarn run test:unit --coverage --ui --watch
 Start the component test development server:
 
 ```shell
-yarn run test:component --ui
+yarn run test:component --coverage --ui --watch
+```
+
+Start the visual-regression test development server:
+
+```shell
+yarn run test:visual-regression --coverage --ui --watch
 ```
 
 Start the integration test development server:
@@ -100,6 +106,6 @@ Integration environment:
 docker run --env=CI=true --interactive --network=host --platform=linux/amd64 --rm --tty --volume="$(pwd)/../..:/work" --workdir=/work mcr.microsoft.com/playwright:v1.63.0-resolute /bin/bash
 corepack enable yarn
 yarn install
-yarn workspace @wren/console-portal run playwright install --with-deps chrome firefox webkit
-yarn workspace @wren/console-portal run concurrently --group --passthrough-arguments --raw 'yarn run test:component {@}' 'yarn run test:end-to-end {@}' -- --grep='@visual' --update-snapshots
+yarn workspace @wren/console-portal run playwright install --with-deps chromium firefox webkit
+yarn workspace @wren/console-portal run test:visual-regression --update
 ```

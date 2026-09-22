@@ -17,17 +17,9 @@ import { i18nDefaultLanguageTag } from '#src/config.ts'
 import enTranslations from '#src/i18n/en.json' with { type: 'json' }
 import esTranslations from '#src/i18n/es.json' with { type: 'json' }
 
-export type WithContextOptions = Partial<IntlProviderProps>
-
-export type WithRouterOptions = {
-  routes: StubRouteObject[]
-  context?: RouterContextProvider
-} & WithContextOptions &
-  Omit<RoutesTestStubProps, 'future'>
-
 // NOTE: This config should match the future config declared in the sibling
-// render.tsx file and the react-router.config.ts file located in the root
-// directory of the project.
+// render.browser.tsx and render.dom.tsx files and the react-router.config.ts
+// file located in the root directory of the project.
 const reactRouterFutureConfig: Partial<FutureConfig> = {}
 
 function getTranslations(languageTag: SupportedLanguageTag): Messages {
@@ -41,6 +33,8 @@ function getTranslations(languageTag: SupportedLanguageTag): Messages {
   }
 }
 
+export type WithContextOptions = Partial<IntlProviderProps>
+
 export function withContext(
   element: ReactElement,
   { locale = i18nDefaultLanguageTag, messages = getTranslations(locale), ...restOptions }: WithContextOptions = {},
@@ -51,6 +45,12 @@ export function withContext(
     </IntlProvider>
   )
 }
+
+export type WithRouterOptions = {
+  routes: StubRouteObject[]
+  context?: RouterContextProvider
+} & WithContextOptions &
+  Omit<RoutesTestStubProps, 'future'>
 
 export function withRouter({
   routes,

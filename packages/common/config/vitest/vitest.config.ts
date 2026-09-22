@@ -1,3 +1,4 @@
+import path from 'node:path'
 import { env } from 'node:process'
 import { fileURLToPath } from 'node:url'
 import { type Plugin, defineConfig } from 'vitest/config'
@@ -26,6 +27,13 @@ const isContinuousIntegrationEnvironment = z
   .pipe(z.string().transform(stringToBoolean).default(false))
   .parse(env.CI)
 
+const artifactRootDir = z
+  .string()
+  .transform(zeroValueStringToUndefined)
+  .optional()
+  .pipe(z.string().default('test-reports'))
+  .parse(env.VITEST_ARTIFACT_ROOT_DIR)
+
 function assertHostPlugin(host: string): Plugin {
   return {
     name: 'wren-common:assert-host',
@@ -44,24 +52,30 @@ const config = defineConfig({
     host: '127.0.0.1',
   },
   test: {
-    name: 'wren-common-unit',
-    include: ['src/**/?(*.)unit.test.[jt]s'],
     reporters: [
       [isContinuousIntegrationEnvironment ? 'github-actions' : 'default'],
       [
         'html',
         {
-          outputDir: fileURLToPath(new URL('test-reports/unit/', packageDirUrl)),
+          outputDir: path.join(artifactRootDir, 'html'),
         },
       ],
     ],
     environment: 'node',
+    projects: [
+      {
+        test: {
+          name: 'unit',
+          include: ['src/**/?(*.)unit.test.[jt]s'],
+        },
+      },
+    ],
     watch: false,
     root: packageDirPath,
     coverage: {
       include: ['src/**/*.[jt]s'],
       exclude: ['src/**/?(*.)unit.test.[jt]s'],
-      reportsDirectory: 'test-reports',
+      reportsDirectory: artifactRootDir,
       reporter: [
         [isContinuousIntegrationEnvironment ? 'cobertura' : 'text'],
         [
@@ -82,6 +96,10 @@ const config = defineConfig({
     onConsoleLog(message) {
       return logMessageBlockPattern.test(message) ? false : undefined
     },
+    provide: {
+      isContinuousIntegrationEnvironment,
+    },
+    attachmentsDir: path.join(artifactRootDir, 'attachments'),
   },
 })
 

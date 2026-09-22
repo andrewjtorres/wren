@@ -558,7 +558,7 @@ design.
 
 ### Adjusted: scaffold-stage test and logging findings
 
-Two findings recommended removing `--passWithNoTests` from `mail-agent` and adding logger redaction there
+Two findings recommended removing `--pass-with-no-tests` from `mail-agent` and adding logger redaction there
 immediately. Both were rescoped: `mail-agent` has no tests and handles no sensitive data, so acting then would
 break CI and add configuration with no subject. Retained substance: the flag is removed when its first real test
 lands in P2; redaction lands where data lands, secrets in `console-portal` at P1 and email content in `mail-agent`

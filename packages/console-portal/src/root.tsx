@@ -1,7 +1,7 @@
 import { status302Code, status302Message, status404Code, status404Message } from '@wren/common/http'
 import { env } from 'node:process'
 import { type JSX, type ReactNode, useEffect } from 'react'
-import { defineMessages, useIntl } from 'react-intl'
+import { useIntl } from 'react-intl'
 import {
   type LinkDescriptor,
   Links,
@@ -16,7 +16,11 @@ import {
 } from 'react-router'
 
 import { useContentSecurityPolicyNonce } from './components/content-security-policy-nonce-provider.tsx'
-import { ErrorBoundary as BaseErrorBoundary, type ErrorResponseHandlers } from './components/error-boundary/index.tsx'
+import {
+  ErrorBoundary as BaseErrorBoundary,
+  type ErrorResponseHandlers,
+  NotFoundErrorHandler,
+} from './components/error-boundary/index.tsx'
 import { debug, i18nDefaultLanguageTag } from './config.ts'
 import fontStyleSheetUrl from './styles/font.css?url'
 import tailwindStyleSheetUrl from './styles/tailwind.css?url'
@@ -133,26 +137,6 @@ export function meta(): MetaDescriptor[] {
       content: '#ffffff',
     },
   ]
-}
-
-const notFoundErrorHandlerMessages = defineMessages({
-  title: {
-    id: 'Zu62i1gQ2Z',
-    description: 'Not found error handler title',
-    defaultMessage: '404',
-  },
-})
-
-function NotFoundErrorHandler(): JSX.Element {
-  const intl = useIntl()
-
-  return (
-    <div className="bg-blue-9 text-blue-contrast selection:bg-blue-7 selection:text-blue-12 flex flex-1 flex-col justify-center">
-      <div className="text-center leading-none">
-        <h1 className="font-mono text-[25vw]">{intl.formatMessage(notFoundErrorHandlerMessages.title)}</h1>
-      </div>
-    </div>
-  )
 }
 
 const errorResponseHandlers: ErrorResponseHandlers = {

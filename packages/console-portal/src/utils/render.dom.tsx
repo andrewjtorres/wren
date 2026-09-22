@@ -24,42 +24,9 @@ import { i18nDefaultLanguageTag } from '#src/config.ts'
 import enTranslations from '#src/i18n/en.json' with { type: 'json' }
 import esTranslations from '#src/i18n/es.json' with { type: 'json' }
 
-export type RenderOptions<
-  TContainer extends Document | DocumentFragment | Element = HTMLElement,
-  TBaseElement extends Document | DocumentFragment | Element = TContainer,
-> = Omit<BaseRenderOptions<typeof queries, TContainer, TBaseElement>, 'queries'>
-
-export type RenderResult<
-  TContainer extends Document | DocumentFragment | Element = HTMLElement,
-  TBaseElement extends Document | DocumentFragment | Element = TContainer,
-> = {
-  userEvent: UserEvent
-} & Pick<
-  BaseRenderResult<typeof queries, TContainer, TBaseElement>,
-  'container' | 'baseElement' | 'debug' | 'unmount' | 'asFragment'
->
-
-export type RenderWithContextOptions<
-  TContainer extends Document | DocumentFragment | Element = HTMLElement,
-  TBaseElement extends Document | DocumentFragment | Element = TContainer,
-> = Omit<RenderOptions<TContainer, TBaseElement>, 'wrapper'> & Partial<IntlProviderProps>
-
-export type RenderWithRouterOptions<
-  TContainer extends Document | DocumentFragment | Element = HTMLElement,
-  TBaseElement extends Document | DocumentFragment | Element = TContainer,
-> = {
-  routes: StubRouteObject[]
-  context?: RouterContextProvider
-} & RenderWithContextOptions<TContainer, TBaseElement> &
-  Omit<RoutesTestStubProps, 'future'>
-
-export type WrapperProps = {
-  children: ReactNode
-}
-
 // NOTE: This config should match the future config declared in the sibling
-// decorator.tsx file and the react-router.config.ts file located in the root
-// directory of the project.
+// decorator.tsx and render.browser.tsx files and the react-router.config.ts
+// file located in the root directory of the project.
 const reactRouterFutureConfig: Partial<FutureConfig> = {}
 
 function getTranslations(languageTag: SupportedLanguageTag): Messages {
@@ -73,11 +40,29 @@ function getTranslations(languageTag: SupportedLanguageTag): Messages {
   }
 }
 
+export type RenderOptions<
+  TContainer extends Document | DocumentFragment | Element = HTMLElement,
+  TBaseElement extends Document | DocumentFragment | Element = TContainer,
+> = Omit<BaseRenderOptions<typeof queries, TContainer, TBaseElement>, 'legacyRoot' | 'queries' | 'reactStrictMode'>
+
+export type RenderResult<
+  TContainer extends Document | DocumentFragment | Element = HTMLElement,
+  TBaseElement extends Document | DocumentFragment | Element = TContainer,
+> = {
+  userEvent: UserEvent
+} & Pick<
+  BaseRenderResult<typeof queries, TContainer, TBaseElement>,
+  'container' | 'baseElement' | 'debug' | 'unmount' | 'asFragment'
+>
+
 export function render<
   TContainer extends Document | DocumentFragment | Element = HTMLElement,
   TBaseElement extends Document | DocumentFragment | Element = TContainer,
 >(ui: ReactElement, options: RenderOptions<TContainer, TBaseElement> = {}): RenderResult<TContainer, TBaseElement> {
-  const { container, baseElement, debug, unmount, asFragment } = baseRender(ui, options)
+  const { container, baseElement, debug, unmount, asFragment } = baseRender(ui, {
+    ...options,
+    reactStrictMode: true,
+  })
 
   return {
     userEvent: userEvent.setup(),
@@ -88,6 +73,15 @@ export function render<
     asFragment,
   }
 }
+
+type WrapperProps = {
+  children: ReactNode
+}
+
+export type RenderWithContextOptions<
+  TContainer extends Document | DocumentFragment | Element = HTMLElement,
+  TBaseElement extends Document | DocumentFragment | Element = TContainer,
+> = Omit<RenderOptions<TContainer, TBaseElement>, 'wrapper'> & Partial<IntlProviderProps>
 
 export function renderWithContext<
   TContainer extends Document | DocumentFragment | Element = HTMLElement,
@@ -136,6 +130,15 @@ export function renderWithContext<
     ...restOptions,
   })
 }
+
+export type RenderWithRouterOptions<
+  TContainer extends Document | DocumentFragment | Element = HTMLElement,
+  TBaseElement extends Document | DocumentFragment | Element = TContainer,
+> = {
+  routes: StubRouteObject[]
+  context?: RouterContextProvider
+} & RenderWithContextOptions<TContainer, TBaseElement> &
+  Omit<RoutesTestStubProps, 'future'>
 
 export function renderWithRouter<
   TContainer extends Document | DocumentFragment | Element = HTMLElement,

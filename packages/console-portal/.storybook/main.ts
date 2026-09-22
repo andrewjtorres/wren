@@ -1,4 +1,4 @@
-import type { StorybookConfig } from '@storybook/react-vite'
+import { defineMain } from '@storybook/react-vite/node'
 import type { Messages, SupportedLanguageTag } from 'react-intl'
 import { mergeConfig } from 'vite'
 
@@ -27,15 +27,9 @@ const windowMetaI18n: WindowMetaI18n = {
   translations: getTranslations(i18nDefaultLanguageTag),
 }
 
-const config: StorybookConfig = {
+const main = defineMain({
   stories: ['../src/**/?(*.)stories.[jt]s?(x)'],
-  addons: [
-    '@storybook/addon-a11y',
-    '@storybook/addon-docs',
-    '@storybook/addon-links',
-    '@storybook/addon-vitest',
-    'storybook-i18n',
-  ],
+  addons: ['@storybook/addon-a11y', '@storybook/addon-docs', '@storybook/addon-links', 'storybook-i18n'],
   features: {
     disallowImplicitActionsInRenderV8: true,
   },
@@ -79,11 +73,18 @@ const config: StorybookConfig = {
 
     return mergeConfig(config, {
       build: {
-        target: 'es2025',
         chunkSizeWarningLimit: 1000,
       },
+      ...(config.server?.hmr !== false &&
+        config.server?.ws !== false && {
+          server: {
+            ws: {
+              host: config.server?.ws?.host ?? '127.0.0.1',
+            },
+          },
+        }),
     })
   },
-}
+})
 
-export default config
+export default main
