@@ -1162,58 +1162,58 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@formatjs/cli-native-darwin-arm64@npm:1.1.18":
-  version: 1.1.18
-  resolution: "@formatjs/cli-native-darwin-arm64@npm:1.1.18"
+"@formatjs/cli-native-darwin-arm64@npm:1.1.22":
+  version: 1.1.22
+  resolution: "@formatjs/cli-native-darwin-arm64@npm:1.1.22"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@formatjs/cli-native-linux-arm64-musl@npm:1.0.16":
-  version: 1.0.16
-  resolution: "@formatjs/cli-native-linux-arm64-musl@npm:1.0.16"
+"@formatjs/cli-native-linux-arm64-musl@npm:1.0.20":
+  version: 1.0.20
+  resolution: "@formatjs/cli-native-linux-arm64-musl@npm:1.0.20"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@formatjs/cli-native-linux-arm64@npm:1.2.18":
-  version: 1.2.18
-  resolution: "@formatjs/cli-native-linux-arm64@npm:1.2.18"
+"@formatjs/cli-native-linux-arm64@npm:1.2.22":
+  version: 1.2.22
+  resolution: "@formatjs/cli-native-linux-arm64@npm:1.2.22"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@formatjs/cli-native-linux-x64-musl@npm:1.0.16":
-  version: 1.0.16
-  resolution: "@formatjs/cli-native-linux-x64-musl@npm:1.0.16"
+"@formatjs/cli-native-linux-x64-musl@npm:1.0.20":
+  version: 1.0.20
+  resolution: "@formatjs/cli-native-linux-x64-musl@npm:1.0.20"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@formatjs/cli-native-linux-x64@npm:1.1.18":
-  version: 1.1.18
-  resolution: "@formatjs/cli-native-linux-x64@npm:1.1.18"
+"@formatjs/cli-native-linux-x64@npm:1.1.22":
+  version: 1.1.22
+  resolution: "@formatjs/cli-native-linux-x64@npm:1.1.22"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@formatjs/cli-native-win32-x64@npm:1.1.19":
-  version: 1.1.19
-  resolution: "@formatjs/cli-native-win32-x64@npm:1.1.19"
+"@formatjs/cli-native-win32-x64@npm:1.1.23":
+  version: 1.1.23
+  resolution: "@formatjs/cli-native-win32-x64@npm:1.1.23"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
-"@formatjs/cli@npm:^6.16.24":
-  version: 6.16.24
-  resolution: "@formatjs/cli@npm:6.16.24"
+"@formatjs/cli@npm:^6.16.28":
+  version: 6.16.28
+  resolution: "@formatjs/cli@npm:6.16.28"
   dependencies:
-    "@formatjs/cli-native-darwin-arm64": "npm:1.1.18"
-    "@formatjs/cli-native-linux-arm64": "npm:1.2.18"
-    "@formatjs/cli-native-linux-arm64-musl": "npm:1.0.16"
-    "@formatjs/cli-native-linux-x64": "npm:1.1.18"
-    "@formatjs/cli-native-linux-x64-musl": "npm:1.0.16"
-    "@formatjs/cli-native-win32-x64": "npm:1.1.19"
+    "@formatjs/cli-native-darwin-arm64": "npm:1.1.22"
+    "@formatjs/cli-native-linux-arm64": "npm:1.2.22"
+    "@formatjs/cli-native-linux-arm64-musl": "npm:1.0.20"
+    "@formatjs/cli-native-linux-x64": "npm:1.1.22"
+    "@formatjs/cli-native-linux-x64-musl": "npm:1.0.20"
+    "@formatjs/cli-native-win32-x64": "npm:1.1.23"
   peerDependencies:
     "@glimmer/syntax": ^0.84.3 || ^0.95.0
     "@vue/compiler-core": 3
@@ -1249,7 +1249,7 @@ __metadata:
       optional: true
   bin:
     formatjs: bin/formatjs
-  checksum: 10/756002d9698958df7d8cfae635007f0f86cf1c4295fc0976f521dfff749ab62d79f5c0c256b5b1abc9a15be6469a13e2358560ad1bdc417551f9191f85c704e0
+  checksum: 10/d705afcd6afaa70514bd250030c431469138effb4a828a5c71a7ce663ec43fb2bbad24a8308f612c4b6d2cd889bfa60bce38e507440ef7bfcd23bcb6404998e2
   languageName: node
   linkType: hard
 
@@ -1260,12 +1260,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@formatjs/icu-messageformat-parser@npm:3.5.17":
-  version: 3.5.17
-  resolution: "@formatjs/icu-messageformat-parser@npm:3.5.17"
+"@formatjs/icu-messageformat-parser@npm:3.5.18":
+  version: 3.5.18
+  resolution: "@formatjs/icu-messageformat-parser@npm:3.5.18"
   dependencies:
     "@formatjs/icu-skeleton-parser": "npm:2.1.11"
-  checksum: 10/cbb9daf23f65e4ef3697eae3be4c6888eda942fcde18929dfc6e96ef6c45052409d20340ece13476eeadd062e222809c46a2f26e3b453c9cbd4979bb6c0b0ae5
+  checksum: 10/fc2215a16571fcff3eb9f446878ef7649d40064a79648352ab79f68f4b48ce7b196125495eec82caa02edec78a9a094d8fd6fd5db0abeb353b95afb62672c2a2
   languageName: node
   linkType: hard
 
@@ -1276,22 +1276,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@formatjs/intl@npm:4.2.0":
-  version: 4.2.0
-  resolution: "@formatjs/intl@npm:4.2.0"
+"@formatjs/intl@npm:4.2.1":
+  version: 4.2.1
+  resolution: "@formatjs/intl@npm:4.2.1"
   dependencies:
     "@formatjs/fast-memoize": "npm:3.1.7"
-    "@formatjs/icu-messageformat-parser": "npm:3.5.17"
-    intl-messageformat: "npm:11.2.14"
-  checksum: 10/a227a959aed540b3782d79d59207519cb316392cb3ba667d4205caeb2d82cc844474b4bf011e5d0d8704138ec290b37bb33d1382767cea8b2ce8eed85cd4b809
+    "@formatjs/icu-messageformat-parser": "npm:3.5.18"
+    intl-messageformat: "npm:11.2.15"
+  checksum: 10/3c9da64a7fdf87c61c9ca147888bc0604555a064ea4d02182274da2505e36ef1699f6d855772422089f0372587aed728b99e5a811b629b7d1267c216f0aea005
   languageName: node
   linkType: hard
 
-"@formatjs/ts-transformer@npm:4.4.19":
-  version: 4.4.19
-  resolution: "@formatjs/ts-transformer@npm:4.4.19"
+"@formatjs/ts-transformer@npm:4.4.20":
+  version: 4.4.20
+  resolution: "@formatjs/ts-transformer@npm:4.4.20"
   dependencies:
-    "@formatjs/icu-messageformat-parser": "npm:3.5.17"
+    "@formatjs/icu-messageformat-parser": "npm:3.5.18"
     "@types/babel__core": "npm:7"
     "@types/node": "npm:22 || 24"
     json-stable-stringify: "npm:1"
@@ -1301,17 +1301,17 @@ __metadata:
   peerDependenciesMeta:
     ts-jest:
       optional: true
-  checksum: 10/2839a82ec6247fbfab67d98ad96af38f87bb2dbf22370b345905005e7868a65923b20cf2286c025c69d530a7da44e646f7e744d49643538aa6c4e215c7c4499a
+  checksum: 10/c9a38d253bb996878168b391fd3a5c7854214adc300e200a77462c922cdef1fe9e2d24ba3f1d73eafa9bbe46cc6fc1d19525d645f44e1add176a4acc54e2e41a
   languageName: node
   linkType: hard
 
-"@formatjs/unplugin@npm:^1.2.8":
-  version: 1.2.8
-  resolution: "@formatjs/unplugin@npm:1.2.8"
+"@formatjs/unplugin@npm:^1.2.10":
+  version: 1.2.10
+  resolution: "@formatjs/unplugin@npm:1.2.10"
   dependencies:
     "@bazel/runfiles": "npm:6"
-    "@formatjs/icu-messageformat-parser": "npm:3.5.17"
-    "@formatjs/ts-transformer": "npm:4.4.19"
+    "@formatjs/icu-messageformat-parser": "npm:3.5.18"
+    "@formatjs/ts-transformer": "npm:4.4.20"
     "@types/node": "npm:22 || 24"
     decode-named-character-reference: "npm:1"
     magic-string: "npm:1"
@@ -1334,7 +1334,7 @@ __metadata:
       optional: true
     webpack:
       optional: true
-  checksum: 10/3dfba74f531e297e1eae73950a438cf262f5d9e2adb525078e8a0ae2c5e96cc1a566f0ea08d38b3c606c9f6930cecdf7fd443a09528eaad231714e06e0fe2dc8
+  checksum: 10/680c73ab55c13e125aa8f8a5277352c1c8475d47db77d50378f2f05ed153598430857713cad137bb3e3726604f01a2b780a4ce352c1a7791af991282d29c4042
   languageName: node
   linkType: hard
 
@@ -2587,9 +2587,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/dom@npm:^10.4.1":
-  version: 10.4.1
-  resolution: "@testing-library/dom@npm:10.4.1"
+"@testing-library/dom@npm:^10.4.1, @testing-library/dom@npm:^10.4.2":
+  version: 10.4.2
+  resolution: "@testing-library/dom@npm:10.4.2"
   dependencies:
     "@babel/code-frame": "npm:^7.10.4"
     "@babel/runtime": "npm:^7.12.5"
@@ -2599,7 +2599,7 @@ __metadata:
     lz-string: "npm:^1.5.0"
     picocolors: "npm:1.1.1"
     pretty-format: "npm:^27.0.2"
-  checksum: 10/7f93e09ea015f151f8b8f42cbab0b2b858999b5445f15239a72a612ef7716e672b14c40c421218194cf191cbecbde0afa6f3dc2cc83dda93ff6a4fb0237df6e6
+  checksum: 10/3ac24b320ae0e59f48a560bbe279f80e75539641e260d5e1c0455413babcb73a23f7090e9d80fca13933c5bc319fe3e48f61b9c89fbe6d4194f8f58e8bab44d4
   languageName: node
   linkType: hard
 
@@ -2673,44 +2673,44 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@turbo/darwin-64@npm:2.10.12":
-  version: 2.10.12
-  resolution: "@turbo/darwin-64@npm:2.10.12"
+"@turbo/darwin-64@npm:2.10.13":
+  version: 2.10.13
+  resolution: "@turbo/darwin-64@npm:2.10.13"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@turbo/darwin-arm64@npm:2.10.12":
-  version: 2.10.12
-  resolution: "@turbo/darwin-arm64@npm:2.10.12"
+"@turbo/darwin-arm64@npm:2.10.13":
+  version: 2.10.13
+  resolution: "@turbo/darwin-arm64@npm:2.10.13"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@turbo/linux-64@npm:2.10.12":
-  version: 2.10.12
-  resolution: "@turbo/linux-64@npm:2.10.12"
+"@turbo/linux-64@npm:2.10.13":
+  version: 2.10.13
+  resolution: "@turbo/linux-64@npm:2.10.13"
   conditions: (os=android | os=linux) & cpu=x64
   languageName: node
   linkType: hard
 
-"@turbo/linux-arm64@npm:2.10.12":
-  version: 2.10.12
-  resolution: "@turbo/linux-arm64@npm:2.10.12"
+"@turbo/linux-arm64@npm:2.10.13":
+  version: 2.10.13
+  resolution: "@turbo/linux-arm64@npm:2.10.13"
   conditions: (os=android | os=linux) & cpu=arm64
   languageName: node
   linkType: hard
 
-"@turbo/windows-64@npm:2.10.12":
-  version: 2.10.12
-  resolution: "@turbo/windows-64@npm:2.10.12"
+"@turbo/windows-64@npm:2.10.13":
+  version: 2.10.13
+  resolution: "@turbo/windows-64@npm:2.10.13"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
-"@turbo/windows-arm64@npm:2.10.12":
-  version: 2.10.12
-  resolution: "@turbo/windows-arm64@npm:2.10.12"
+"@turbo/windows-arm64@npm:2.10.13":
+  version: 2.10.13
+  resolution: "@turbo/windows-arm64@npm:2.10.13"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
@@ -3670,18 +3670,18 @@ __metadata:
     eslint-plugin-prettier: "npm:^5.5.6"
     eslint-plugin-promise: "npm:^7.3.0"
     eslint-plugin-unicorn: "npm:^74.0.0"
-    lint-staged: "npm:^17.5.0"
+    lint-staged: "npm:^17.5.1"
     nanoid: "npm:^6.0.1"
     prettier: "npm:^3.9.6"
     rolldown: "npm:^1.2.8"
     rolldown-plugin-dts: "npm:^0.28.5"
-    turbo: "npm:^2.10.12"
+    turbo: "npm:^2.10.13"
     type-fest: "npm:^5.9.0"
     typescript: "npm:^6.0.3"
     typescript-eslint: "npm:^8.70.0"
     vite: "npm:^8.3.0"
     vitest: "npm:^5.0.0"
-    zod: "npm:^4.6.1"
+    zod: "npm:^4.6.5"
   peerDependencies:
     nanoid: ^6.0.0
     type-fest: ^5.6.0
@@ -3702,8 +3702,8 @@ __metadata:
   dependencies:
     "@axe-core/playwright": "npm:^4.13.0"
     "@eslint/js": "npm:^10.0.1"
-    "@formatjs/cli": "npm:^6.16.24"
-    "@formatjs/unplugin": "npm:^1.2.8"
+    "@formatjs/cli": "npm:^6.16.28"
+    "@formatjs/unplugin": "npm:^1.2.10"
     "@hono/node-server": "npm:^2.1.1"
     "@playwright/test": "npm:^1.63.0"
     "@react-router/dev": "npm:^8.3.1"
@@ -3715,7 +3715,7 @@ __metadata:
     "@storybook/react-vite": "npm:^10.6.0"
     "@stylistic/eslint-plugin": "npm:^5.10.0"
     "@tailwindcss/vite": "npm:^4.3.3"
-    "@testing-library/dom": "npm:^10.4.1"
+    "@testing-library/dom": "npm:^10.4.2"
     "@testing-library/jest-dom": "npm:^7.0.1"
     "@testing-library/react": "npm:^16.3.3"
     "@testing-library/user-event": "npm:^14.6.7"
@@ -3743,7 +3743,7 @@ __metadata:
     eslint: "npm:^10.10.0"
     eslint-config-prettier: "npm:^10.1.8"
     eslint-import-resolver-typescript: "npm:^4.4.5"
-    eslint-plugin-formatjs: "npm:^6.6.2"
+    eslint-plugin-formatjs: "npm:^6.6.3"
     eslint-plugin-import-x: "npm:^4.17.1"
     eslint-plugin-jest-dom: "npm:^5.10.1"
     eslint-plugin-jsx-a11y: "npm:^6.10.2"
@@ -3756,10 +3756,10 @@ __metadata:
     eslint-plugin-storybook: "npm:^10.6.0"
     eslint-plugin-testing-library: "npm:^7.16.2"
     eslint-plugin-unicorn: "npm:^74.0.0"
-    happy-dom: "npm:^20.14.3"
+    happy-dom: "npm:^20.14.5"
     hono: "npm:^4.13.7"
     isbot: "npm:^5.2.2"
-    lint-staged: "npm:^17.5.0"
+    lint-staged: "npm:^17.5.1"
     make-dir-cli: "npm:^4.0.0"
     nanoid: "npm:^6.0.1"
     pino: "npm:^10.3.1"
@@ -3769,7 +3769,7 @@ __metadata:
     prettier-plugin-tailwindcss: "npm:^0.8.1"
     react: "npm:^19.3.0"
     react-dom: "npm:^19.3.0"
-    react-intl: "npm:^10.2.0"
+    react-intl: "npm:^10.2.2"
     react-router: "npm:^8.3.1"
     rolldown: "npm:^1.2.8"
     storybook: "npm:^10.6.0"
@@ -3781,7 +3781,7 @@ __metadata:
     supports-color: "npm:^11.0.0"
     tailwindcss: "npm:^4.3.3"
     tsx: "npm:^4.23.13"
-    turbo: "npm:^2.10.12"
+    turbo: "npm:^2.10.13"
     type-fest: "npm:^5.9.0"
     typescript: "npm:^6.0.3"
     typescript-eslint: "npm:^8.70.0"
@@ -3789,7 +3789,7 @@ __metadata:
     vite: "npm:^8.3.0"
     vitest: "npm:^5.0.0"
     vitest-browser-react: "npm:^2.3.0"
-    zod: "npm:^4.6.1"
+    zod: "npm:^4.6.5"
   languageName: unknown
   linkType: soft
 
@@ -3813,15 +3813,15 @@ __metadata:
     eslint-plugin-prettier: "npm:^5.5.6"
     eslint-plugin-promise: "npm:^7.3.0"
     eslint-plugin-unicorn: "npm:^74.0.0"
-    lint-staged: "npm:^17.5.0"
+    lint-staged: "npm:^17.5.1"
     prettier: "npm:^3.9.6"
     rolldown: "npm:^1.2.8"
     rolldown-plugin-dts: "npm:^0.28.5"
-    turbo: "npm:^2.10.12"
+    turbo: "npm:^2.10.13"
     typescript: "npm:^6.0.3"
     typescript-eslint: "npm:^8.70.0"
     valibot: "npm:^1.5.0"
-    zod: "npm:^4.6.1"
+    zod: "npm:^4.6.5"
   peerDependencies:
     drizzle-orm: ^1.0.0-rc.4
   languageName: unknown
@@ -3848,17 +3848,17 @@ __metadata:
     eslint-plugin-prettier: "npm:^5.5.6"
     eslint-plugin-promise: "npm:^7.3.0"
     eslint-plugin-unicorn: "npm:^74.0.0"
-    lint-staged: "npm:^17.5.0"
+    lint-staged: "npm:^17.5.1"
     pino: "npm:^10.3.1"
     prettier: "npm:^3.9.6"
     rolldown: "npm:^1.2.8"
     tsx: "npm:^4.23.13"
-    turbo: "npm:^2.10.12"
+    turbo: "npm:^2.10.13"
     typescript: "npm:^6.0.3"
     typescript-eslint: "npm:^8.70.0"
     vite: "npm:^8.3.0"
     vitest: "npm:^5.0.0"
-    zod: "npm:^4.6.1"
+    zod: "npm:^4.6.5"
   languageName: unknown
   linkType: soft
 
@@ -5915,12 +5915,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-formatjs@npm:^6.6.2":
-  version: 6.6.2
-  resolution: "eslint-plugin-formatjs@npm:6.6.2"
+"eslint-plugin-formatjs@npm:^6.6.3":
+  version: 6.6.3
+  resolution: "eslint-plugin-formatjs@npm:6.6.3"
   dependencies:
-    "@formatjs/icu-messageformat-parser": "npm:3.5.17"
-    "@formatjs/ts-transformer": "npm:4.4.19"
+    "@formatjs/icu-messageformat-parser": "npm:3.5.18"
+    "@formatjs/ts-transformer": "npm:4.4.20"
     "@types/estree-jsx": "npm:1"
     "@types/picomatch": "npm:4"
     "@unicode/unicode-17.0.0": "npm:2"
@@ -5928,7 +5928,7 @@ __metadata:
     picomatch: "npm:2 || 3 || 4"
   peerDependencies:
     eslint: 9 || 10
-  checksum: 10/d43f1e3a292c8f1908cc4ed7bd9cda19aca8c04f7a025e1ad0c4b6ace1e290787a4320dc73a42b7f194b05830aebf0b2f1834fe6491aa778f6cd4dcf9991156f
+  checksum: 10/7123e50a7030fd97777bfdbb799b95c9a0ac8af80debc2fe6f888b0c607f3d79a0459449af044bb7a413394831fc715b2200b4a29a84409404fcd42f82ef49bc
   languageName: node
   linkType: hard
 
@@ -6939,9 +6939,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"happy-dom@npm:^20.14.3":
-  version: 20.14.3
-  resolution: "happy-dom@npm:20.14.3"
+"happy-dom@npm:^20.14.5":
+  version: 20.14.5
+  resolution: "happy-dom@npm:20.14.5"
   dependencies:
     "@types/node": "npm:>=20.0.0"
     "@types/whatwg-mimetype": "npm:^3.0.2"
@@ -6950,7 +6950,7 @@ __metadata:
     entities: "npm:^7.0.1"
     whatwg-mimetype: "npm:^3.0.0"
     ws: "npm:^8.21.0"
-  checksum: 10/a2b25604306d2529d110355367baf4d8241bcee312bf4b1b8c7679e9b219af170966bcafebd378e217408064d82a673c4bdb1f28adedbc36ea4abe9d674c6bd6
+  checksum: 10/5a1f177622e7d08d0ee27b2bdd4d2c86365989e04342c67b6afd623da968ace87d551fb9ea60085159d4d9174db040cd9b5320a430a0b899a06fbbfd1acf2374
   languageName: node
   linkType: hard
 
@@ -7238,13 +7238,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"intl-messageformat@npm:11.2.14":
-  version: 11.2.14
-  resolution: "intl-messageformat@npm:11.2.14"
+"intl-messageformat@npm:11.2.15":
+  version: 11.2.15
+  resolution: "intl-messageformat@npm:11.2.15"
   dependencies:
     "@formatjs/fast-memoize": "npm:3.1.7"
-    "@formatjs/icu-messageformat-parser": "npm:3.5.17"
-  checksum: 10/2720155c42bfd99a00d41f7bc9e2f5c2c83c2b6cb2353006b7d8e736a0f1ed20d0147406c1aeba0748731a0ce588c67304b52eb2fe92b42b928bf1ef6bffdcdf
+    "@formatjs/icu-messageformat-parser": "npm:3.5.18"
+  checksum: 10/71d1448964e685c821b3680a89668aae3fe92f6b7774842ea5eb08830417846d4fcbcaf691930e4da1ceb2cc414eeab468c7e3dd4eb530a38ffed91530468ac5
   languageName: node
   linkType: hard
 
@@ -8105,9 +8105,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:^17.5.0":
-  version: 17.5.0
-  resolution: "lint-staged@npm:17.5.0"
+"lint-staged@npm:^17.5.1":
+  version: 17.5.1
+  resolution: "lint-staged@npm:17.5.1"
   dependencies:
     picomatch: "npm:^4.0.7"
     string-argv: "npm:^0.3.2"
@@ -8118,7 +8118,7 @@ __metadata:
       optional: true
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: 10/3ca6263488ae3e8e4915e5c6ee70bb3b54bbffcb7e84dd2fb05c02032563401e5bb41c3d216cdc43933c6d6ff3ed66319d22c5cb5c63727e00af966b95929516
+  checksum: 10/2e10b821214eafce576e8505d6b5cee3a83dd40d68b2d3705b0c69abe35a26e3ad3fcd9cc8379bab47c3e5b3cb8042923d8fbe42e7f72b28da54e6c7d4b4986a
   languageName: node
   linkType: hard
 
@@ -9364,17 +9364,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-intl@npm:^10.2.0":
-  version: 10.2.0
-  resolution: "react-intl@npm:10.2.0"
+"react-intl@npm:^10.2.2":
+  version: 10.2.2
+  resolution: "react-intl@npm:10.2.2"
   dependencies:
-    "@formatjs/icu-messageformat-parser": "npm:3.5.17"
-    "@formatjs/intl": "npm:4.2.0"
-    intl-messageformat: "npm:11.2.14"
+    "@formatjs/icu-messageformat-parser": "npm:3.5.18"
+    "@formatjs/intl": "npm:4.2.1"
+    intl-messageformat: "npm:11.2.15"
   peerDependencies:
     "@types/react": ">=18.0.0"
     react: ">=18.0.0"
-  checksum: 10/230b9d2d03e9d48d65610010fa492248850401d5b07ff52a6f2ef695b344a6b24d930858667197b4a5b812230ebbf28232d3afc9558c0621e6690fb4aa70337f
+  checksum: 10/a250632d6cc0178e87651deb9aa8b4fc0594cbdd850d510d6abc79a6fbb9476cc17f76091160d908648d7398837e7fd8311d1f74cb678bd3077fa954d8898b88
   languageName: node
   linkType: hard
 
@@ -10656,16 +10656,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"turbo@npm:^2.10.12":
-  version: 2.10.12
-  resolution: "turbo@npm:2.10.12"
+"turbo@npm:^2.10.13":
+  version: 2.10.13
+  resolution: "turbo@npm:2.10.13"
   dependencies:
-    "@turbo/darwin-64": "npm:2.10.12"
-    "@turbo/darwin-arm64": "npm:2.10.12"
-    "@turbo/linux-64": "npm:2.10.12"
-    "@turbo/linux-arm64": "npm:2.10.12"
-    "@turbo/windows-64": "npm:2.10.12"
-    "@turbo/windows-arm64": "npm:2.10.12"
+    "@turbo/darwin-64": "npm:2.10.13"
+    "@turbo/darwin-arm64": "npm:2.10.13"
+    "@turbo/linux-64": "npm:2.10.13"
+    "@turbo/linux-arm64": "npm:2.10.13"
+    "@turbo/windows-64": "npm:2.10.13"
+    "@turbo/windows-arm64": "npm:2.10.13"
   dependenciesMeta:
     "@turbo/darwin-64":
       optional: true
@@ -10681,7 +10681,7 @@ __metadata:
       optional: true
   bin:
     turbo: bin/turbo
-  checksum: 10/d92ff6c947dacd9a25ceed9267ad45ec3ee89ca7776e8b4851098c234d811e090656958f52c72a1ee6e1d825a29907d649775f1feb4c628a38194d522c659e27
+  checksum: 10/5f6d6e0d747fa151946ca7ea9793771293b466003a8000cbdef9d03b6051c992ebd6677b97ab0b5727335c5c40b0fee66201fe8a13433dac7103a343a5005f89
   languageName: node
   linkType: hard
 
@@ -11509,7 +11509,7 @@ __metadata:
     eslint: "npm:^10.10.0"
     eslint-config-prettier: "npm:^10.1.8"
     eslint-import-resolver-typescript: "npm:^4.4.5"
-    eslint-plugin-formatjs: "npm:^6.6.2"
+    eslint-plugin-formatjs: "npm:^6.6.3"
     eslint-plugin-import-x: "npm:^4.17.1"
     eslint-plugin-jest-dom: "npm:^5.10.1"
     eslint-plugin-jsx-a11y: "npm:^6.10.2"
@@ -11523,7 +11523,7 @@ __metadata:
     eslint-plugin-testing-library: "npm:^7.16.2"
     eslint-plugin-unicorn: "npm:^74.0.0"
     husky: "npm:^9.1.7"
-    lint-staged: "npm:^17.5.0"
+    lint-staged: "npm:^17.5.1"
     prettier: "npm:^3.9.6"
     prettier-plugin-tailwindcss: "npm:^0.8.1"
     storybook: "npm:^10.6.0"
@@ -11531,7 +11531,7 @@ __metadata:
     stylelint-config-recommended: "npm:^18.0.0"
     stylelint-order: "npm:^8.1.1"
     stylelint-prettier: "npm:^5.0.3"
-    turbo: "npm:^2.10.12"
+    turbo: "npm:^2.10.13"
     typescript: "npm:^6.0.3"
     typescript-eslint: "npm:^8.70.0"
   dependenciesMeta:
@@ -11756,9 +11756,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod@npm:^3.25.0 || ^4.0.0, zod@npm:^4.6.1":
-  version: 4.6.1
-  resolution: "zod@npm:4.6.1"
-  checksum: 10/061c51d941fea3ec43055d908e6587bdf42556228b5ccb40227f5eca3050c6c7d987f7e7de8ff3720ecf764448af323cc876cf64501f8c6fb681199273744674
+"zod@npm:^3.25.0 || ^4.0.0, zod@npm:^4.6.5":
+  version: 4.6.5
+  resolution: "zod@npm:4.6.5"
+  checksum: 10/db004952e4dc6eab38b70f0cdef9251a65da84f5d08c5a0ef85e2590cfa9c477544ce734161ff5c05f89a15f0967137607a7feb16716195e04965f030db47213
   languageName: node
   linkType: hard
