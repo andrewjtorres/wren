@@ -1303,24 +1303,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@formatjs/ts-transformer@npm:4.4.20":
-  version: 4.4.20
-  resolution: "@formatjs/ts-transformer@npm:4.4.20"
-  dependencies:
-    "@formatjs/icu-messageformat-parser": "npm:3.5.18"
-    "@types/babel__core": "npm:7"
-    "@types/node": "npm:22 || 24"
-    json-stable-stringify: "npm:1"
-    typescript: "npm:^5.6 || 6 || 7"
-  peerDependencies:
-    ts-jest: 29
-  peerDependenciesMeta:
-    ts-jest:
-      optional: true
-  checksum: 10/c9a38d253bb996878168b391fd3a5c7854214adc300e200a77462c922cdef1fe9e2d24ba3f1d73eafa9bbe46cc6fc1d19525d645f44e1add176a4acc54e2e41a
-  languageName: node
-  linkType: hard
-
 "@formatjs/ts-transformer@npm:4.4.21":
   version: 4.4.21
   resolution: "@formatjs/ts-transformer@npm:4.4.21"
@@ -3784,7 +3766,7 @@ __metadata:
     eslint: "npm:^10.10.0"
     eslint-config-prettier: "npm:^10.1.8"
     eslint-import-resolver-typescript: "npm:^4.4.5"
-    eslint-plugin-formatjs: "npm:^6.6.3"
+    eslint-plugin-formatjs: "npm:^8.0.3"
     eslint-plugin-import-x: "npm:^4.17.1"
     eslint-plugin-jest-dom: "npm:^5.10.1"
     eslint-plugin-jsx-a11y: "npm:^6.10.2"
@@ -5956,12 +5938,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-formatjs@npm:^6.6.3":
-  version: 6.6.3
-  resolution: "eslint-plugin-formatjs@npm:6.6.3"
+"eslint-plugin-formatjs@npm:^8.0.3":
+  version: 8.0.3
+  resolution: "eslint-plugin-formatjs@npm:8.0.3"
   dependencies:
-    "@formatjs/icu-messageformat-parser": "npm:3.5.18"
-    "@formatjs/ts-transformer": "npm:4.4.20"
+    "@formatjs/icu-messageformat-parser": "npm:3.5.19"
+    "@formatjs/ts-transformer": "npm:4.4.21"
     "@types/estree-jsx": "npm:1"
     "@types/picomatch": "npm:4"
     "@unicode/unicode-17.0.0": "npm:2"
@@ -5969,7 +5951,7 @@ __metadata:
     picomatch: "npm:2 || 3 || 4"
   peerDependencies:
     eslint: 9 || 10
-  checksum: 10/7123e50a7030fd97777bfdbb799b95c9a0ac8af80debc2fe6f888b0c607f3d79a0459449af044bb7a413394831fc715b2200b4a29a84409404fcd42f82ef49bc
+  checksum: 10/1fd1a0b96ce0b552853eed92af6e57e0e5ffc36cade755282a847658b7cf79135fed815ec46abfceb9341c22526ee3a8ad7c06087768e9aaff75911b09db5b91
   languageName: node
   linkType: hard
 
@@ -11561,7 +11543,7 @@ __metadata:
     eslint: "npm:^10.10.0"
     eslint-config-prettier: "npm:^10.1.8"
     eslint-import-resolver-typescript: "npm:^4.4.5"
-    eslint-plugin-formatjs: "npm:^6.6.3"
+    eslint-plugin-formatjs: "npm:^8.0.3"
     eslint-plugin-import-x: "npm:^4.17.1"
     eslint-plugin-jest-dom: "npm:^5.10.1"
     eslint-plugin-jsx-a11y: "npm:^6.10.2"
