@@ -1,9 +1,16 @@
 {
   "name": "@wren/graph-manager",
   "version": "0.1.0",
+  "private": true,
   "description": "Schema management and utilities",
   "license": "MIT",
   "author": "Andrew J. Torres <andrew.jonathan.torres@gmail.com> (https://andrewjtorr.es)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewjtorres/wren.git",
+    "directory": "packages/graph-manager"
+  },
+  "type": "module",
   "imports": {
     "#src/*": "./src/*"
   },
@@ -21,12 +28,6 @@
       "default": "./dist/condition.js"
     }
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/andrewjtorres/wren.git",
-    "directory": "packages/graph-manager"
-  },
-  "type": "module",
   "scripts": {
     "build": "rolldown --config=rolldown.config.ts",
     "clean": "concurrently --group --raw \"yarn:clean:*\"",
@@ -56,9 +57,9 @@
     "eslint-plugin-promise": "^7.3.0",
     "eslint-plugin-unicorn": "^74.0.0",
     "lint-staged": "^17.5.1",
-    "prettier": "^3.9.6",
-    "rolldown": "^1.2.8",
-    "rolldown-plugin-dts": "^0.28.5",
+    "prettier": "^3.9.7",
+    "rolldown": "^1.2.9",
+    "rolldown-plugin-dts": "^0.28.6",
     "turbo": "^2.10.13",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.70.0",
@@ -71,6 +72,5 @@
   "engines": {
     "node": ">=24.21",
     "yarn": ">=4.18"
-  },
-  "private": true
+  }
 }
