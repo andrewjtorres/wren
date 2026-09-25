@@ -51,7 +51,7 @@
     "eslint-plugin-promise": "^7.3.0",
     "eslint-plugin-unicorn": "^74.0.0",
     "lint-staged": "^17.5.1",
-    "prettier": "^3.9.7",
+    "prettier": "^3.9.8",
     "rolldown": "^1.2.9",
     "tsx": "^4.23.13",
     "turbo": "^2.10.13",

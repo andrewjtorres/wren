@@ -57,7 +57,7 @@
     "eslint-plugin-unicorn": "^74.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^17.5.1",
-    "prettier": "^3.9.7",
+    "prettier": "^3.9.8",
     "prettier-plugin-tailwindcss": "^0.8.1",
     "storybook": "^10.6.0",
     "stylelint": "^17.15.0",
