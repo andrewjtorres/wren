@@ -3763,7 +3763,7 @@ __metadata:
     eslint-plugin-import-x: "npm:^4.17.1"
     eslint-plugin-jest-dom: "npm:^5.10.1"
     eslint-plugin-jsx-a11y: "npm:^6.10.2"
-    eslint-plugin-perfectionist: "npm:^5.11.1"
+    eslint-plugin-perfectionist: "npm:^5.12.0"
     eslint-plugin-playwright: "npm:^2.12.0"
     eslint-plugin-prettier: "npm:^5.5.6"
     eslint-plugin-promise: "npm:^7.3.0"
@@ -6014,15 +6014,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-perfectionist@npm:^5.11.1":
-  version: 5.11.1
-  resolution: "eslint-plugin-perfectionist@npm:5.11.1"
+"eslint-plugin-perfectionist@npm:^5.12.0":
+  version: 5.12.0
+  resolution: "eslint-plugin-perfectionist@npm:5.12.0"
   dependencies:
+    "@typescript-eslint/types": "npm:^8.70.0"
     "@typescript-eslint/utils": "npm:^8.70.0"
     natural-orderby: "npm:^5.0.0"
   peerDependencies:
     eslint: ^8.45.0 || ^9.0.0 || ^10.0.0
-  checksum: 10/86a74fa3f57fb2f0cb74b1e63655f742dfa11c2d51f8980d6b0e9e20063434069b001c08d9667acac6eca3a07bdd62968f0fe074fced95d024a006bde2d33ea6
+  checksum: 10/4cef9837c23f450201bb19e0d9bdcfc25477d2d456a8db51f2dd190e3b527a63cebf804fdce60a1c112cd9d1c6637ccc31d1daf53e8ac083e04b3ef63eeaa042
   languageName: node
   linkType: hard
 
@@ -11000,9 +11001,9 @@ __metadata:
   linkType: hard
 
 "undici@npm:^8.4.1":
-  version: 8.10.2
-  resolution: "undici@npm:8.10.2"
-  checksum: 10/90f7ba3d3e9543f25d47552282239faa395eaa66d0db7272ebf57055c8ced34e4c948923c734be5571bfce0cc56080e93c0e2f960e9c5fba163759fce112bab4
+  version: 8.11.0
+  resolution: "undici@npm:8.11.0"
+  checksum: 10/340ef9eab46b3361aef0ac6f90949d192c819e30208f2382ea011404cb731960a6ce12fccbfe4614b3a2a9710a0b34075acf6dd2b5a889daa3c4cbc89611c5bc
   languageName: node
   linkType: hard
 
@@ -11539,7 +11540,7 @@ __metadata:
     eslint-plugin-import-x: "npm:^4.17.1"
     eslint-plugin-jest-dom: "npm:^5.10.1"
     eslint-plugin-jsx-a11y: "npm:^6.10.2"
-    eslint-plugin-perfectionist: "npm:^5.11.1"
+    eslint-plugin-perfectionist: "npm:^5.12.0"
     eslint-plugin-playwright: "npm:^2.12.0"
     eslint-plugin-prettier: "npm:^5.5.6"
     eslint-plugin-promise: "npm:^7.3.0"
