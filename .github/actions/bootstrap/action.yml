@@ -33,9 +33,9 @@ runs:
 
         mkdir --parents "$HOME/.local/bin"
 
-        curl --fail --location --output "$HOME/.local/bin/yarn" --show-error --silent 'https://repo.yarnpkg.com/releases/4.18.0/x86_64-unknown-linux-musl'
+        curl --fail --location --output "$HOME/.local/bin/yarn" --show-error --silent 'https://repo.yarnpkg.com/releases/4.18.1/x86_64-unknown-linux-musl'
 
-        echo "fb8b1d20be72a0b544a35bcec4c7ed0ff55a9b173c01f191b02ba164b2051db5  $HOME/.local/bin/yarn" | sha256sum --check -
+        echo "a28ad591febb769f939c11f82f89bacad0b0fac0c884d3b78fa2aaaee970907e  $HOME/.local/bin/yarn" | sha256sum --check -
 
         chmod +x "$HOME/.local/bin/yarn"
 
