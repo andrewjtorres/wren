@@ -45,6 +45,7 @@
     "@total-typescript/ts-reset": "^0.6.1",
     "@tursodatabase/database": "0.7.2",
     "@types/node": "^26.6.2",
+    "@typescript/native": "npm:typescript@^7.0.2",
     "concurrently": "^10.0.5",
     "del-cli": "^7.0.0",
     "drizzle-kit": "1.0.0-rc.4",
@@ -61,7 +62,7 @@
     "rolldown": "^1.2.10",
     "rolldown-plugin-dts": "^0.28.6",
     "turbo": "^2.11.3",
-    "typescript": "^6.0.3",
+    "typescript": "npm:@typescript/typescript6@^6.0.2",
     "typescript-eslint": "^8.70.1",
     "valibot": "^1.5.0",
     "zod": "^4.6.5"
