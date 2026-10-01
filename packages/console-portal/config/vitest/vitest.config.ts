@@ -116,6 +116,7 @@ const config = defineConfig({
     watch: false,
     root: packageDirPath,
     coverage: {
+      provider: 'istanbul',
       include: ['src/**/*.[jt]s?(x)'],
       exclude: [
         'src/**/?(*.)@(end-to-end|integration|unit).test.[jt]s',

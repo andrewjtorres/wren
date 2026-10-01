@@ -73,6 +73,7 @@ const config = defineConfig({
     watch: false,
     root: packageDirPath,
     coverage: {
+      provider: 'istanbul',
       include: ['src/**/*.[jt]s'],
       exclude: ['src/**/?(*.)unit.test.[jt]s'],
       reportsDirectory: artifactRootDir,
