@@ -13,7 +13,7 @@ updates:
       include:
         - '*'
     allow:
-      - dependency-type: all
+      - dependency-type: direct
     commit-message:
       prefix: build
       include: scope
@@ -51,7 +51,7 @@ updates:
       include:
         - '*'
     allow:
-      - dependency-type: all
+      - dependency-type: direct
     commit-message:
       prefix: build
       include: scope
