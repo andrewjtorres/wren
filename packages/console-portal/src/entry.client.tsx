@@ -1,5 +1,5 @@
 import { asError } from '@wren/common/error'
-import { StrictMode, startTransition } from 'react'
+import { startTransition, StrictMode } from 'react'
 import { hydrateRoot } from 'react-dom/client'
 import { IntlProvider } from 'react-intl'
 import type { RouterErrorInfo } from 'react-router'

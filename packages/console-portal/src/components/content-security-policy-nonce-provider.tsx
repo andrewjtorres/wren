@@ -1,4 +1,4 @@
-import { type JSX, type ReactNode, createContext, use } from 'react'
+import { createContext, type JSX, type ReactNode, use } from 'react'
 
 import { GenericError } from '#src/error.ts'
 

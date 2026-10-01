@@ -1,7 +1,7 @@
 import { asError } from '@wren/common/error'
 import type { JSX } from 'react'
-import { defineMessages, useIntl } from 'react-intl'
-import { type ErrorResponse, type Params, isRouteErrorResponse, useParams, useRouteError } from 'react-router'
+import { useIntl } from 'react-intl'
+import { type ErrorResponse, isRouteErrorResponse, type Params, useParams, useRouteError } from 'react-router'
 
 export type ErrorHandler = (error: Error) => JSX.Element | undefined
 
@@ -15,39 +15,30 @@ export type ErrorBoundaryProps = {
   errorResponseHandlers?: ErrorResponseHandlers
 }
 
-const defaultErrorHandlerMessages = defineMessages({
-  title: {
-    id: 'TDc0yu4YI3',
-    description: 'Default error handler title',
-    defaultMessage: 'Error',
-  },
-  description: {
-    id: 'ZoA5ElZ83H',
-    description: 'Default error handler description',
-    defaultMessage: 'Something went wrong! Please try again later.',
-  },
-})
-
 function DefaultErrorHandler(): JSX.Element {
   const intl = useIntl()
 
   return (
     <div className="bg-red-9 text-red-contrast selection:bg-red-7 selection:text-red-12 flex flex-1 flex-col justify-center">
       <div className="text-center leading-none">
-        <h1 className="text-[25vw]">{intl.formatMessage(defaultErrorHandlerMessages.title)}</h1>
-        <div className="text-3xl">{intl.formatMessage(defaultErrorHandlerMessages.description)}</div>
+        <h1 className="text-[25vw]">
+          {intl.formatMessage({
+            id: 'TDc0yu4YI3',
+            description: 'Default error handler title',
+            defaultMessage: 'Error',
+          })}
+        </h1>
+        <div className="text-3xl">
+          {intl.formatMessage({
+            id: 'ZoA5ElZ83H',
+            description: 'Default error handler description',
+            defaultMessage: 'Something went wrong! Please try again later.',
+          })}
+        </div>
       </div>
     </div>
   )
 }
-
-const notFoundErrorHandlerMessages = defineMessages({
-  title: {
-    id: 'Zu62i1gQ2Z',
-    description: 'Not found error handler title',
-    defaultMessage: '404',
-  },
-})
 
 export function NotFoundErrorHandler(): JSX.Element {
   const intl = useIntl()
@@ -55,7 +46,13 @@ export function NotFoundErrorHandler(): JSX.Element {
   return (
     <div className="bg-blue-9 text-blue-contrast selection:bg-blue-7 selection:text-blue-12 flex flex-1 flex-col justify-center">
       <div className="text-center leading-none">
-        <h1 className="font-mono text-[25vw]">{intl.formatMessage(notFoundErrorHandlerMessages.title)}</h1>
+        <h1 className="font-mono text-[25vw]">
+          {intl.formatMessage({
+            id: 'Zu62i1gQ2Z',
+            description: 'Not found error handler title',
+            defaultMessage: '404',
+          })}
+        </h1>
       </div>
     </div>
   )

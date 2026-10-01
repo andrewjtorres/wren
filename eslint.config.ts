@@ -1,39 +1,44 @@
-import eslint from '@eslint/js'
+import javascriptPlugin from '@eslint/js'
 import stylisticPlugin from '@stylistic/eslint-plugin'
 import vitestPlugin from '@vitest/eslint-plugin'
-import type { Linter } from 'eslint'
-import { defineConfig } from 'eslint/config'
 import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript'
 import formatjsPlugin from 'eslint-plugin-formatjs'
-import { flatConfigs as importXPluginConfigs } from 'eslint-plugin-import-x'
+import importXPlugin from 'eslint-plugin-import-x'
 import jestDomPlugin from 'eslint-plugin-jest-dom'
 import jsxA11yPlugin from 'eslint-plugin-jsx-a11y'
-import { configs as perfectionistConfigs } from 'eslint-plugin-perfectionist'
+import perfectionistPlugin from 'eslint-plugin-perfectionist'
 import playwrightPlugin from 'eslint-plugin-playwright'
 import prettierPlugin from 'eslint-plugin-prettier/recommended'
 import promisePlugin from 'eslint-plugin-promise'
 import reactPlugin from 'eslint-plugin-react'
 import reactHooksPlugin from 'eslint-plugin-react-hooks'
-import { configs as storybookConfigs } from 'eslint-plugin-storybook'
+import storybookPlugin from 'eslint-plugin-storybook'
 import testingLibraryPlugin from 'eslint-plugin-testing-library'
 import unicornPlugin from 'eslint-plugin-unicorn'
-import { configs as typescriptConfigs, parser as typescriptParser, plugin as typescriptPlugin } from 'typescript-eslint'
+import { type Config, defineConfig } from 'eslint/config'
+import typescriptPlugin from 'typescript-eslint'
 
-export const baseConfig: Linter.Config = {
+export const baseConfig: Config = {
   name: 'base',
   files: [],
   languageOptions: {
     ecmaVersion: 2025,
     sourceType: 'module',
   },
+  linterOptions: {
+    reportUnusedDisableDirectives: 'error',
+    reportUnusedInlineConfigs: 'error',
+  },
   plugins: {
-    ...importXPluginConfigs.recommended.plugins,
+    '@eslint/js': javascriptPlugin,
+    ...importXPlugin.flatConfigs.recommended.plugins, // eslint-disable-line import-x/no-named-as-default-member
+    ...perfectionistPlugin.configs['recommended-natural'].plugins, // eslint-disable-line import-x/no-named-as-default-member
     ...promisePlugin.configs['flat/recommended'].plugins,
     ...unicornPlugin.configs.recommended.plugins,
   },
   rules: {
-    ...eslint.configs.recommended.rules,
-    ...importXPluginConfigs.recommended.rules,
+    ...javascriptPlugin.configs.recommended.rules,
+    ...importXPlugin.flatConfigs.recommended.rules, // eslint-disable-line import-x/no-named-as-default-member
     ...promisePlugin.configs['flat/recommended'].rules,
     ...unicornPlugin.configs.recommended.rules,
     'func-style': [
@@ -54,38 +59,51 @@ export const baseConfig: Linter.Config = {
       'error',
       {
         varsIgnorePattern: '^_',
+        args: 'all',
         argsIgnorePattern: '^_',
+        reportUsedIgnorePattern: true,
       },
     ],
-    'sort-imports': [
+    'import-x/extensions': [
       'error',
+      'ignorePackages',
       {
-        ignoreDeclarationSort: true,
+        checkTypeImports: true,
       },
     ],
-    'import-x/extensions': ['error', 'ignorePackages'],
     'import-x/first': 'error',
     'import-x/newline-after-import': 'error',
-    'import-x/order': [
+    'perfectionist/sort-imports': [
       'error',
       {
+        type: 'alphabetical',
+        order: 'asc',
+        fallbackSort: {
+          type: 'type-import-first',
+          order: 'asc',
+        },
+        ignoreCase: false,
+        internalPattern: ['^#.+'],
+        newlinesBetween: 1,
+        newlinesInside: 0,
         groups: [
           ['builtin', 'external'],
-          ['internal', 'parent', 'sibling', 'index', 'unknown'],
-        ],
-        pathGroups: [
+          'subpath',
           {
-            pattern: '#src/**',
-            group: 'internal',
-            position: 'before',
+            newlinesBetween: 0,
           },
+          ['internal', 'parent', 'sibling', 'index', 'unknown'],
+          'side-effect',
         ],
-        distinctGroup: false,
-        'newlines-between': 'always',
-        alphabetize: {
-          order: 'asc',
-          orderImportKind: 'asc',
-        },
+      },
+    ],
+    'perfectionist/sort-named-imports': [
+      'error',
+      {
+        type: 'alphabetical',
+        order: 'asc',
+        ignoreCase: false,
+        ignoreAlias: true,
       },
     ],
     'unicorn/max-nested-calls': [
@@ -97,27 +115,93 @@ export const baseConfig: Linter.Config = {
     'unicorn/name-replacements': 'off',
   },
   settings: {
-    'import-x/extensions': ['.js', '.jsx', '.ts', '.tsx'],
+    'import-x/extensions': ['.js', '.ts'],
     'import-x/external-module-folders': ['node_modules', 'node_modules/@types'],
-    'import-x/internal-regex': '^#src',
     'import-x/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx'],
-    },
-    'import-x/resolver': {
-      node: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
-      },
+      '@typescript-eslint/parser': ['.ts'],
     },
     'import-x/resolver-next': [
       createTypeScriptImportResolver({
-        alwaysTryTypes: true,
         project: 'tsconfig.json',
+        alwaysTryTypes: true,
       }),
     ],
   },
 }
 
-export const reactConfig: Linter.Config = {
+export const typescriptConfig: Config = {
+  name: 'typescript',
+  files: [],
+  languageOptions: {
+    parser: typescriptPlugin.parser, // eslint-disable-line import-x/no-named-as-default-member
+    parserOptions: {
+      projectService: true,
+    },
+  },
+  plugins: {
+    '@typescript-eslint': typescriptPlugin.plugin, // eslint-disable-line import-x/no-named-as-default-member
+    ...importXPlugin.flatConfigs.typescript.plugins, // eslint-disable-line import-x/no-named-as-default-member
+    ...promisePlugin.configs['flat/recommended'].plugins,
+  },
+  rules: {
+    ...typescriptPlugin.configs.eslintRecommended.rules, // eslint-disable-line import-x/no-named-as-default-member
+    ...typescriptPlugin.configs.strictTypeChecked[2]?.rules, // eslint-disable-line import-x/no-named-as-default-member
+    ...typescriptPlugin.configs.stylisticTypeChecked[2]?.rules, // eslint-disable-line import-x/no-named-as-default-member
+    ...importXPlugin.flatConfigs.typescript.rules, // eslint-disable-line import-x/no-named-as-default-member
+    '@typescript-eslint/ban-ts-comment': [
+      'error',
+      {
+        'ts-expect-error': {
+          descriptionFormat: String.raw`^ TS\d{4,5}.*$`,
+        },
+        'ts-ignore': true,
+        'ts-nocheck': true,
+        'ts-check': false,
+      },
+    ],
+    '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+    '@typescript-eslint/consistent-type-exports': 'error',
+    '@typescript-eslint/consistent-type-imports': [
+      'error',
+      {
+        prefer: 'type-imports',
+        fixStyle: 'inline-type-imports',
+      },
+    ],
+    '@typescript-eslint/no-import-type-side-effects': 'error',
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        varsIgnorePattern: '^_',
+        args: 'all',
+        argsIgnorePattern: '^_',
+        reportUsedIgnorePattern: true,
+      },
+    ],
+    '@typescript-eslint/restrict-template-expressions': [
+      'error',
+      {
+        allowAny: false,
+        allowArray: false,
+        allowBoolean: true,
+        allowNever: false,
+        allowNullish: true,
+        allowNumber: true,
+        allowRegExp: true,
+      },
+    ],
+    '@typescript-eslint/switch-exhaustiveness-check': 'error',
+    'import-x/no-duplicates': [
+      'warn',
+      {
+        'prefer-inline': true,
+      },
+    ],
+    'promise/catch-or-return': 'off',
+  },
+}
+
+export const reactConfig: Config = {
   name: 'react',
   files: [],
   languageOptions: {
@@ -125,36 +209,51 @@ export const reactConfig: Linter.Config = {
       ecmaFeatures: {
         jsx: true,
       },
+      jsxPragma: null, // eslint-disable-line unicorn/no-null
     },
   },
   plugins: {
     ...stylisticPlugin.configs.recommended.plugins,
-    ...formatjsPlugin.configs.recommended.plugins,
-    ...jsxA11yPlugin.flatConfigs.recommended.plugins,
-    ...perfectionistConfigs['recommended-natural'].plugins,
+    ...formatjsPlugin.configs.strict.plugins,
+    ...jsxA11yPlugin.flatConfigs.strict.plugins,
+    ...perfectionistPlugin.configs['recommended-natural'].plugins, // eslint-disable-line import-x/no-named-as-default-member
     ...reactPlugin.configs.flat['recommended']?.plugins,
     ...reactHooksPlugin.configs.flat['recommended-latest'].plugins,
   },
   rules: {
-    ...formatjsPlugin.configs.recommended.rules,
-    ...jsxA11yPlugin.flatConfigs.recommended.rules,
+    ...formatjsPlugin.configs.strict.rules,
+    ...jsxA11yPlugin.flatConfigs.strict.rules,
     ...reactPlugin.configs.flat['recommended']?.rules,
     ...reactPlugin.configs.flat['jsx-runtime']?.rules,
     ...reactHooksPlugin.configs.flat['recommended-latest'].rules,
-    '@stylistic/jsx-curly-brace-presence': 'error',
-    '@stylistic/jsx-newline': [
+    '@stylistic/jsx-curly-brace-presence': [
       'error',
       {
-        prevent: true,
+        propElementValues: 'always',
       },
     ],
-    '@stylistic/jsx-self-closing-comp': 'error',
-    'formatjs/enforce-id': [
+    '@stylistic/jsx-self-closing-comp': [
       'error',
       {
-        idInterpolationPattern: '[sha512:contenthash:base64:10]',
+        component: true,
+        html: true,
       },
     ],
+    'formatjs/enforce-message-types': [
+      'error',
+      {
+        generateTypes: true,
+      },
+    ],
+    'jsx-a11y/anchor-is-valid': [
+      'error',
+      {
+        components: ['Link', 'NavLink'],
+        specialLink: ['to'],
+        aspects: ['noHref', 'invalidHref', 'preferButton'],
+      },
+    ],
+    'jsx-a11y/no-aria-hidden-on-focusable': 'error',
     'perfectionist/sort-jsx-props': [
       'error',
       {
@@ -164,6 +263,17 @@ export const reactConfig: Linter.Config = {
     ],
   },
   settings: {
+    'import-x/extensions': ['.js', '.jsx', '.ts', '.tsx'],
+    'import-x/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
+    'jsx-a11y': {
+      components: {
+        Form: 'form',
+        Link: 'a',
+        NavLink: 'a',
+      },
+    },
     react: {
       version: '19.3.0',
     },
@@ -186,96 +296,44 @@ export const reactConfig: Linter.Config = {
   },
 }
 
-export const typescriptConfig: Linter.Config = {
-  name: 'typescript',
+export const reactTypescriptConfig: Config = {
+  name: 'react/typescript',
   files: [],
-  languageOptions: {
-    parser: typescriptParser,
-    parserOptions: {
-      projectService: true,
-    },
-  },
   plugins: {
-    '@typescript-eslint': typescriptPlugin,
-    ...importXPluginConfigs.recommended.plugins,
+    ...reactPlugin.configs.flat['recommended']?.plugins,
   },
   rules: {
-    ...typescriptConfigs.eslintRecommended.rules,
-    ...typescriptConfigs.strictTypeChecked.at(-1)?.rules,
-    ...typescriptConfigs.stylisticTypeChecked.at(-1)?.rules,
-    ...importXPluginConfigs.typescript.rules,
-    '@typescript-eslint/ban-ts-comment': [
-      'error',
-      {
-        'ts-expect-error': {
-          descriptionFormat: String.raw`^ TS\d{4,5}.*$`,
-        },
-        'ts-ignore': true,
-        'ts-nocheck': true,
-        'ts-check': false,
-      },
-    ],
-    '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
-    '@typescript-eslint/consistent-type-exports': 'error',
-    '@typescript-eslint/consistent-type-imports': 'error',
-    '@typescript-eslint/no-import-type-side-effects': 'error',
-    '@typescript-eslint/no-unused-vars': [
-      'error',
-      {
-        varsIgnorePattern: '^_',
-        argsIgnorePattern: '^_',
-      },
-    ],
-    '@typescript-eslint/only-throw-error': [
-      'error',
-      {
-        allow: [
-          {
-            from: 'lib',
-            name: 'Response',
-          },
-        ],
-        allowRethrowing: true,
-        allowThrowingAny: true,
-        allowThrowingUnknown: true,
-      },
-    ],
-    '@typescript-eslint/restrict-template-expressions': [
-      'error',
-      {
-        allowAny: false,
-        allowArray: false,
-        allowBoolean: true,
-        allowNever: false,
-        allowNullish: true,
-        allowNumber: true,
-        allowRegExp: true,
-      },
-    ],
-    'import-x/no-duplicates': [
-      'warn',
-      {
-        'prefer-inline': true,
-      },
-    ],
+    'react/prop-types': 'off',
   },
 }
 
-export const storybookConfig: Linter.Config = {
-  name: 'storybook',
+export const storybookMainConfig: Config = {
+  name: 'storybook/main',
   files: [],
   // @ts-expect-error TS2322
   plugins: {
-    ...formatjsPlugin.configs.recommended.plugins,
-    ...storybookConfigs['flat/recommended'].at(0)?.plugins,
+    ...storybookPlugin.configs['flat/recommended'][0]?.plugins, // eslint-disable-line import-x/no-named-as-default-member
   },
   rules: {
-    ...storybookConfigs['flat/recommended'].at(0)?.rules,
+    ...storybookPlugin.configs['flat/recommended'][2]?.rules, // eslint-disable-line import-x/no-named-as-default-member
+  },
+}
+
+export const storybookStoriesConfig: Config = {
+  name: 'storybook/stories',
+  files: [],
+  // @ts-expect-error TS2322
+  plugins: {
+    ...formatjsPlugin.configs.strict.plugins,
+    ...storybookPlugin.configs['flat/recommended'][0]?.plugins, // eslint-disable-line import-x/no-named-as-default-member
+  },
+  rules: {
+    ...storybookPlugin.configs['flat/recommended'][1]?.rules, // eslint-disable-line import-x/no-named-as-default-member
     'formatjs/no-literal-string-in-jsx': 'off',
   },
 }
 
-export const playwrightConfig: Linter.Config = {
+export const playwrightConfig: Config = {
   name: 'playwright',
   files: [],
   plugins: {
@@ -286,34 +344,39 @@ export const playwrightConfig: Linter.Config = {
   },
 }
 
-export const vitestConfig: Linter.Config = {
+export const vitestConfig: Config = {
   name: 'vitest',
   files: [],
   plugins: {
-    ...formatjsPlugin.configs.recommended.plugins,
+    ...formatjsPlugin.configs.strict.plugins,
     ...vitestPlugin.configs.recommended.plugins,
   },
   rules: {
     ...vitestPlugin.configs.recommended.rules,
     'formatjs/no-literal-string-in-jsx': 'off',
     'vitest/no-alias-methods': 'error',
-    'vitest/no-conditional-expect': 'error',
-    'vitest/no-disabled-tests': 'warn',
     'vitest/no-done-callback': 'error',
-    'vitest/no-focused-tests': 'error',
-    'vitest/no-interpolation-in-snapshots': 'error',
-    'vitest/no-mocks-import': 'error',
-    'vitest/no-standalone-expect': 'error',
     'vitest/no-test-prefixes': 'error',
-    'vitest/prefer-to-be-falsy': 'error',
     'vitest/prefer-to-be-object': 'error',
-    'vitest/prefer-to-be-truthy': 'error',
     'vitest/prefer-to-contain': 'error',
     'vitest/prefer-to-have-length': 'error',
   },
 }
 
-export const reactTestingLibraryConfig: Linter.Config = {
+export const vitestTypeCheckedConfig: Config = {
+  name: 'vitest/type-checked',
+  files: [],
+  plugins: {
+    '@typescript-eslint': typescriptPlugin.plugin, // eslint-disable-line import-x/no-named-as-default-member
+    ...vitestPlugin.configs.recommended.plugins,
+  },
+  rules: {
+    '@typescript-eslint/unbound-method': 'off',
+    'vitest/unbound-method': 'error',
+  },
+}
+
+export const reactTestingLibraryConfig: Config = {
   name: 'react-testing-library',
   files: [],
   plugins: {
@@ -326,7 +389,7 @@ export const reactTestingLibraryConfig: Linter.Config = {
   },
 }
 
-export const prettierConfig: Linter.Config = {
+export const prettierConfig: Config = {
   name: 'prettier',
   files: [],
   plugins: {
@@ -334,10 +397,6 @@ export const prettierConfig: Linter.Config = {
   },
   rules: {
     ...prettierPlugin.rules,
-  },
-  linterOptions: {
-    reportUnusedDisableDirectives: true,
-    reportUnusedInlineConfigs: 'error',
   },
 }
 

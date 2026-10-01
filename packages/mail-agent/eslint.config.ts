@@ -1,6 +1,12 @@
 import { defineConfig } from 'eslint/config'
 
-import { baseConfig, prettierConfig, typescriptConfig, vitestConfig } from '../../eslint.config.ts'
+import {
+  baseConfig,
+  prettierConfig,
+  typescriptConfig,
+  vitestConfig,
+  vitestTypeCheckedConfig,
+} from '../../eslint.config.ts'
 
 const config = defineConfig([
   {
@@ -34,6 +40,10 @@ const config = defineConfig([
   },
   {
     ...vitestConfig,
+    files: ['**/?(*.)unit.test.[jt]s'],
+  },
+  {
+    ...vitestTypeCheckedConfig,
     files: ['**/?(*.)unit.test.[jt]s'],
   },
   {

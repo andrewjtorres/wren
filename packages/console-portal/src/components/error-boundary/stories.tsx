@@ -1,6 +1,6 @@
+import preview from '#.storybook/preview.ts'
 import { withRouter } from '#src/utils/decorator.tsx'
 import { isSupportedLanguageTag } from '#src/utils/i18n.ts'
-import preview from '#.storybook/preview.ts'
 import { ErrorBoundary, NotFoundErrorHandler } from './index.tsx'
 
 const meta = preview.meta({

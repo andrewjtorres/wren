@@ -1,8 +1,8 @@
 import {
   type LevelWithSilent as PinoLogLevelWithSilent,
   type Logger as PinoLogger,
-  type redactOptions as RedactOptions,
   pino,
+  type redactOptions as RedactOptions,
   stdSerializers,
   stdTimeFunctions,
 } from 'pino'

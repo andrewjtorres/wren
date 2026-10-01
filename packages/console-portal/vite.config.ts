@@ -5,7 +5,7 @@ import reactPlugin from '@vitejs/plugin-react'
 import { argv } from 'node:process'
 import { fileURLToPath } from 'node:url'
 import { replacePlugin } from 'rolldown/plugins'
-import { type Plugin, defineConfig, loadEnv, perEnvironmentPlugin } from 'vite'
+import { defineConfig, loadEnv, perEnvironmentPlugin, type Plugin } from 'vite'
 
 const packageDirUrl = new URL('.', import.meta.url)
 
@@ -52,17 +52,16 @@ const config = defineConfig(({ mode }) => {
     plugins: [
       assertHostPlugin('127.0.0.1'),
       perEnvironmentPlugin('wren-console-portal:replace-server-environment', (environment) => {
-        if (environment.name !== 'ssr') {
-          return false
-        }
-
-        return replacePlugin(
-          {
-            'env.NODE_ENV': stringify(env['NODE_ENV'] ?? 'production'),
-          },
-          {
-            preventAssignment: true,
-          },
+        return (
+          environment.name === 'ssr' &&
+          replacePlugin(
+            {
+              'env.NODE_ENV': stringify(env['NODE_ENV'] ?? 'production'),
+            },
+            {
+              preventAssignment: true,
+            },
+          )
         )
       }),
       formatjsPlugin({

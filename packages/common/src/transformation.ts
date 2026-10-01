@@ -1,12 +1,12 @@
 import {
-  type NonZeroValueBigInt,
-  type NonZeroValueBoolean,
-  type NonZeroValueNumber,
-  type NonZeroValueString,
   isNonZeroValueBigInt,
   isNonZeroValueBoolean,
   isNonZeroValueNumber,
   isNonZeroValueString,
+  type NonZeroValueBigInt,
+  type NonZeroValueBoolean,
+  type NonZeroValueNumber,
+  type NonZeroValueString,
 } from './validation.ts'
 
 const booleanPattern = /^(?:1|enabled|on|true|y|yes)$/i

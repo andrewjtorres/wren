@@ -1,12 +1,12 @@
-import { type HasDefault, type NotNull, isNotNull, sql } from 'drizzle-orm'
+import { type HasDefault, isNotNull, type NotNull, sql } from 'drizzle-orm'
 import {
-  type SQLiteTextBuilder,
-  type SQLiteTimestampBuilder,
   foreignKey,
   index,
   integer,
   primaryKey,
   sqliteTable,
+  type SQLiteTextBuilder,
+  type SQLiteTimestampBuilder,
   text,
 } from 'drizzle-orm/sqlite-core'
 

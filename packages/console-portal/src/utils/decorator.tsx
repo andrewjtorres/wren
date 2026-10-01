@@ -1,16 +1,16 @@
 import type { JSX, ReactElement } from 'react'
 import {
-  IntlProvider,
   type IntlConfig as IntlProviderProps,
+  IntlProvider,
   type Messages,
   type SupportedLanguageTag,
 } from 'react-intl'
 import {
+  createRoutesStub,
   type FutureConfig,
   type RouterContextProvider,
   type RoutesTestStubProps,
   type StubRouteObject,
-  createRoutesStub,
 } from 'react-router'
 
 import { i18nDefaultLanguageTag } from '#src/config.ts'

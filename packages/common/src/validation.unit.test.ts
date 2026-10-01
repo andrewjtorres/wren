@@ -13,17 +13,14 @@ describe('should return true if the provided value is a non-zero value bigint; o
   test.each([
     {
       value: 0n,
+      expected: false,
     },
-  ])('isNonZeroValueBigInt($value) -> false', ({ value }) => {
-    expect(isNonZeroValueBigInt(value)).toBeFalsy()
-  })
-
-  test.each([
     {
       value: 42n,
+      expected: true,
     },
-  ])('isNonZeroValueBigInt($value) -> true', ({ value }) => {
-    expect(isNonZeroValueBigInt(value)).toBeTruthy()
+  ])('isNonZeroValueBigInt($value) -> $expected', ({ value, expected }) => {
+    expect(isNonZeroValueBigInt(value)).toBe(expected)
   })
 })
 
@@ -31,17 +28,14 @@ describe('should return true if the provided value is a non-zero value boolean; 
   test.each([
     {
       value: false,
+      expected: false,
     },
-  ])('isNonZeroValueBoolean($value) -> false', ({ value }) => {
-    expect(isNonZeroValueBoolean(value)).toBeFalsy()
-  })
-
-  test.each([
     {
       value: true,
+      expected: true,
     },
-  ])('isNonZeroValueBoolean($value) -> true', ({ value }) => {
-    expect(isNonZeroValueBoolean(value)).toBeTruthy()
+  ])('isNonZeroValueBoolean($value) -> $expected', ({ value, expected }) => {
+    expect(isNonZeroValueBoolean(value)).toBe(expected)
   })
 })
 
@@ -49,17 +43,14 @@ describe('should return true if the provided value is a non-zero value number; o
   test.each([
     {
       value: 0,
+      expected: false,
     },
-  ])('isNonZeroValueNumber($value) -> false', ({ value }) => {
-    expect(isNonZeroValueNumber(value)).toBeFalsy()
-  })
-
-  test.each([
     {
       value: 42,
+      expected: true,
     },
-  ])('isNonZeroValueNumber($value) -> true', ({ value }) => {
-    expect(isNonZeroValueNumber(value)).toBeTruthy()
+  ])('isNonZeroValueNumber($value) -> $expected', ({ value, expected }) => {
+    expect(isNonZeroValueNumber(value)).toBe(expected)
   })
 })
 
@@ -67,17 +58,14 @@ describe('should return true if the provided value is a non-zero value string; o
   test.each([
     {
       value: '',
+      expected: false,
     },
-  ])('isNonZeroValueString($value) -> false', ({ value }) => {
-    expect(isNonZeroValueString(value)).toBeFalsy()
-  })
-
-  test.each([
     {
       value: 'forty-two',
+      expected: true,
     },
-  ])('isNonZeroValueString($value) -> true', ({ value }) => {
-    expect(isNonZeroValueString(value)).toBeTruthy()
+  ])('isNonZeroValueString($value) -> $expected', ({ value, expected }) => {
+    expect(isNonZeroValueString(value)).toBe(expected)
   })
 })
 
@@ -87,22 +75,20 @@ describe('should return true if the provided value is an empty object; otherwise
       value: {
         data: undefined,
       },
+      expected: false,
     },
     {
       value: {
         data: 42,
       },
+      expected: false,
     },
-  ])('isEmptyObject($value) -> false', ({ value }) => {
-    expect(isEmptyObject(value)).toBeFalsy()
-  })
-
-  test.each([
     {
       value: {},
+      expected: true,
     },
-  ])('isEmptyObject($value) -> true', ({ value }) => {
-    expect(isEmptyObject(value)).toBeTruthy()
+  ])('isEmptyObject($value) -> $expected', ({ value, expected }) => {
+    expect(isEmptyObject(value)).toBe(expected)
   })
 })
 
@@ -112,21 +98,19 @@ describe('should return true if the provided value is an uninitialized object; o
       value: {
         data: 42,
       },
+      expected: false,
     },
-  ])('isUninitializedObject($value) -> false', ({ value }) => {
-    expect(isUninitializedObject(value)).toBeFalsy()
-  })
-
-  test.each([
     {
       value: {},
+      expected: true,
     },
     {
       value: {
         data: undefined,
       },
+      expected: true,
     },
-  ])('isUninitializedObject($value) -> true', ({ value }) => {
-    expect(isUninitializedObject(value)).toBeTruthy()
+  ])('isUninitializedObject($value) -> $expected', ({ value, expected }) => {
+    expect(isUninitializedObject(value)).toBe(expected)
   })
 })

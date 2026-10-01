@@ -6,9 +6,12 @@ import {
   prettierConfig,
   reactConfig,
   reactTestingLibraryConfig,
-  storybookConfig,
+  reactTypescriptConfig,
+  storybookMainConfig,
+  storybookStoriesConfig,
   typescriptConfig,
   vitestConfig,
+  vitestTypeCheckedConfig,
 } from '../../eslint.config.ts'
 
 const config = defineConfig([
@@ -44,15 +47,40 @@ const config = defineConfig([
     files: ['**/*.[jt]s?(x)'],
   },
   {
+    ...typescriptConfig,
+    files: ['**/*.ts?(x)'],
+    rules: {
+      ...typescriptConfig.rules,
+      '@typescript-eslint/only-throw-error': [
+        'error',
+        {
+          allow: [
+            {
+              from: 'lib',
+              name: 'Response',
+            },
+          ],
+          allowRethrowing: true,
+          allowThrowingAny: true,
+          allowThrowingUnknown: true,
+        },
+      ],
+    },
+  },
+  {
     ...reactConfig,
     files: ['**/*.[jt]s?(x)'],
   },
   {
-    ...typescriptConfig,
-    files: ['**/*.ts?(x)'],
+    ...reactTypescriptConfig,
+    files: ['**/*.[jt]s?(x)'],
   },
   {
-    ...storybookConfig,
+    ...storybookMainConfig,
+    files: ['.storybook/main.[jt]s'],
+  },
+  {
+    ...storybookStoriesConfig,
     files: ['**/?(*.)stories.[jt]s?(x)'],
   },
   {
@@ -61,6 +89,10 @@ const config = defineConfig([
   },
   {
     ...vitestConfig,
+    files: ['**/?(*.)@(integration|unit).test.[jt]s', '**/?(*.)@(component|visual-regression).test.[jt]s?(x)'],
+  },
+  {
+    ...vitestTypeCheckedConfig,
     files: ['**/?(*.)@(integration|unit).test.[jt]s', '**/?(*.)@(component|visual-regression).test.[jt]s?(x)'],
   },
   {

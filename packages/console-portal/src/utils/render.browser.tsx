@@ -1,22 +1,22 @@
 import type { JSX, ReactElement, ReactNode } from 'react'
 import type { RootOptions } from 'react-dom/client'
 import {
-  IntlProvider,
   type IntlConfig as IntlProviderProps,
+  IntlProvider,
   type Messages,
   type SupportedLanguageTag,
 } from 'react-intl'
 import {
+  createRoutesStub,
   type FutureConfig,
   type RouterContextProvider,
   type RoutesTestStubProps,
   type StubRouteObject,
-  createRoutesStub,
 } from 'react-router'
 import {
+  render as baseRender,
   type RenderOptions as BaseRenderOptions,
   type RenderResult as BaseRenderResult,
-  render as baseRender,
 } from 'vitest-browser-react/pure'
 
 import { i18nDefaultLanguageTag } from '#src/config.ts'

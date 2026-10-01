@@ -3,7 +3,7 @@ import { playwright } from '@vitest/browser-playwright'
 import path from 'node:path'
 import { env } from 'node:process'
 import { fileURLToPath } from 'node:url'
-import { type Plugin, defineConfig } from 'vitest/config'
+import { defineConfig, type Plugin } from 'vitest/config'
 import { z } from 'zod'
 
 const packageDirUrl = new URL('../..', import.meta.url)
@@ -155,7 +155,7 @@ const config = defineConfig({
       DEBUG: '-wren-console-portal',
     },
     onConsoleLog(message) {
-      return logMessageBlockPattern.test(message) ? false : undefined
+      return !logMessageBlockPattern.test(message) && undefined
     },
     provide: {
       isContinuousIntegrationEnvironment,

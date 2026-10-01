@@ -1,23 +1,23 @@
 import {
+  type queries,
+  render as baseRender,
   type RenderOptions as BaseRenderOptions,
   type RenderResult as BaseRenderResult,
-  render as baseRender,
-  type queries,
 } from '@testing-library/react'
-import { type UserEvent, userEvent } from '@testing-library/user-event'
+import { userEvent, type UserEvent } from '@testing-library/user-event'
 import type { JSX, ReactElement, ReactNode } from 'react'
 import {
-  IntlProvider,
   type IntlConfig as IntlProviderProps,
+  IntlProvider,
   type Messages,
   type SupportedLanguageTag,
 } from 'react-intl'
 import {
+  createRoutesStub,
   type FutureConfig,
   type RouterContextProvider,
   type RoutesTestStubProps,
   type StubRouteObject,
-  createRoutesStub,
 } from 'react-router'
 
 import { i18nDefaultLanguageTag } from '#src/config.ts'

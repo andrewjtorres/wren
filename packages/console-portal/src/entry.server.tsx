@@ -9,10 +9,10 @@ import { IntlProvider } from 'react-intl'
 import {
   type ActionFunctionArgs,
   type EntryContext,
+  isRouteErrorResponse,
   type LoaderFunctionArgs,
   type RouterContextProvider,
   ServerRouter,
-  isRouteErrorResponse,
 } from 'react-router'
 
 import { ContentSecurityPolicyNonceProvider } from './components/content-security-policy-nonce-provider.tsx'
@@ -23,11 +23,7 @@ import { isResponse } from './utils/http.ts'
 import { findLanguageTag, getTranslations } from './utils/i18n.server.ts'
 
 export function handleError(value: unknown, { request, context }: ActionFunctionArgs | LoaderFunctionArgs): void {
-  if (request.signal.aborted) {
-    return
-  }
-
-  if (isResponse(value) || isRouteErrorResponse(value)) {
+  if (request.signal.aborted || isResponse(value) || isRouteErrorResponse(value)) {
     return
   }
 

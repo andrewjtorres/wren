@@ -1,4 +1,4 @@
-import { type BinaryOperator, type SQLWrapper, bindIfParam, sql } from 'drizzle-orm'
+import { type BinaryOperator, bindIfParam, sql, type SQLWrapper } from 'drizzle-orm'
 
 // eslint-disable-next-line unicorn/consistent-boolean-name
 export const isDistinctFrom: BinaryOperator = (left: SQLWrapper, right: unknown) => {

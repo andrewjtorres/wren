@@ -3,11 +3,11 @@
 import { describe, expect, test, vi } from 'vitest'
 
 import {
-  type PreferredColorScheme,
-  type PreferredMotion,
   getPrefersColorSchemeCookieValue,
   getPrefersReducedMotionCookieValue,
   getTimeZoneCookieValue,
+  type PreferredColorScheme,
+  type PreferredMotion,
   subscribeToPrefersColorSchemeChange,
   subscribeToPrefersReducedMotionChange,
 } from './client-hint.ts'

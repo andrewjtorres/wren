@@ -23,7 +23,7 @@ import { secureHeaders } from 'hono/secure-headers'
 import { trimTrailingSlash } from 'hono/trailing-slash'
 import { randomBytes } from 'node:crypto'
 import { env } from 'node:process'
-import { RouterContextProvider, type ServerBuild, createRequestHandler } from 'react-router'
+import { createRequestHandler, RouterContextProvider, type ServerBuild } from 'react-router'
 
 import {
   cacheDatabase,
@@ -63,11 +63,9 @@ function getCacheControl(uriPath: string): string {
     return 'public, max-age=31557600, immutable' // 1 year
   }
 
-  if (cacheControlLowPathPattern.test(uriPath)) {
-    return 'max-age=3600, must-revalidate' // 1 hour
-  }
-
-  return 'no-cache, no-store, must-revalidate'
+  return cacheControlLowPathPattern.test(uriPath)
+    ? 'max-age=3600, must-revalidate' // 1 hour
+    : 'no-cache, no-store, must-revalidate'
 }
 
 export type MainOptions = {
@@ -287,11 +285,9 @@ export async function main({ interceptorMiddleware, prepareError, ...restOptions
       return context.text('PORTAL_IS_SHUTTING_DOWN', status500Code)
     }
 
-    if (await isPortalReady()) {
-      return context.text('PORTAL_IS_HEALTHY', status200Code)
-    }
-
-    return context.text('PORTAL_IS_UNHEALTHY', status500Code)
+    return (await isPortalReady())
+      ? context.text('PORTAL_IS_HEALTHY', status200Code)
+      : context.text('PORTAL_IS_UNHEALTHY', status500Code)
   })
 
   if (interceptorMiddleware) {
@@ -396,27 +392,21 @@ export async function main({ interceptorMiddleware, prepareError, ...restOptions
       return context.text('PORTAL_IS_SHUTTING_DOWN', status500Code)
     }
 
-    if (await isPortalReady()) {
-      return context.text('PORTAL_IS_HEALTHY', status200Code)
-    }
-
-    return context.text('PORTAL_IS_UNHEALTHY', status500Code)
+    return (await isPortalReady())
+      ? context.text('PORTAL_IS_HEALTHY', status200Code)
+      : context.text('PORTAL_IS_UNHEALTHY', status500Code)
   })
 
   probeApp.get('/live', (context) => {
-    if (isPortalShuttingDown) {
-      return context.text('PORTAL_IS_SHUTTING_DOWN', status500Code)
-    }
-
-    return context.text('PORTAL_IS_NOT_SHUTTING_DOWN', status200Code)
+    return isPortalShuttingDown
+      ? context.text('PORTAL_IS_SHUTTING_DOWN', status500Code)
+      : context.text('PORTAL_IS_NOT_SHUTTING_DOWN', status200Code)
   })
 
   probeApp.get('/ready', async (context) => {
-    if (await isPortalReady()) {
-      return context.text('PORTAL_IS_READY', status200Code)
-    }
-
-    return context.text('PORTAL_IS_NOT_READY', status500Code)
+    return (await isPortalReady())
+      ? context.text('PORTAL_IS_READY', status200Code)
+      : context.text('PORTAL_IS_NOT_READY', status500Code)
   })
 
   const probeServer = serve(

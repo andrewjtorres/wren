@@ -285,40 +285,45 @@ describe('should return false if the provided value is not a boolean string; oth
   test.each([
     {
       value: 'bqzt2sg9nscn58p742j9xmzpbl',
+      expected: false,
     },
-  ])('stringToBoolean($value) -> false', ({ value }) => {
-    expect(stringToBoolean(value)).toBeFalsy()
-  })
-
-  test.each([
     {
       value: '1',
+      expected: true,
     },
     {
       value: 'enabled',
+      expected: true,
     },
     {
       value: 'on',
+      expected: true,
     },
     {
       value: 'true',
+      expected: true,
     },
     {
       value: 'y',
+      expected: true,
     },
     {
       value: 'YES',
+      expected: true,
     },
     {
       value: 'YeS',
+      expected: true,
     },
     {
       value: 'yEs',
+      expected: true,
     },
     {
       value: 'yes',
+      expected: true,
     },
-  ])('stringToBoolean($value) -> true', ({ value }) => {
-    expect(stringToBoolean(value)).toBeTruthy()
+  ])('stringToBoolean($value) -> $expected', ({ value, expected }) => {
+    expect(stringToBoolean(value)).toBe(expected)
   })
 })
