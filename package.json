@@ -47,7 +47,7 @@
     "eslint-plugin-import-x": "^4.17.1",
     "eslint-plugin-jest-dom": "^5.10.1",
     "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-perfectionist": "^5.12.0",
+    "eslint-plugin-perfectionist": "^5.12.1",
     "eslint-plugin-playwright": "^2.12.0",
     "eslint-plugin-prettier": "^5.5.6",
     "eslint-plugin-promise": "^7.3.0",
@@ -65,7 +65,7 @@
     "stylelint-config-recommended": "^18.0.0",
     "stylelint-order": "^8.1.1",
     "stylelint-prettier": "^5.0.3",
-    "turbo": "^2.11.3",
+    "turbo": "^2.11.4",
     "typescript": "npm:@typescript/typescript6@^6.0.2",
     "typescript-eslint": "^8.70.1"
   },
