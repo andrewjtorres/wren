@@ -67,7 +67,7 @@
     "eslint-plugin-prettier": "^5.5.6",
     "eslint-plugin-promise": "^7.3.0",
     "eslint-plugin-unicorn": "^76.0.0",
-    "lint-staged": "^17.5.1",
+    "lint-staged": "^17.6.0",
     "nanoid": "^6.0.1",
     "prettier": "^3.9.9",
     "rolldown": "^1.2.11",

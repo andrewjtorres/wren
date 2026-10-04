@@ -3966,7 +3966,7 @@ __metadata:
     eslint-plugin-prettier: "npm:^5.5.6"
     eslint-plugin-promise: "npm:^7.3.0"
     eslint-plugin-unicorn: "npm:^76.0.0"
-    lint-staged: "npm:^17.5.1"
+    lint-staged: "npm:^17.6.0"
     nanoid: "npm:^6.0.1"
     prettier: "npm:^3.9.9"
     rolldown: "npm:^1.2.11"
@@ -4056,7 +4056,7 @@ __metadata:
     happy-dom: "npm:^20.14.5"
     hono: "npm:^4.13.9"
     isbot: "npm:^5.2.2"
-    lint-staged: "npm:^17.5.1"
+    lint-staged: "npm:^17.6.0"
     make-dir-cli: "npm:^4.0.0"
     nanoid: "npm:^6.0.1"
     pino: "npm:^10.3.1"
@@ -4111,7 +4111,7 @@ __metadata:
     eslint-plugin-prettier: "npm:^5.5.6"
     eslint-plugin-promise: "npm:^7.3.0"
     eslint-plugin-unicorn: "npm:^76.0.0"
-    lint-staged: "npm:^17.5.1"
+    lint-staged: "npm:^17.6.0"
     prettier: "npm:^3.9.9"
     rolldown: "npm:^1.2.11"
     rolldown-plugin-dts: "npm:^0.28.6"
@@ -4147,7 +4147,7 @@ __metadata:
     eslint-plugin-prettier: "npm:^5.5.6"
     eslint-plugin-promise: "npm:^7.3.0"
     eslint-plugin-unicorn: "npm:^76.0.0"
-    lint-staged: "npm:^17.5.1"
+    lint-staged: "npm:^17.6.0"
     pino: "npm:^10.3.1"
     prettier: "npm:^3.9.9"
     rolldown: "npm:^1.2.11"
@@ -8380,20 +8380,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:^17.5.1":
-  version: 17.5.1
-  resolution: "lint-staged@npm:17.5.1"
+"lint-staged@npm:^17.6.0":
+  version: 17.6.0
+  resolution: "lint-staged@npm:17.6.0"
   dependencies:
     picomatch: "npm:^4.0.7"
     string-argv: "npm:^0.3.2"
     tinyexec: "npm:^1.3.1"
-    yaml: "npm:^2.9.0"
+    yaml: "npm:^2.9.1"
   dependenciesMeta:
     yaml:
       optional: true
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: 10/2e10b821214eafce576e8505d6b5cee3a83dd40d68b2d3705b0c69abe35a26e3ad3fcd9cc8379bab47c3e5b3cb8042923d8fbe42e7f72b28da54e6c7d4b4986a
+  checksum: 10/e959c4af383f26db7dc567e4454313f1f94e5450fdd560586b9345331b16916bf8c8176c1f2fd9eec071e6882e37ec9ab76fcb67df7d71c62ad856ea6bcc040e
   languageName: node
   linkType: hard
 
@@ -11675,7 +11675,7 @@ __metadata:
     eslint-plugin-testing-library: "npm:^7.16.2"
     eslint-plugin-unicorn: "npm:^76.0.0"
     husky: "npm:^9.1.7"
-    lint-staged: "npm:^17.5.1"
+    lint-staged: "npm:^17.6.0"
     prettier: "npm:^3.9.9"
     prettier-plugin-tailwindcss: "npm:^0.8.1"
     storybook: "npm:^10.6.0"
@@ -11746,7 +11746,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yaml@npm:^2.9.0":
+"yaml@npm:^2.9.0, yaml@npm:^2.9.1":
   version: 2.9.1
   resolution: "yaml@npm:2.9.1"
   bin:
