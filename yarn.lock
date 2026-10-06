@@ -2885,7 +2885,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tursodatabase/database-common@npm:0.7.2, @tursodatabase/database-common@npm:^0.7.2":
+"@tursodatabase/database-common@npm:0.8.0":
+  version: 0.8.0
+  resolution: "@tursodatabase/database-common@npm:0.8.0"
+  checksum: 10/b357fd78a1b0e459d1b83f210f14bc0692ab9181cb25e778536ee7cc3ce949940db0418ebdc651a438c62cb5b2500b11dab8108b2f1deeaf16f08331164f3f89
+  languageName: node
+  linkType: hard
+
+"@tursodatabase/database-common@npm:^0.7.2":
   version: 0.7.2
   resolution: "@tursodatabase/database-common@npm:0.7.2"
   checksum: 10/da1267cd61b5bdfa879f0edcf8f7b5fb5f34581964c8782c476ac5e043955d88863c80843eee9821374babca5a78451528e282edd627c2452caba527dae18b31
@@ -4017,7 +4024,7 @@ __metadata:
     "@testing-library/user-event": "npm:^14.6.7"
     "@total-typescript/ts-reset": "npm:^0.6.1"
     "@tursodatabase/database": "npm:0.7.2"
-    "@tursodatabase/database-common": "npm:0.7.2"
+    "@tursodatabase/database-common": "npm:0.8.0"
     "@types/debug": "npm:^4.1.13"
     "@types/eslint-plugin-jsx-a11y": "npm:^6.10.1"
     "@types/node": "npm:^26.6.3"
