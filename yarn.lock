@@ -2885,50 +2885,57 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tursodatabase/database-common@npm:0.7.2, @tursodatabase/database-common@npm:^0.7.2":
+"@tursodatabase/database-common@npm:0.7.2":
   version: 0.7.2
   resolution: "@tursodatabase/database-common@npm:0.7.2"
   checksum: 10/da1267cd61b5bdfa879f0edcf8f7b5fb5f34581964c8782c476ac5e043955d88863c80843eee9821374babca5a78451528e282edd627c2452caba527dae18b31
   languageName: node
   linkType: hard
 
-"@tursodatabase/database-darwin-arm64@npm:0.7.2":
-  version: 0.7.2
-  resolution: "@tursodatabase/database-darwin-arm64@npm:0.7.2"
+"@tursodatabase/database-common@npm:^0.8.1":
+  version: 0.8.1
+  resolution: "@tursodatabase/database-common@npm:0.8.1"
+  checksum: 10/4c14bd5c4b96d14f411c762810e4c2d990e5520ce5b678df145d598b861eb45fd57c812c840505f93f978b6809825e167c2e3fd51ad4af573ac97f22cc271961
+  languageName: node
+  linkType: hard
+
+"@tursodatabase/database-darwin-arm64@npm:0.8.1":
+  version: 0.8.1
+  resolution: "@tursodatabase/database-darwin-arm64@npm:0.8.1"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@tursodatabase/database-linux-arm64-gnu@npm:0.7.2":
-  version: 0.7.2
-  resolution: "@tursodatabase/database-linux-arm64-gnu@npm:0.7.2"
+"@tursodatabase/database-linux-arm64-gnu@npm:0.8.1":
+  version: 0.8.1
+  resolution: "@tursodatabase/database-linux-arm64-gnu@npm:0.8.1"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@tursodatabase/database-linux-x64-gnu@npm:0.7.2":
-  version: 0.7.2
-  resolution: "@tursodatabase/database-linux-x64-gnu@npm:0.7.2"
+"@tursodatabase/database-linux-x64-gnu@npm:0.8.1":
+  version: 0.8.1
+  resolution: "@tursodatabase/database-linux-x64-gnu@npm:0.8.1"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@tursodatabase/database-win32-x64-msvc@npm:0.7.2":
-  version: 0.7.2
-  resolution: "@tursodatabase/database-win32-x64-msvc@npm:0.7.2"
+"@tursodatabase/database-win32-x64-msvc@npm:0.8.1":
+  version: 0.8.1
+  resolution: "@tursodatabase/database-win32-x64-msvc@npm:0.8.1"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
-"@tursodatabase/database@npm:0.7.2":
-  version: 0.7.2
-  resolution: "@tursodatabase/database@npm:0.7.2"
+"@tursodatabase/database@npm:0.8.1":
+  version: 0.8.1
+  resolution: "@tursodatabase/database@npm:0.8.1"
   dependencies:
-    "@tursodatabase/database-common": "npm:^0.7.2"
-    "@tursodatabase/database-darwin-arm64": "npm:0.7.2"
-    "@tursodatabase/database-linux-arm64-gnu": "npm:0.7.2"
-    "@tursodatabase/database-linux-x64-gnu": "npm:0.7.2"
-    "@tursodatabase/database-win32-x64-msvc": "npm:0.7.2"
+    "@tursodatabase/database-common": "npm:^0.8.1"
+    "@tursodatabase/database-darwin-arm64": "npm:0.8.1"
+    "@tursodatabase/database-linux-arm64-gnu": "npm:0.8.1"
+    "@tursodatabase/database-linux-x64-gnu": "npm:0.8.1"
+    "@tursodatabase/database-win32-x64-msvc": "npm:0.8.1"
   dependenciesMeta:
     "@tursodatabase/database-darwin-arm64":
       optional: true
@@ -2938,7 +2945,7 @@ __metadata:
       optional: true
     "@tursodatabase/database-win32-x64-msvc":
       optional: true
-  checksum: 10/c939e14b35903b725e5d27d5c7182c9c0b507b9d94f58e76a0648bca353effd5f40cce5a7b364b207259974cceabfe40951024efdb94a0a33fa8773d4dbc76c7
+  checksum: 10/d51b87e1bc334e3323dda80cad7e693ca94222f6d62408e48da5fe205ff1fca7dbfb2eab72f1101a41cd5a7055ac5a3f902156e78839a890c26f155d6badd934
   languageName: node
   linkType: hard
 
@@ -4016,7 +4023,7 @@ __metadata:
     "@testing-library/react": "npm:^16.3.3"
     "@testing-library/user-event": "npm:^14.6.7"
     "@total-typescript/ts-reset": "npm:^0.6.1"
-    "@tursodatabase/database": "npm:0.7.2"
+    "@tursodatabase/database": "npm:0.8.1"
     "@tursodatabase/database-common": "npm:0.7.2"
     "@types/debug": "npm:^4.1.13"
     "@types/eslint-plugin-jsx-a11y": "npm:^6.10.1"
@@ -4097,7 +4104,7 @@ __metadata:
     "@ariga/atlas": "npm:1.3.3"
     "@eslint/js": "npm:^10.0.1"
     "@total-typescript/ts-reset": "npm:^0.6.1"
-    "@tursodatabase/database": "npm:0.7.2"
+    "@tursodatabase/database": "npm:0.8.1"
     "@types/node": "npm:^26.6.3"
     "@typescript/native": "npm:typescript@^7.0.2"
     concurrently: "npm:^10.0.5"

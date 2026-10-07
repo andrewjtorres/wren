@@ -43,7 +43,7 @@
     "@hono/node-server": "^2.1.1",
     "@react-router/fs-routes": "^8.4.0",
     "@react-router/node": "^8.4.0",
-    "@tursodatabase/database": "0.7.2",
+    "@tursodatabase/database": "0.8.1",
     "@tursodatabase/database-common": "0.7.2",
     "@wren/common": "workspace:^",
     "@wren/graph-manager": "workspace:^",
