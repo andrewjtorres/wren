@@ -71,14 +71,14 @@
     "nanoid": "^6.0.2",
     "prettier": "^3.9.10",
     "rolldown": "^1.2.13",
-    "rolldown-plugin-dts": "^0.28.7",
+    "rolldown-plugin-dts": "^0.28.8",
     "turbo": "^2.11.7",
     "type-fest": "^5.10.0",
     "typescript": "npm:@typescript/typescript6@^6.0.2",
     "typescript-eslint": "^8.71.1",
     "vite": "^8.3.4",
     "vitest": "^5.0.3",
-    "zod": "^4.6.5"
+    "zod": "^4.6.6"
   },
   "peerDependencies": {
     "nanoid": "^6.0.0",
