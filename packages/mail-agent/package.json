@@ -31,7 +31,7 @@
   "dependencies": {
     "@wren/common": "workspace:^",
     "pino": "^10.4.0",
-    "zod": "^4.6.5"
+    "zod": "^4.6.6"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

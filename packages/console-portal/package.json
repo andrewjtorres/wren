@@ -58,7 +58,7 @@
     "react-dom": "^19.3.0",
     "react-intl": "^12.1.4",
     "react-router": "^8.4.0",
-    "zod": "^4.6.5"
+    "zod": "^4.6.6"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.13.0",
