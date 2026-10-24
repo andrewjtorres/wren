@@ -44,7 +44,7 @@
     "@react-router/fs-routes": "^8.4.0",
     "@react-router/node": "^8.4.0",
     "@tursodatabase/database": "0.7.2",
-    "@tursodatabase/database-common": "0.7.2",
+    "@tursodatabase/database-common": "0.8.3",
     "@wren/common": "workspace:^",
     "@wren/graph-manager": "workspace:^",
     "close-with-grace": "^2.5.0",
