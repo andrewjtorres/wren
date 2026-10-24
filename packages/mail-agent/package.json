@@ -38,9 +38,9 @@
     "@total-typescript/ts-reset": "^0.6.1",
     "@types/node": "^26.6.5",
     "@typescript/native": "npm:typescript@^7.0.2",
-    "@vitest/coverage-istanbul": "^5.0.4",
+    "@vitest/coverage-istanbul": "^5.0.5",
     "@vitest/eslint-plugin": "^1.6.27",
-    "@vitest/ui": "^5.0.4",
+    "@vitest/ui": "^5.0.5",
     "concurrently": "^10.0.6",
     "cross-env": "^10.1.0",
     "del-cli": "^7.0.0",
@@ -55,11 +55,11 @@
     "prettier": "^3.9.10",
     "rolldown": "^1.2.14",
     "tsx": "^4.23.15",
-    "turbo": "^2.11.8",
+    "turbo": "^2.11.9",
     "typescript": "npm:@typescript/typescript6@^6.0.2",
     "typescript-eslint": "^8.71.2",
     "vite": "^8.3.4",
-    "vitest": "^5.0.4"
+    "vitest": "^5.0.5"
   },
   "engines": {
     "node": ">=26.10",
