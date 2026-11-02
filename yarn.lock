@@ -12,12 +12,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ariga/atlas@npm:1.3.3":
-  version: 1.3.3
-  resolution: "@ariga/atlas@npm:1.3.3"
+"@ariga/atlas@npm:1.3.5":
+  version: 1.3.5
+  resolution: "@ariga/atlas@npm:1.3.5"
   bin:
     atlas: atlas
-  checksum: 10/a4a72ced40be334172714e0eb2a9e33e9e57ae6dc4b58b779b826914eb44254c905680b327d1f7f8ef862b0ca146bb6dda117a2cb7ad130f3e36abf4f02e245a
+  checksum: 10/d8cef849a231cbd60b81b585c5ccec67f8dd129a0997a89c355d975a38d59fc12b8a65322a9f6aff8154414ef3e639c42818308ea65e1dc7700c93eb39182392
   languageName: node
   linkType: hard
 
@@ -4319,7 +4319,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@wren/graph-manager@workspace:packages/graph-manager"
   dependencies:
-    "@ariga/atlas": "npm:1.3.3"
+    "@ariga/atlas": "npm:1.3.5"
     "@eslint/js": "npm:^10.0.1"
     "@total-typescript/ts-reset": "npm:^0.6.1"
     "@tursodatabase/database": "npm:0.7.2"
